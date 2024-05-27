@@ -27,3 +27,15 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Compile Employees
+```sh
+npm install primevue
+npm install primeicons
+npm install vue-router@next
+rm -rf node_modules/.vite
+npm run dev
+npm install axios
+```
+
+
