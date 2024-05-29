@@ -1,128 +1,332 @@
 {
-  "usuarios": [
+  "users": [
     {
-      "id": 1,
-      "nombre": "Carlos",
-      "apellido": "Gómez",
-      "edad": 40,
-      "correo": "carlos@gmail.com",
-      "numero": "952168758",
-      "trabajadorId": 1
+      "id": "987654321",
+      "full_name": "María García",
+      "company_name": "GreenFields",
+      "email_address": "maria.garcia@example.com",
+      "phone_number": "123456789",
+      "user_type": "vendedor",
+      "password": "securepass",
+      "payments_pending": [
+        {
+          "payment_type": "salario",
+          "amount": 500
+        }
+      ],
+      "receivables_pending": [
+        {
+          "receivable_type": "venta de manzanas",
+          "amount": 200
+        },
+        {
+          "receivable_type": "venta de otras frutas",
+          "amount": 300
+        }
+      ]
     },
     {
-      "id": 2,
-      "nombre": "Ana",
-      "apellido": "Pérez",
-      "edad": 35,
-      "correo": "ana@gmail.com",
-      "numero": "963254876",
-      "trabajadorId": 2
+      "id": "987654321",
+      "full_name": "María García",
+      "company_name": "GreenFields",
+      "email_address": "maria.garcia@example.com",
+      "phone_number": "123456789",
+      "user_type": "vendedor",
+      "password": "securepass",
+      "payments_pending": [
+        {
+          "payment_type": "salario",
+          "amount": 600
+        }
+      ],
+      "receivables_pending": [
+        {
+          "receivable_type": "venta de manzanas",
+          "amount": 400
+        }
+      ]
     },
     {
-      "id": 3,
-      "nombre": "Miguel",
-      "apellido": "López",
-      "edad": 45,
-      "correo": "miguel@hotmail.com",
-      "numero": "912578466",
-      "trabajadorId": 3
+      "id": "15344",
+      "full_name": "Martha",
+      "company_name": "Agricola",
+      "email_address": "marta@gmail.com",
+      "phone_number": "2154564646",
+      "user_type": "vendedor",
+      "password": "15466464",
+      "payments_pending": [
+        {
+          "payment_type": "salario",
+          "amount": 600
+        }
+      ],
+      "receivables_pending": [
+        {
+          "receivable_type": "venta de manzanas",
+          "amount": 400
+        }
+      ]
+    },
+    {
+      "id": "3231",
+      "full_name": "mario",
+      "company_name": "mario bussiness",
+      "email_address": "mario@gmail.com",
+      "phone_number": "4486486",
+      "user_type": "agricultor",
+      "password": "121221",
+      "payments_pending": [
+        {
+          "payment_type": "compra de abono",
+          "amount": 1000
+        }
+      ],
+      "receivables_pending": [
+        {
+          "receivable_type": "venta de manzanas",
+          "amount": 800
+        },
+        {
+          "receivable_type": "venta de otras frutas",
+          "amount": 500
+        }
+      ]
+    },
+    {
+      "id": "",
+      "full_name": "",
+      "company_name": "",
+      "email_address": "",
+      "phone_number": "",
+      "user_type": "",
+      "password": ""
+    },
+    {
+      "id": "",
+      "full_name": "",
+      "company_name": "",
+      "email_address": "",
+      "phone_number": "",
+      "user_type": "",
+      "password": ""
+    },
+    {
+      "id": "",
+      "full_name": "",
+      "company_name": "",
+      "email_address": "",
+      "phone_number": "",
+      "user_type": "",
+      "password": ""
     }
   ],
-  "trabajadores": [
+  "tasks": [
     {
-      "id": 1,
-      "nombre": "Pedro",
-      "apellido": "Sánchez",
-      "edad": 30,
-      "usuarioId": 1
+      "task_id": 1,
+      "description": "Preparar informe de ventas",
+      "task_status": "doing",
+      "id": "5f5a"
     },
     {
-      "id": 2,
-      "nombre": "María",
-      "apellido": "Martínez",
-      "edad": 28,
-      "usuarioId": 2
+      "task_id": 2,
+      "description": "Enviar correos electrónicos a clientes",
+      "task_status": "to do",
+      "id": "7274"
     },
     {
-      "id": 3,
-      "nombre": "Javier",
-      "apellido": "Rodríguez",
-      "edad": 32,
-      "usuarioId": 3
+      "task_id": 3,
+      "description": "Revisar inventario de productos",
+      "task_status": "to do",
+      "id": "eb1e"
+    },
+    {
+      "task_id": 4,
+      "description": "Realizar llamadas de seguimiento",
+      "task_status": "to do",
+      "id": "b465"
+    },
+    {
+      "task_id": 5,
+      "description": "Programar reunión con proveedores",
+      "task_status": "to do",
+      "id": "5e3a"
+    },
+    {
+      "task_id": 6,
+      "description": "Actualizar catálogo de productos",
+      "task_status": "to do",
+      "id": "1185"
+    },
+    {
+      "task_id": 7,
+      "description": "Investigar nuevas estrategias de marketing",
+      "task_status": "to do",
+      "id": "5b6c"
+    },
+    {
+      "task_id": 8,
+      "description": "Asistir a reunión de equipo",
+      "task_status": "to do",
+      "id": "1017"
     }
   ],
-  "ingresos": [
+  "cultivos": [
     {
-      "id": 1,
-      "usuarioId": 1,
-      "mes": "enero",
-      "total": 500,
-      "gastos": 200,
-      "ganancia": 300
+      "id": "3",
+      "estado": "Bueno",
+      "area": 50,
+      "costo": 200,
+      "producto": "Maíz",
+      "retorno": 600,
+      "localizacion": "Trujillo",
+      "notificaciones": "Ninguna",
+      "image_Url": "https://i.postimg.cc/hGWLZTfZ/choclo.jpg"
     },
     {
-      "id": 2,
-      "usuarioId": 1,
-      "mes": "febrero",
-      "total": 600,
-      "gastos": 250,
-      "ganancia": 350
+      "id": "8",
+      "estado": "Regular",
+      "area": 40,
+      "costo": 150,
+      "producto": "Tomate",
+      "retorno": 500,
+      "localizacion": "Ica",
+      "notificaciones": "Ninguna",
+      "image_Url": "https://i.postimg.cc/jSC3YHqs/tomate.jpg"
     },
     {
-      "id": 3,
-      "usuarioId": 1,
-      "mes": "marzo",
-      "total": 700,
-      "gastos": 300,
-      "ganancia": 400
+      "id": "5",
+      "estado": "Excelente",
+      "area": 60,
+      "costo": 250,
+      "producto": "Papa",
+      "retorno": 700,
+      "localizacion": "Arequipa",
+      "notificaciones": "Ninguna",
+      "image_Url": "https://i.postimg.cc/XqVxHFD6/papa.jpg"
     },
     {
-      "id": 4,
-      "usuarioId": 2,
-      "mes": "enero",
-      "total": 550,
-      "gastos": 220,
-      "ganancia": 330
+      "id": "6",
+      "estado": "Bueno",
+      "area": 45,
+      "costo": 180,
+      "producto": "Arroz",
+      "retorno": 550,
+      "localizacion": "Lambayeque",
+      "notificaciones": "Todas",
+      "image_Url": "https://i.postimg.cc/NfdCnJcJ/arroz.jpg"
     },
     {
-      "id": 5,
-      "usuarioId": 2,
-      "mes": "febrero",
-      "total": 650,
-      "gastos": 270,
-      "ganancia": 380
+      "id": "7896",
+      "estado": "Regular",
+      "area": 55,
+      "costo": 220,
+      "producto": "Café",
+      "retorno": 650,
+      "localizacion": "Cusco",
+      "notificaciones": "Ninguna",
+      "image_Url": "https://i.postimg.cc/bNw31xtQ/cafee.png"
     },
     {
-      "id": 6,
-      "usuarioId": 2,
-      "mes": "marzo",
-      "total": 750,
-      "gastos": 320,
-      "ganancia": 430
+      "id": "2ace",
+      "producto": "",
+      "area": "",
+      "localizacion": ""
+    }
+  ],
+  "providers": [
+    {
+      "id": "1",
+      "proveedor": "Diego Cano",
+      "costo": "8470",
+      "estadoEnvio": "En camino",
+      "fechaEntrega": "06/08/2024",
+      "localizacion": "-11.911609, -76.663388",
+      "telefono": 998548321,
+      "entregado": 0
     },
     {
-      "id": 7,
-      "usuarioId": 3,
-      "mes": "enero",
-      "total": 600,
-      "gastos": 240,
-      "ganancia": 360
+      "id": "2",
+      "proveedor": "Alejandro Rios",
+      "costo": "6578",
+      "estadoEnvio": "En espera",
+      "fechaEntrega": "12/06/2024",
+      "localizacion": "-12.060155, -76.960981",
+      "telefono": 996812457,
+      "entregado": 0
     },
     {
-      "id": 8,
-      "usuarioId": 3,
-      "mes": "febrero",
-      "total": 700,
-      "gastos": 290,
-      "ganancia": 410
+      "id": "3",
+      "proveedor": "Gabriel Martinez",
+      "costo": "6900",
+      "estadoEnvio": "En espera",
+      "fechaEntrega": "24/11/2024",
+      "localizacion": "-12.058007, -76.950871",
+      "telefono": 989589551,
+      "entregado": 0
+    }
+  ],
+  "pagosPendientes": [
+    {
+      "id": "1",
+      "tipo": "Salarios",
+      "costo": "5891",
+      "descripcion": "Pago de salarios",
+      "pagado": 1
     },
     {
-      "id": 9,
-      "usuarioId": 3,
-      "mes": "marzo",
-      "total": 800,
-      "gastos": 350,
-      "ganancia": 450
+      "id": "2",
+      "tipo": "Compra Abono",
+      "costo": "6500",
+      "descripcion": "Compra mensual de abono",
+      "pagado": 1
+    },
+    {
+      "id": "3",
+      "tipo": "Compra Semillas",
+      "costo": "7455",
+      "descripcion": "Compra mensual de semillas",
+      "pagado": 1
+    }
+  ],
+
+  "cobranzasPendientes": [
+    {
+      "id": "1",
+      "tipo": "Venta Manzanas",
+      "costo": "5200",
+      "descripcion": "Manzanas vendidas a Juan",
+      "pagado": 0
+    },
+    {
+      "id": "2",
+      "tipo": "Venta Trigo",
+      "costo": "5000",
+      "descripcion": "Trigo vendido a Diego",
+      "pagado": 0
+    },
+    {
+      "id": "3",
+      "tipo": "Venta Zanahorias",
+      "costo": "6400",
+      "descripcion": "Zanahorias vendidas a Jose",
+      "pagado": 0
+    }
+  ],
+
+  "finanzas": [
+    {
+      "id": "1",
+      "mes": "Enero",
+      "ingresos": 8000,
+      "gastos": 5000,
+      "ganancias": 3000
+    },
+    {
+      "id": "2",
+      "mes": "Febrero",
+      "ingresos": 9000,
+      "gastos": 3000,
+      "ganancias": 6000
     }
   ]
 }
