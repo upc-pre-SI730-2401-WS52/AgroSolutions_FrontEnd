@@ -1,4 +1,4 @@
-# wireframes-web
+# parcial
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -27,15 +27,3 @@ npm run dev
 ```sh
 npm run build
 ```
-
-### Compile Employees
-```sh
-npm install primevue
-npm install primeicons
-npm install vue-router@next
-rm -rf node_modules/.vite
-npm run dev
-npm install axios
-```
-
-

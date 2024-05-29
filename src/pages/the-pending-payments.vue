@@ -20,7 +20,6 @@ export default {
 
 <style scoped>
 
-
 header {
   position: fixed;
   top: 0;
@@ -28,6 +27,5 @@ header {
   right: 0;
   z-index: 100;
 }
-
 
 </style>

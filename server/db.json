@@ -1,0 +1,380 @@
+{
+  "users": [
+    {
+      "id": "987654321",
+      "full_name": "María García",
+      "company_name": "GreenFields",
+      "email_address": "maria.garcia@example.com",
+      "phone_number": "123456789",
+      "user_type": "vendedor",
+      "password": "securepass",
+      "payments_pending": [
+        {
+          "payment_type": "salario",
+          "amount": 500
+        }
+      ],
+      "receivables_pending": [
+        {
+          "receivable_type": "venta de manzanas",
+          "amount": 200
+        },
+        {
+          "receivable_type": "venta de otras frutas",
+          "amount": 300
+        }
+      ]
+    },
+    {
+      "id": "987654321",
+      "full_name": "María García",
+      "company_name": "GreenFields",
+      "email_address": "maria.garcia@example.com",
+      "phone_number": "123456789",
+      "user_type": "vendedor",
+      "password": "securepass",
+      "payments_pending": [
+        {
+          "payment_type": "salario",
+          "amount": 600
+        }
+      ],
+      "receivables_pending": [
+        {
+          "receivable_type": "venta de manzanas",
+          "amount": 400
+        }
+      ]
+    },
+    {
+      "id": "15344",
+      "full_name": "Martha",
+      "company_name": "Agricola",
+      "email_address": "marta@gmail.com",
+      "phone_number": "2154564646",
+      "user_type": "vendedor",
+      "password": "15466464",
+      "payments_pending": [
+        {
+          "payment_type": "salario",
+          "amount": 600
+        }
+      ],
+      "receivables_pending": [
+        {
+          "receivable_type": "venta de manzanas",
+          "amount": 400
+        }
+      ]
+    },
+    {
+      "id": "3231",
+      "full_name": "mario",
+      "company_name": "mario bussiness",
+      "email_address": "mario@gmail.com",
+      "phone_number": "4486486",
+      "user_type": "agricultor",
+      "password": "121221",
+      "payments_pending": [
+        {
+          "payment_type": "compra de abono",
+          "amount": 1000
+        }
+      ],
+      "receivables_pending": [
+        {
+          "receivable_type": "venta de manzanas",
+          "amount": 800
+        },
+        {
+          "receivable_type": "venta de otras frutas",
+          "amount": 500
+        }
+      ]
+    },
+    {
+      "id": "",
+      "full_name": "",
+      "company_name": "",
+      "email_address": "",
+      "phone_number": "",
+      "user_type": "",
+      "password": ""
+    },
+    {
+      "id": "",
+      "full_name": "",
+      "company_name": "",
+      "email_address": "",
+      "phone_number": "",
+      "user_type": "",
+      "password": ""
+    },
+    {
+      "id": "",
+      "full_name": "",
+      "company_name": "",
+      "email_address": "",
+      "phone_number": "",
+      "user_type": "",
+      "password": ""
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": 1,
+      "description": "Preparar informe de ventas",
+      "task_status": "doing",
+      "id": "5f5a"
+    },
+    {
+      "task_id": 2,
+      "description": "Enviar correos electrónicos a clientes",
+      "task_status": "to do",
+      "id": "7274"
+    },
+    {
+      "task_id": 3,
+      "description": "Revisar inventario de productos",
+      "task_status": "to do",
+      "id": "eb1e"
+    },
+    {
+      "task_id": 4,
+      "description": "Realizar llamadas de seguimiento",
+      "task_status": "to do",
+      "id": "b465"
+    },
+    {
+      "task_id": 5,
+      "description": "Programar reunión con proveedores",
+      "task_status": "to do",
+      "id": "5e3a"
+    },
+    {
+      "task_id": 6,
+      "description": "Actualizar catálogo de productos",
+      "task_status": "to do",
+      "id": "1185"
+    },
+    {
+      "task_id": 7,
+      "description": "Investigar nuevas estrategias de marketing",
+      "task_status": "to do",
+      "id": "5b6c"
+    },
+    {
+      "task_id": 8,
+      "description": "Asistir a reunión de equipo",
+      "task_status": "to do",
+      "id": "1017"
+    }
+  ],
+  "cultivos": [
+    {
+      "id": "3",
+      "estado": "Bueno",
+      "area": 50,
+      "costo": 200,
+      "producto": "Maíz",
+      "retorno": 600,
+      "localizacion": "Trujillo",
+      "notificaciones": "Ninguna",
+      "calendarioId": "11",
+      "asesorId": "31",
+      "image_Url": "https://i.postimg.cc/hGWLZTfZ/choclo.jpg"
+    },
+    {
+      "id": "8",
+      "estado": "Regular",
+      "area": 40,
+      "costo": 150,
+      "producto": "Tomate",
+      "retorno": 500,
+      "localizacion": "Ica",
+      "notificaciones": "Ninguna",
+      "calendarioId": "22",
+      "asesorId": "21",
+      "image_Url": "https://i.postimg.cc/jSC3YHqs/tomate.jpg"
+    },
+    {
+      "id": "5",
+      "estado": "Excelente",
+      "area": 60,
+      "costo": 250,
+      "producto": "Papa",
+      "retorno": 700,
+      "localizacion": "Arequipa",
+      "notificaciones": "Ninguna",
+      "calendarioId": "24",
+      "asesorId": "41",
+      "image_Url": "https://i.postimg.cc/XqVxHFD6/papa.jpg"
+    },
+    {
+      "id": "6",
+      "estado": "Bueno",
+      "area": 45,
+      "costo": 180,
+      "producto": "Arroz",
+      "retorno": 550,
+      "localizacion": "Lambayeque",
+      "notificaciones": "Todas",
+      "calendarioId": "19",
+      "asesorId": "41",
+      "image_Url": "https://i.postimg.cc/NfdCnJcJ/arroz.jpg"
+    },
+    {
+      "id": "7896",
+      "estado": "Regular",
+      "area": 55,
+      "costo": 220,
+      "producto": "Café",
+      "retorno": 650,
+      "localizacion": "Cusco",
+      "notificaciones": "Ninguna",
+      "calendarioId": "15",
+      "asesorId": "41",
+      "image_Url": "https://i.postimg.cc/bNw31xtQ/cafee.png"
+    }
+  ],
+  "asesores": [
+    {
+      "id": "31",
+      "nombre": "Carlos Huerta",
+      "descripcion": "Asesor especializado en maíz con amplia experiencia en el clima de Trujillo.",
+      "calificacion": 4.8
+    },
+    {
+      "id": "21",
+      "nombre": "Luisa Fernández",
+      "descripcion": "Experta en hortalizas, con enfoque en tomate y técnicas de cultivo orgánico.",
+      "calificacion": 4.6
+    },
+    {
+      "id": "41",
+      "nombre": "Rosa Alvarado",
+      "descripcion": "Asesora con conocimientos avanzados en papa, arroz y café, con énfasis en sostenibilidad.",
+      "calificacion": 4.7
+    },
+    {
+      "id": "51",
+      "nombre": "Jorge Campos",
+      "descripcion": "Asesor en cultivos diversificados y gestión de recursos hídricos.",
+      "calificacion": 4.5
+    },
+    {
+      "id": "61",
+      "nombre": "Ana Torres",
+      "descripcion": "Especialista en cultivos de clima cálido y técnicas de riego eficientes.",
+      "calificacion": 4.9
+    },
+    {
+      "id": "71",
+      "nombre": "Pedro Gutiérrez",
+      "descripcion": "Asesor con experiencia internacional en cultivos de exportación y mercados globales.",
+      "calificacion": 4.4
+    }
+  ],
+  "calendarios": [
+    {
+      "id": "11",
+      "dias": [
+        {
+          "fecha": "2024-06-01",
+          "actividad": "Siembra",
+          "estado": "Germinación"
+        },
+        {
+          "fecha": "2024-06-02",
+          "actividad": "Riego inicial",
+          "estado": "Crecimiento temprano"
+        },
+        {
+          "fecha": "2024-06-03",
+          "actividad": "Control de plagas",
+          "estado": "Mantenimiento"
+        }
+      ]
+    },
+    {
+      "calendarioId": "22",
+      "dias": [
+        {
+          "fecha": "2024-05-15",
+          "actividad": "Preparación del terreno",
+          "estado": "Pre-siembra"
+        },
+        {
+          "fecha": "2024-05-16",
+          "actividad": "Siembra",
+          "estado": "Germinación"
+        },
+        {
+          "fecha": "2024-05-17",
+          "actividad": "Primer riego",
+          "estado": "Crecimiento temprano"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "dias": [
+        {
+          "fecha": "2024-07-01",
+          "actividad": "Siembra",
+          "estado": "Germinación"
+        },
+        {
+          "fecha": "2024-07-02",
+          "actividad": "Fertilización inicial",
+          "estado": "Crecimiento temprano"
+        },
+        {
+          "fecha": "2024-07-03",
+          "actividad": "Inspección de suelo",
+          "estado": "Mantenimiento"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "dias": [
+        {
+          "fecha": "2024-08-10",
+          "actividad": "Siembra",
+          "estado": "Germinación"
+        },
+        {
+          "fecha": "2024-08-11",
+          "actividad": "Riego inicial",
+          "estado": "Crecimiento temprano"
+        },
+        {
+          "fecha": "2024-08-12",
+          "actividad": "Control de malezas",
+          "estado": "Mantenimiento"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "dias": [
+        {
+          "fecha": "2024-09-05",
+          "actividad": "Siembra",
+          "estado": "Germinación"
+        },
+        {
+          "fecha": "2024-09-06",
+          "actividad": "Aplicación de abono",
+          "estado": "Crecimiento temprano"
+        },
+        {
+          "fecha": "2024-09-07",
+          "actividad": "Monitoreo de crecimiento",
+          "estado": "Mantenimiento"
+        }
+      ]
+    }
+  ]
+}

@@ -43,7 +43,6 @@ export default {
     const response = await this.finanzasApiService.getAll();
     this.finanzas = response.data;
   },
-
 }
 </script>
 
