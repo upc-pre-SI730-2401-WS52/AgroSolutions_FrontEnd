@@ -21,12 +21,6 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  padding-left: 400px;
-}
 
 header {
   position: fixed;
@@ -36,10 +30,4 @@ header {
   z-index: 100;
 }
 
-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 </style>
