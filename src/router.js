@@ -15,6 +15,7 @@ import viewCropComponent from "@/components/view-crop.component.vue";
 import addCrops from "@/pages/add-crops.vue";
 import TheCalendari from "@/pages/the-calendari.vue";
 import Cropsall from "@/pages/cropsall.vue";
+import TheChat from "@/pages/the-chat.vue";
 
 
 const routes = [
@@ -24,11 +25,12 @@ const routes = [
     { path: '/home', component: TheHome },
     { path: '/users', component: TheLogin },
     { path: '/finances', component: TheFinances },
-    { path: '/orders', component: TheOrders },
     {path: '/pending_payments', component: ThePendingPayments},
     {path: '/farmer_chat', component: TheFarmersChat},
     { path: '/view-crow/:id', component: viewCropComponent, name: 'view-crow' },
     {path: '/store', component: TheStores},
+    { path: '/orders', component: TheOrders },
+    { path: '/chat', component: TheChat },
     { path: '/crops', component: TheCrops },
     {path:'/add-crops', component: addCrops},
     { path: '/calendari/:id', component: TheCalendari, name: 'calendari' },

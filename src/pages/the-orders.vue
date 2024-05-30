@@ -1,32 +1,50 @@
 <template>
-  <div class="container">
-    <header>
-      <the-header-session />
-    </header>
-    <main>
-      <the-order></the-order>
-    </main>
+  <div>
+    <h1>Generar Pedidos</h1>
+    <div>
+      <label for="producto">Producto</label>
+      <input type="text" id="producto" v-model="producto" placeholder="Nombre del Producto">
+    </div>
+    <div>
+      <label for="cantidad">Cantidad</label>
+      <input type="number" id="cantidad" v-model="cantidad" placeholder="Cantidad">
+    </div>
+    <div>
+      <label for="precio">Precio</label>
+      <input type="number" id="precio" v-model="precio" placeholder="Precio">
+    </div>
+    <div>
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" v-model="telefono" placeholder="Número de Teléfono (9 dígitos)">
+    </div>
   </div>
 </template>
 
 <script>
-import TheHeaderSession from "@/components/the-header-session.component.vue";
-import TheOrder from "@/components/orders.vue";
-
 export default {
   name: 'the-orders',
-  components: {TheOrder, TheHeaderSession}
+  data() {
+    return {
+      producto: '',
+      cantidad: '',
+      precio: '',
+      telefono: ''
+    }
+  }
 }
 </script>
 
 <style scoped>
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
+/* Estilos del componente */
+div {
+  margin-bottom: 10px;
 }
-
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input {
+  width: 100%;
+  padding: 5px;
+}
 </style>
