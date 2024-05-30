@@ -170,69 +170,7 @@
       "id": "1017"
     }
   ],
-  "cultivos": [
-    {
-      "id": "3",
-      "estado": "Bueno",
-      "area": 50,
-      "costo": 200,
-      "producto": "Maíz",
-      "retorno": 600,
-      "localizacion": "Trujillo",
-      "notificaciones": "Ninguna",
-      "image_Url": "https://i.postimg.cc/hGWLZTfZ/choclo.jpg"
-    },
-    {
-      "id": "8",
-      "estado": "Regular",
-      "area": 40,
-      "costo": 150,
-      "producto": "Tomate",
-      "retorno": 500,
-      "localizacion": "Ica",
-      "notificaciones": "Ninguna",
-      "image_Url": "https://i.postimg.cc/jSC3YHqs/tomate.jpg"
-    },
-    {
-      "id": "5",
-      "estado": "Excelente",
-      "area": 60,
-      "costo": 250,
-      "producto": "Papa",
-      "retorno": 700,
-      "localizacion": "Arequipa",
-      "notificaciones": "Ninguna",
-      "image_Url": "https://i.postimg.cc/XqVxHFD6/papa.jpg"
-    },
-    {
-      "id": "6",
-      "estado": "Bueno",
-      "area": 45,
-      "costo": 180,
-      "producto": "Arroz",
-      "retorno": 550,
-      "localizacion": "Lambayeque",
-      "notificaciones": "Todas",
-      "image_Url": "https://i.postimg.cc/NfdCnJcJ/arroz.jpg"
-    },
-    {
-      "id": "7896",
-      "estado": "Regular",
-      "area": 55,
-      "costo": 220,
-      "producto": "Café",
-      "retorno": 650,
-      "localizacion": "Cusco",
-      "notificaciones": "Ninguna",
-      "image_Url": "https://i.postimg.cc/bNw31xtQ/cafee.png"
-    },
-    {
-      "id": "2ace",
-      "producto": "",
-      "area": "",
-      "localizacion": ""
-    }
-  ],
+
   "providers": [
     {
       "id": "1",
@@ -535,5 +473,278 @@
         }
       ]
     }
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "producto": "Papa",
+      "antiguedad": 4,
+      "cantidad_minima": 45,
+      "cantidad_maxima": 156,
+      "numero_ventas": 321,
+      "valoracion": 4
+    },
+    {
+      "id": 2,
+      "producto": "Camote",
+      "antiguedad": 3,
+      "cantidad_minima": 67,
+      "cantidad_maxima": 132,
+      "numero_ventas": 234,
+      "valoracion": 3
+    },
+    {
+      "id": 3,
+      "producto": "Oca",
+      "antiguedad": 2,
+      "cantidad_minima": 89,
+      "cantidad_maxima": 170,
+      "numero_ventas": 123,
+      "valoracion": 5
+    },
+    {
+      "id": 4,
+      "producto": "Mashua",
+      "antiguedad": 5,
+      "cantidad_minima": 52,
+      "cantidad_maxima": 143,
+      "numero_ventas": 456,
+      "valoracion": 2
+    },
+    {
+      "id": 5,
+      "producto": "Yuca",
+      "antiguedad": 1,
+      "cantidad_minima": 23,
+      "cantidad_maxima": 87,
+      "numero_ventas": 678,
+      "valoracion": 4
+    },
+    {
+      "id": 6,
+      "producto": "Arracacha",
+      "antiguedad": 3,
+      "cantidad_minima": 45,
+      "cantidad_maxima": 178,
+      "numero_ventas": 910,
+      "valoracion": 3
+    },
+    {
+      "id": 7,
+      "producto": "Maca",
+      "antiguedad": 4,
+      "cantidad_minima": 56,
+      "cantidad_maxima": 134,
+      "numero_ventas": 432,
+      "valoracion": 5
+    },
+    {
+      "id": 8,
+      "producto": "Olluco",
+      "antiguedad": 2,
+      "cantidad_minima": 65,
+      "cantidad_maxima": 112,
+      "numero_ventas": 543,
+      "valoracion": 2
+    },
+    {
+      "id": 9,
+      "producto": "Quinua",
+      "antiguedad": 5,
+      "cantidad_minima": 34,
+      "cantidad_maxima": 109,
+      "numero_ventas": 678,
+      "valoracion": 3
+    },
+    {
+      "id": 10,
+      "producto": "Tarwi",
+      "antiguedad": 4,
+      "cantidad_minima": 78,
+      "cantidad_maxima": 145,
+      "numero_ventas": 321,
+      "valoracion": 4
+    },
+    {
+      "id": 11,
+      "producto": "Zapallo",
+      "antiguedad": 2,
+      "cantidad_minima": 47,
+      "cantidad_maxima": 134,
+      "numero_ventas": 234,
+      "valoracion": 5
+    },
+    {
+      "id": 12,
+      "producto": "Calabaza",
+      "antiguedad": 3,
+      "cantidad_minima": 64,
+      "cantidad_maxima": 187,
+      "numero_ventas": 765,
+      "valoracion": 2
+    },
+    {
+      "id": 13,
+      "producto": "Calabacín",
+      "antiguedad": 1,
+      "cantidad_minima": 83,
+      "cantidad_maxima": 176,
+      "numero_ventas": 123,
+      "valoracion": 3
+    },
+    {
+      "id": 14,
+      "producto": "Pepino",
+      "antiguedad": 5,
+      "cantidad_minima": 29,
+      "cantidad_maxima": 134,
+      "numero_ventas": 654,
+      "valoracion": 4
+    },
+    {
+      "id": 15,
+      "producto": "Pepinillo",
+      "antiguedad": 2,
+      "cantidad_minima": 34,
+      "cantidad_maxima": 121,
+      "numero_ventas": 765,
+      "valoracion": 2
+    },
+    {
+      "id": 16,
+      "producto": "Tomate",
+      "antiguedad": 3,
+      "cantidad_minima": 78,
+      "cantidad_maxima": 156,
+      "numero_ventas": 987,
+      "valoracion": 5
+    },
+    {
+      "id": 17,
+      "producto": "Tomatillo",
+      "antiguedad": 4,
+      "cantidad_minima": 54,
+      "cantidad_maxima": 145,
+      "numero_ventas": 342,
+      "valoracion": 3
+    },
+    {
+      "id": 18,
+      "producto": "Pimiento",
+      "antiguedad": 1,
+      "cantidad_minima": 76,
+      "cantidad_maxima": 189,
+      "numero_ventas": 876,
+      "valoracion": 4
+    },
+    {
+      "id": 19,
+      "producto": "Ají amarillo",
+      "antiguedad": 2,
+      "cantidad_minima": 45,
+      "cantidad_maxima": 134,
+      "numero_ventas": 543,
+      "valoracion": 3
+    },
+    {
+      "id": 20,
+      "producto": "Ají panca",
+      "antiguedad": 5,
+      "cantidad_minima": 34,
+      "cantidad_maxima": 145,
+      "numero_ventas": 234,
+      "valoracion": 5
+    },
+    {
+      "id": 21,
+      "producto": "Ají rocoto",
+      "antiguedad": 4,
+      "cantidad_minima": 78,
+      "cantidad_maxima": 165,
+      "numero_ventas": 876,
+      "valoracion": 2
+    },
+    {
+      "id": 22,
+      "producto": "Ají limo",
+      "antiguedad": 1,
+      "cantidad_minima": 56,
+      "cantidad_maxima": 134,
+      "numero_ventas": 321,
+      "valoracion": 4
+    },
+    {
+      "id": 23,
+      "producto": "Choclo",
+      "antiguedad": 2,
+      "cantidad_minima": 89,
+      "cantidad_maxima": 176,
+      "numero_ventas": 543,
+      "valoracion": 3
+    },
+    {
+      "id": 24,
+      "producto": "Chirimoya",
+      "antiguedad": 5,
+      "cantidad_minima": 47,
+      "cantidad_maxima": 123,
+      "numero_ventas": 876,
+      "valoracion": 5
+    },
+    {
+      "id": 25,
+      "producto": "Palta",
+      "antiguedad": 4,
+      "cantidad_minima": 56,
+      "cantidad_maxima": 145,
+      "numero_ventas": 654,
+      "valoracion": 3
+    },
+    {
+      "id": 26,
+      "producto": "Caigua",
+      "antiguedad": 3,
+      "cantidad_minima": 78,
+      "cantidad_maxima": 165,
+      "numero_ventas": 234,
+      "valoracion": 4
+    },
+    {
+      "id": 27,
+      "producto": "Chayote",
+      "antiguedad": 2,
+      "cantidad_minima": 45,
+      "cantidad_maxima": 176,
+      "numero_ventas": 543,
+      "valoracion": 3
+    },
+    {
+      "id": 28,
+      "producto": "Espinaca",
+      "antiguedad": 1,
+      "cantidad_minima": 67,
+      "cantidad_maxima": 156,
+      "numero_ventas": 876,
+      "valoracion": 5
+    },
+    {
+      "id": 29,
+      "producto": "Acelga",
+      "antiguedad": 4,
+      "cantidad_minima": 89,
+      "cantidad_maxima": 145,
+      "numero_ventas": 654,
+      "valoracion": 2
+    },
+    {
+      "id": 30,
+      "producto": "Lechuga",
+      "antiguedad": 5,
+      "cantidad_minima": 56,
+      "cantidad_maxima": 134,
+      "numero_ventas": 321,
+      "valoracion": 4
+    }
   ]
+
 }
