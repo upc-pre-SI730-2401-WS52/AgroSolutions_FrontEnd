@@ -100,7 +100,6 @@ export default {
   background-color: darkred;
 }
 
-/* Añadido: Agrega un margen inferior a los elementos del formulario */
 input,
 select {
   margin-bottom: 10px;

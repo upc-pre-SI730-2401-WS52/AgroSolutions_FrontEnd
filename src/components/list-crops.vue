@@ -69,7 +69,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.container1 {
   width: 80%;
   margin: 0 auto;
 }
@@ -81,7 +81,7 @@ export default {
 }
 
 .cultivo-card {
-  width: calc(50% - 10px);
+  width: calc(50% - 10px );
   margin-bottom: 20px;
 }
 

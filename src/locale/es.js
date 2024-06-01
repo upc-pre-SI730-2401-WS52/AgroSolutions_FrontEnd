@@ -38,17 +38,34 @@ const es = ({
         state: 'Estado:',
         noActivities: 'No se encontraron actividades para este calendario.'
     },
-    messages:{
-
-        es:{
-            hello:'Hola',
-            greet:'Hola {user}',
-            home: "Inicio",
-            about: "Acerca de nosotros",
-            contact: "Contacto"
-
-        },
-    }
+    hello:'Hola',
+    greet:'Hola {user}',
+    home: "Inicio",
+    about: "Acerca de nosotros",
+    contact: "Contacto",
+    month: 'mes',
+    monthFinance: 'Finanzas de',
+    income: 'Ingresos',
+    bills: 'Gastos',
+    profits: 'Ganacias',
+    addFinance: 'Agregar Finanzas',
+    add: 'Agregar',
+    pendingPayments: 'Pagos pendientes',
+    pendingCollections: 'Cobranzas pendientes',
+    addPayment: 'Agregar Pago',
+    addCollection: 'Agregar Cobranza',
+    type: 'Tipo',
+    cost: 'Costo',
+    description: 'Descripcion',
+    paid: 'Pagado',
+    collected: 'Cobrado',
+    addOrder: 'Agregar Orden',
+    provider: 'Proveedor',
+    deadline: 'Fecha de entrega',
+    location: 'Ubicacion',
+    phone: 'Telefono',
+    delivered: 'Entregado',
+    notification: 'Notificar',
 })
 
 export default es;

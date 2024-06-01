@@ -1,4 +1,10 @@
 <template>
+
+  <header>
+    <the-header-session />
+  </header>
+
+  <main style="margin-top: 50px">
   <div class="employees-container">
     <h1>Empleados</h1>
     <div class="button-container">
@@ -11,17 +17,20 @@
     </div>
     <EmployeeInformation v-if="selectedEmployee" :employee="selectedEmployee" @close="closeEmployeeInfo" />
   </div>
+  </main>
 </template>
 
 <script>
 import EmployeeCard from './EmployeeCard.vue';
 import EmployeeInformation from './EmployeeInformation.vue';
 import AddEmployee from './AddEmployee.vue';
-import { addEmployee as addEmployeeService, getEmployees } from '../services/employee-api.service.api.js';
+import {addEmployee as addEmployeeService, getEmployees} from '../services/employee-api.service.js';
+import TheHeaderSession from "@/components/the-header-session.component.vue";
 
 export default {
   name: 'TheEmployeesComponent',
   components: {
+    TheHeaderSession,
     EmployeeCard,
     EmployeeInformation,
     AddEmployee
@@ -80,6 +89,14 @@ h1 {
 .button-container {
   display: flex;
   justify-content: space-between;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 button.green-button {

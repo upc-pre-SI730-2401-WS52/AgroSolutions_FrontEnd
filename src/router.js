@@ -3,19 +3,18 @@ import TheRegister from '@/pages/the-register.vue'
 import TheHome from '@/pages/the-home.vue'
 import TheMain from '@/pages/the-main.vue'
 import TheFinances from '@/pages/the-finances.vue'
-import TheCrops from "@/pages/the-crops.vue";
 import TheOrders from "@/pages/the-orders.vue";
 import ThePendingPayments from "@/pages/the-pending-payments.vue";
 import TheFarmersChat from "@/pages/the-farmers-chat.vue";
 import TheStores from "@/pages/the-stores.vue";
 
-import TheFooter from '@/components/the-footer.component.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import viewCropComponent from "@/components/view-crop.component.vue";
 import addCrops from "@/pages/add-crops.vue";
 import TheCalendari from "@/pages/the-calendari.vue";
 import Cropsall from "@/pages/cropsall.vue";
-
+import TheEmployeesComponent from "@/components/TheEmployeesComponent.vue";
+import Equipment from "@/components/equipment.vue";
 
 const routes = [
     { path: '/', component: TheMain },
@@ -28,11 +27,12 @@ const routes = [
     {path: '/pending_payments', component: ThePendingPayments},
     {path: '/farmer_chat', component: TheFarmersChat},
     { path: '/view-crow/:id', component: viewCropComponent, name: 'view-crow' },
-    {path: '/store', component: TheStores},
-    { path: '/crops', component: TheCrops },
     {path:'/add-crops', component: addCrops},
     { path: '/calendari/:id', component: TheCalendari, name: 'calendari' },
-    {path: '/list-crops', component: Cropsall}
+    {path: '/list-crops', component: Cropsall},
+    {path: '/store', component: TheStores},
+    { path: '/employees', name: 'employees', component: TheEmployeesComponent },
+    { path: '/equipment', name: 'equipment', component: Equipment }
 ]
 
 const router = createRouter({

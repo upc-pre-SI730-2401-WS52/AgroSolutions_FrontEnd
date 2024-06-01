@@ -10,7 +10,7 @@
 
 <script>
 import CardEquipment from './CardEquipment.vue';
-import { getTeams } from '../services/employee-api.service.api.js';
+import {getTeams} from "@/services/employee-api.service.js";
 
 export default {
   name: 'Equipment',
