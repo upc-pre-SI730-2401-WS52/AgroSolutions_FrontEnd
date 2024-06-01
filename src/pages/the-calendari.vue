@@ -1,24 +1,24 @@
 <template>
-  <div class="container">
-    <header>
-      <the-header-session />
+  <div class="container" aria-label="Contenedor principal">
+    <header aria-label="Encabezado principal">
+      <the-header-session aria-label="Sesión de encabezado" />
     </header>
-    <main>
-      <div class="calendario">
-        <h2 class="titulo">Actividades del Calendario</h2>
+    <main aria-label="Contenido principal">
+      <div class="calendario" aria-label="Sección del calendario">
+        <h2 class="titulo" aria-label="Título del calendario">{{ $t('calendar.title') }}</h2>
         <br>
-        <div class="card-container" v-if="calendario && calendario.dias">
-          <div v-for="dia in calendario.dias" :key="dia.fecha" class="card">
-            <div class="card-header">
-              <h3>{{ dia.fecha }}</h3>
+        <div class="card-container" v-if="calendario && calendario.dias" aria-label="Contenedor de tarjetas del calendario">
+          <div v-for="dia in calendario.dias" :key="dia.fecha" class="card" :aria-label="'Tarjeta del día ' + dia.fecha">
+            <div class="card-header" aria-label="Encabezado de la tarjeta del día">
+              <h3 aria-label="Fecha del día">{{ dia.fecha }}</h3>
             </div>
-            <div class="card-body">
-              <p><strong>Actividad:</strong> <span class="actividad">{{ dia.actividad }}</span></p>
-              <p><strong>Estado:</strong> <span class="estado">{{ dia.estado }}</span></p>
+            <div class="card-body" aria-label="Cuerpo de la tarjeta del día">
+              <p><strong aria-label="Actividad del día">{{ $t('calendar.activity') }}</strong> <span class="actividad" aria-label="Descripción de la actividad">{{ dia.actividad }}</span></p>
+              <p><strong aria-label="Estado del día">{{ $t('calendar.state') }}</strong> <span class="estado" aria-label="Descripción del estado">{{ dia.estado }}</span></p>
             </div>
           </div>
         </div>
-        <p v-else>No se encontraron actividades para este calendario.</p>
+        <p v-else aria-label="Mensaje de no hay actividades">{{ $t('calendar.noActivities') }}</p>
       </div>
     </main>
   </div>
