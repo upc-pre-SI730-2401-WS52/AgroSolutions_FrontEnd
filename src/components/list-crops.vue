@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container1">
     <div class="card-container">
       <div class="cultivo-card" v-for="cultivo in cultivos" :key="cultivo.id" @click="viewCultivo(cultivo.id)">
         <div class="card">
@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.container1 {
   width: 80%;
   margin: 0 auto;
 }
@@ -66,7 +66,7 @@ export default {
 }
 
 .cultivo-card {
-  width: calc(50% - 10px);
+  width: calc(50% - 10px );
   margin-bottom: 20px;
 }
 

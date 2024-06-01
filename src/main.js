@@ -19,7 +19,7 @@ import Row from "primevue/row";
 import DataView from "primevue/dataview";
 import Fieldset from "primevue/fieldset";
 import Card from "primevue/card";
-
+import SelectButton from 'primevue/selectbutton';
 
 const app = createApp(App);
 
@@ -39,6 +39,7 @@ app.component('pv-columnGroup', ColumnGroup)
 app.component('pv-dataView', DataView)
 app.component('pv-fieldSet', Fieldset)
 app.component('pv-card', Card)
+app.component('pv-selectButton', SelectButton)
 app.component('pv-row', Row)
 
 app.mount('#app')

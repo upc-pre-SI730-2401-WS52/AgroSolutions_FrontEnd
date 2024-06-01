@@ -22,6 +22,7 @@ export default {
 
 <style scoped>
 
+
 header {
   position: fixed;
   top: 0;

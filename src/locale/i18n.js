@@ -9,11 +9,7 @@ const i18n = createI18n({
     locale: 'es',
     messages:{
         es,
-        en,
-        fr:{
-            hello:'Bonjour',
-            greet:'Bonjour {user}',
-        }
+        en
     }
 })
 

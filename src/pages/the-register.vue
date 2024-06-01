@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <header>
-      <the-header-session />
     </header>
     <main>
       <div class="content">

@@ -29,7 +29,7 @@ export default {
 
 <template>
   <header class="header">
-    <the-header-session />
+    <the-header-session/>
   </header>
   <main>
     <div class="view-crop-container" v-if="crop">
@@ -67,7 +67,7 @@ header {
   right: 0;
   z-index: 1000;
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .view-crop-container {
@@ -75,22 +75,21 @@ header {
   margin: 100px auto;
   padding: 30px;
   background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   transition: box-shadow 0.3s;
 }
 
 .view-crop-container:hover {
-  box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
-
 
 
 .crop-image img {
   max-height: 350px;
   width: auto;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .crop-info {
@@ -123,17 +122,19 @@ header {
 
 .action-button:hover {
   background-color: #17b212;
-}.view-crop-container {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   max-width: 1200px;
-   margin: 100px auto;
-   padding: 30px;
-   background-color: #fff;
-   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-   border-radius: 8px;
- }
+}
+
+.view-crop-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
 
 .crop-info {
   flex-grow: 1;
@@ -144,7 +145,7 @@ header {
   max-height: 350px;
   width: auto;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 </style>

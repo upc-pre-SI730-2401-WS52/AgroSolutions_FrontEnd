@@ -1,14 +1,32 @@
 const en = ({
-    messages:{
-
-        en:{
-            hello:'Hello',
-            greet:'Hello {user}',
-            home: "Home",
-            about: "About Us",
-            contact: "Contact"
-        },
-    }
+    hello:'Hello',
+    greet:'Hello {user}',
+    home: "Home",
+    about: "About Us",
+    contact: "Contact",
+    month: 'month',
+    monthFinance: 'Finance of',
+    income: 'Income',
+    bills: 'Bills',
+    profits: 'Profits',
+    addFinance: 'Add Finance',
+    add: 'Add',
+    pendingPayments: 'Pending payments',
+    pendingCollections: 'Cobranzas pendientes',
+    addPayment: 'Add Payment',
+    addCollection: 'Agregar Collection',
+    type: 'Type',
+    cost: 'Cost',
+    description: 'Description',
+    paid: 'Paid',
+    collected: 'Collected',
+    addOrder: 'Add Order',
+    provider: 'Provider',
+    deadline: 'Deadline',
+    location: 'Location',
+    phone: 'Phone',
+    delivered: 'Delivered',
+    notification: 'Notification',
 })
 
 export default en;
