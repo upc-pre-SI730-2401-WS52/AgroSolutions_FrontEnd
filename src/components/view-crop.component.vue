@@ -28,31 +28,32 @@ export default {
 </script>
 
 <template>
-  <header class="header">
-    <the-header-session />
+  <header class="header" aria-label="Encabezado principal">
+    <the-header-session aria-label="Sesión de encabezado" />
   </header>
-  <main>
-    <div class="view-crop-container" v-if="crop">
-      <div class="crop-info">
-        <h1>{{ crop.producto }}</h1>
-        <div class="crop-data">Área: {{ crop.area }}</div>
-        <div class="crop-data">Código: {{ crop.id }}</div>
-        <div class="crop-data">Germinación: {{ crop.germinacion }}</div>
-        <div class="crop-data">Costo: $ {{ crop.costo }}</div>
-        <div class="crop-data">Retorno: $ {{ crop.retorno }}</div>
-        <div class="crop-data">Notificaciones: {{ crop.notificaciones }}</div>
-        <div class="crop-data">Localización: {{ crop.localizacion }}</div>
-        <div class="crop-data">Estado: {{ crop.estado }}</div>
-        <router-link :to="{ name: 'calendari', params: { id: crop.calendarioId }}" class="action-button">
+  <main aria-label="Contenido principal">
+    <div class="view-crop-container" v-if="crop" aria-label="Contenedor de información del cultivo">
+      <div class="crop-info" aria-label="Información del cultivo">
+        <h1 aria-label="Nombre del producto">{{ crop.producto }}</h1>
+        <div class="crop-data" aria-label="Área del cultivo">{{ $t('cropInfo.area') }}: {{ crop.area }}</div>
+        <div class="crop-data" aria-label="Código del cultivo">{{ $t('cropInfo.code') }}: {{ crop.id }}</div>
+        <div class="crop-data" aria-label="Germinación del cultivo">{{ $t('cropInfo.germination') }}: {{ crop.germinacion }}</div>
+        <div class="crop-data" aria-label="Costo del cultivo">{{ $t('cropInfo.cost') }}: $ {{ crop.costo }}</div>
+        <div class="crop-data" aria-label="Retorno del cultivo">{{ $t('cropInfo.return') }}: $ {{ crop.retorno }}</div>
+        <div class="crop-data" aria-label="Notificaciones del cultivo">{{ $t('cropInfo.notifications') }}: {{ crop.notificaciones }}</div>
+        <div class="crop-data" aria-label="Localización del cultivo">{{ $t('cropInfo.location') }}: {{ crop.localizacion }}</div>
+        <div class="crop-data" aria-label="Estado del cultivo">{{ $t('cropInfo.state') }}: {{ crop.estado }}</div>
+        <router-link :to="{ name: 'calendari', params: { id: crop.calendarioId }}" class="action-button" aria-label="Ir al calendario del cultivo">
           Calendario
         </router-link>
       </div>
-      <div class="crop-image">
+      <div class="crop-image" aria-label="Imagen del cultivo">
         <img :src="crop.image_Url" alt="Imagen del cultivo">
       </div>
     </div>
   </main>
 </template>
+
 
 <style scoped>
 body {
@@ -118,7 +119,7 @@ header {
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.3s;
-  transform: translatex(580px);
+  transform: translatex(450px);
 }
 
 .action-button:hover {

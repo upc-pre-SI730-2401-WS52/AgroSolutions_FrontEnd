@@ -1,18 +1,32 @@
 <template>
-  <div class="container">
-    <div class="card-container">
-      <div class="cultivo-card" v-for="cultivo in cultivos" :key="cultivo.id" @click="viewCultivo(cultivo.id)">
-        <div class="card">
-          <div class="card-content" :style="{ backgroundColor: '#2C3E50' }">
-            <div class="media align-items-center">
-              <img :src="cultivo.image_Url" class="cultivo-img" alt="Imagen del cultivo">
-              <div class="media-body">
-                <h5 class="mt-0 text-light">{{ cultivo.producto }}</h5>
-                <p class="text-light">Estado:
-                  <span :class="{
-    'text-success': cultivo.estado === 'Bueno' || cultivo.estado === 'Excelente',
-    'text-danger': cultivo.estado !== 'Bueno' && cultivo.estado !== 'Excelente'
-  }">{{ cultivo.estado }}</span>
+  <div class="container" aria-label="Contenedor principal">
+    <div class="card-container" aria-label="Contenedor de tarjetas de cultivo">
+      <div
+          class="cultivo-card"
+          v-for="cultivo in cultivos"
+          :key="cultivo.id"
+          @click="viewCultivo(cultivo.id)"
+          :aria-label="'Tarjeta de cultivo: ' + cultivo.producto"
+      >
+        <div class="card" aria-label="Tarjeta de cultivo">
+          <div class="card-content" :style="{ backgroundColor: '#2C3E50' }" aria-label="Contenido de la tarjeta de cultivo">
+            <div class="media align-items-center" aria-label="Sección de medios">
+              <img
+                  :src="cultivo.image_Url"
+                  class="cultivo-img"
+                  alt="Imagen del cultivo"
+                  :aria-label="'Imagen del cultivo ' + cultivo.producto"
+              >
+              <div class="media-body" aria-label="Cuerpo de la tarjeta de cultivo">
+                <h5 class="mt-0 text-light" aria-label="Nombre del producto">{{ cultivo.producto }}</h5>
+                <p class="text-light" aria-label="Estado del cultivo">{{ $t('card.status') }}:
+                  <span
+                      :class="{
+                      'text-success': cultivo.estado === 'Bueno' || cultivo.estado === 'Excelente',
+                      'text-danger': cultivo.estado !== 'Bueno' && cultivo.estado !== 'Excelente'
+                    }"
+                      :aria-label="'Estado del cultivo: ' + cultivo.estado"
+                  >{{ cultivo.estado }}</span>
                 </p>
               </div>
             </div>
@@ -20,11 +34,12 @@
         </div>
       </div>
     </div>
-    <div class="button-container">
-      <router-link to="/add-crops" class="button">Agregar Cultivo</router-link>
+    <div class="button-container" aria-label="Contenedor del botón para agregar cultivos">
+      <router-link to="/add-crops" class="button" aria-label="Agregar nuevo cultivo">{{ $t('card.addCrop') }}</router-link>
     </div>
   </div>
 </template>
+
 
 <script>
 import { CropsApiService } from "@/services/crop-api.service.js";

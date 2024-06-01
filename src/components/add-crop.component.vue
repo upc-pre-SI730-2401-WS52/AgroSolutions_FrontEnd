@@ -4,85 +4,84 @@
     <div class="form-and-calendar">
 
       <div class="form-section">
-        <h2>Añadir Nuevo Cultivo</h2>
+        <h2 aria-label="Formulario para agregar un nuevo cultivo">{{ $t('form.addNewCrop') }}</h2>
         <br>
         <form @submit.prevent="submitForm" class="form-grid">
           <!-- Columna izquierda -->
           <div class="left-column">
             <div class="form-group">
-              <label for="estado">Estado:</label>
-              <select id="estado" v-model="newProduct.estado" required>
-                <option value="Regular">Regular</option>
-                <option value="Bueno">Bueno</option>
-                <option value="Excelente">Excelente</option>
+              <label for="estado" aria-label="Seleccionar estado del producto">{{ $t('form.state') }}</label>
+              <select id="estado" v-model="newProduct.estado" required aria-label="Seleccionar estado del producto: Regular, Bueno, Excelente">
+                <option value="Regular" aria-label="Estado Regular">Regular</option>
+                <option value="Bueno" aria-label="Estado Bueno">Bueno</option>
+                <option value="Excelente" aria-label="Estado Excelente">Excelente</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="area">Área:</label>
-              <input type="number" id="area" v-model.number="newProduct.area" required>
+              <label for="area" aria-label="Ingresar el área del producto">{{ $t('form.area') }}</label>
+              <input type="number" id="area" v-model.number="newProduct.area" required aria-label="Ingresar el área del producto en metros cuadrados">
             </div>
             <div class="form-group">
-              <label for="costo">Costo:</label>
-              <input type="number" id="costo" v-model.number="newProduct.costo" required>
+              <label for="costo" aria-label="Ingresar el costo del producto">{{ $t('form.cost') }}</label>
+              <input type="number" id="costo" v-model.number="newProduct.costo" required aria-label="Ingresar el costo del producto en dólares">
             </div>
           </div>
           <!-- Columna derecha -->
           <div class="right-column">
             <div class="form-group">
-              <label for="producto">Producto:</label>
-              <input type="text" id="producto" v-model="newProduct.producto" required>
+              <label for="producto" aria-label="Ingresar el nombre del producto">{{ $t('form.product') }}</label>
+              <input type="text" id="producto" v-model="newProduct.producto" required aria-label="Ingresar el nombre del producto">
             </div>
             <div class="form-group">
-              <label for="retorno">Retorno:</label>
-              <input type="number" id="retorno" v-model.number="newProduct.retorno" required>
+              <label for="retorno" aria-label="Ingresar el retorno esperado del producto">{{ $t('form.return') }}</label>
+              <input type="number" id="retorno" v-model.number="newProduct.retorno" required aria-label="Ingresar el retorno esperado del producto en dólares">
             </div>
             <div class="form-group">
-              <label for="localizacion">Localización:</label>
-              <input type="text" id="localizacion" v-model="newProduct.localizacion" required>
+              <label for="localizacion" aria-label="Ingresar la localización del producto">{{ $t('form.location') }}</label>
+              <input type="text" id="localizacion" v-model="newProduct.localizacion" required aria-label="Ingresar la localización del producto">
             </div>
           </div>
           <div class="form-group">
-            <label for="notificaciones">Notificaciones:</label>
-            <select id="notificaciones" v-model="newProduct.notificaciones" required>
-              <option value="Ninguna">Ninguna</option>
-              <option value="Todas">Todas</option>
-              <option value="Urgentes">Urgentes</option>
+            <label for="notificaciones" aria-label="Seleccionar las notificaciones deseadas">{{ $t('form.notifications') }}</label>
+            <select id="notificaciones" v-model="newProduct.notificaciones" required aria-label="Seleccionar tipo de notificaciones: Ninguna, Todas, Urgentes">
+              <option value="Ninguna" aria-label="Sin notificaciones">Ninguna</option>
+              <option value="Todas" aria-label="Todas las notificaciones">Todas</option>
+              <option value="Urgentes" aria-label="Solo notificaciones urgentes">Urgentes</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="image_url">URL de la Imagen:</label>
-            <input type="url" id="image_url" v-model="newProduct.image_Url" required>
+            <label for="image_url" aria-label="Ingresar la URL de la imagen del producto">{{ $t('form.imageUrl') }}</label>
+            <input type="url" id="image_url" v-model="newProduct.image_Url" required aria-label="Ingresar la URL de la imagen del producto">
           </div>
           <div class="form-group">
-            <label for="asesor">Asesor:</label>
-            <select id="asesor" v-model="newProduct.asesorId" required>
-              <option v-for="asesor in asesores" :key="asesor.id" :value="asesor.id">
+            <label for="asesor" aria-label="Seleccionar el asesor para el producto">{{ $t('form.advisor') }}</label>
+            <select id="asesor" v-model="newProduct.asesorId" required aria-label="Seleccionar asesor del producto">
+              <option v-for="asesor in asesores" :key="asesor.id" :value="asesor.id" :aria-label="'Asesor: ' + asesor.nombre">
                 {{ asesor.nombre }}
               </option>
             </select>
           </div>
-          <button type="submit" class="submit-button">Guardar Producto</button>
+          <button type="submit" class="submit-button" aria-label="Guardar los datos del producto">{{ $t('form.saveProduct') }}</button>
         </form>
       </div>
 
       <!-- Sección del calendario -->
       <div class="calendar-section">
-        <h3>Añadir Calendario</h3>
+        <h3 aria-label="Formulario para agregar un calendario">{{ $t('form.addCalendar') }}</h3>
         <div class="form-group" v-for="(dia, index) in newProduct.calendario.dias" :key="index">
-          <label :for="'fecha-' + index">Fecha:</label>
-          <input type="date" :id="'fecha-' + index" v-model="dia.fecha">
-          <label :for="'actividad-' + index">Actividad:</label>
-          <input type="text" :id="'actividad-' + index" v-model="dia.actividad">
-          <label :for="'estado-' + index">Estado:</label>
-          <input type="text" :id="'estado-' + index" v-model="dia.estado">
-          <button type="button" @click="removeDia(index)">Eliminar Día</button>
+          <label :for="'fecha-' + index" :aria-label="'Ingresar fecha para el día ' + (index + 1)">{{ $t('form.date') }}</label>
+          <input type="date" :id="'fecha-' + index" v-model="dia.fecha" :aria-label="'Ingresar fecha para el día ' + (index + 1)">
+          <label :for="'actividad-' + index" :aria-label="'Ingresar actividad para el día ' + (index + 1)">{{ $t('form.activity') }}</label>
+          <input type="text" :id="'actividad-' + index" v-model="dia.actividad" :aria-label="'Ingresar actividad para el día ' + (index + 1)">
+          <label :for="'estado-' + index" :aria-label="'Ingresar estado para el día ' + (index + 1)">{{ $t('form.state') }}</label>
+          <input type="text" :id="'estado-' + index" v-model="dia.estado" :aria-label="'Ingresar estado para el día ' + (index + 1)">
+          <button type="button" @click="removeDia(index)" :aria-label="'Eliminar el día ' + (index + 1)">{{ $t('form.removeDay') }}</button>
         </div>
-        <button type="button" @click="addDia">Añadir Día</button>
+        <button type="button" @click="addDia" aria-label="Agregar un nuevo día al calendario">{{ $t('form.addDay') }}</button>
       </div>
     </div>
   </div>
 </template>
-
 <script>
 import {CropsApiService} from "@/services/crop-api.service.js";
 
