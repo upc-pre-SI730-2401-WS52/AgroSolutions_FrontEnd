@@ -15,6 +15,8 @@ import TheCalendari from "@/pages/the-calendari.vue";
 import Cropsall from "@/pages/cropsall.vue";
 import TheEmployeesComponent from "@/components/TheEmployeesComponent.vue";
 import Equipment from "@/components/equipment.vue";
+import TheCreateOrders from "@/pages/the-create-orders.vue";
+import TheChat from "@/pages/the-chat.vue";
 
 const routes = [
     { path: '/', component: TheMain },
@@ -25,14 +27,15 @@ const routes = [
     { path: '/finances', component: TheFinances },
     { path: '/orders', component: TheOrders },
     {path: '/pending_payments', component: ThePendingPayments},
-    {path: '/farmer_chat', component: TheFarmersChat},
+    {path: '/chat', component: TheChat},
     { path: '/view-crow/:id', component: viewCropComponent, name: 'view-crow' },
     {path:'/add-crops', component: addCrops},
     { path: '/calendari/:id', component: TheCalendari, name: 'calendari' },
     {path: '/list-crops', component: Cropsall},
     {path: '/store', component: TheStores},
     { path: '/employees', name: 'employees', component: TheEmployeesComponent },
-    { path: '/equipment', name: 'equipment', component: Equipment }
+    { path: '/equipment', name: 'equipment', component: Equipment },
+    { path: '/create_order', component: TheCreateOrders }
 ]
 
 const router = createRouter({
