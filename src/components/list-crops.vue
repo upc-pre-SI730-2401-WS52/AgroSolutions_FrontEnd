@@ -19,7 +19,7 @@
               >
               <div class="media-body" aria-label="Cuerpo de la tarjeta de cultivo">
                 <h5 class="mt-0 text-light" aria-label="Nombre del producto">{{ cultivo.producto }}</h5>
-                <p class="text-light" aria-label="Estado del cultivo">{{ $t('card.status') }}:
+                <p class="text-light" aria-label="Estado del cultivo">{{ $t('card.status') }}
                   <span
                       :class="{
                       'text-success': cultivo.estado === 'Bueno' || cultivo.estado === 'Excelente',
