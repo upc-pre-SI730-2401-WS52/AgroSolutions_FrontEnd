@@ -7,15 +7,17 @@ import TheCrops from "@/pages/the-crops.vue";
 import TheOrders from "@/pages/the-orders.vue";
 import ThePendingPayments from "@/pages/the-pending-payments.vue";
 import TheFarmersChat from "@/pages/the-farmers-chat.vue";
-import TheStores from "@/pages/the-stores.vue";
 
-import TheFooter from '@/components/the-footer.component.vue'
+
+
 import { createRouter, createWebHistory } from 'vue-router'
 import viewCropComponent from "@/components/view-crop.component.vue";
 import addCrops from "@/pages/add-crops.vue";
 import TheCalendari from "@/pages/the-calendari.vue";
 import Cropsall from "@/pages/cropsall.vue";
-import TheChat from "@/pages/the-chat.vue";
+import theStoreComponent from "@/components/the-store.component.vue";
+import theGenerateOrderComponent from "@/components/the-generate-order.component.vue";
+
 
 
 const routes = [
@@ -28,9 +30,11 @@ const routes = [
     {path: '/pending_payments', component: ThePendingPayments},
     {path: '/farmer_chat', component: TheFarmersChat},
     { path: '/view-crow/:id', component: viewCropComponent, name: 'view-crow' },
-    {path: '/store', component: TheStores},
+    {path: '/store', name: 'TheStore',component: theStoreComponent},
+    { path: '/generate-order/:productId',  name: 'TheGenerateOrder', component: theGenerateOrderComponent},
+
     { path: '/orders', component: TheOrders },
-    { path: '/chat', component: TheChat },
+
     { path: '/crops', component: TheCrops },
     {path:'/add-crops', component: addCrops},
     { path: '/calendari/:id', component: TheCalendari, name: 'calendari' },
