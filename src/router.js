@@ -5,8 +5,8 @@ import TheMain from '@/pages/the-main.vue'
 import TheFinances from '@/pages/the-finances.vue'
 import TheOrders from "@/pages/the-orders.vue";
 import ThePendingPayments from "@/pages/the-pending-payments.vue";
-import TheFarmersChat from "@/pages/the-farmers-chat.vue";
-import TheStores from "@/pages/the-stores.vue";
+import theStoreComponent from "@/components/the-store.component.vue";
+import theGenerateOrderComponent from "@/components/the-generate-order.component.vue";
 
 import { createRouter, createWebHistory } from 'vue-router'
 import viewCropComponent from "@/components/view-crop.component.vue";
@@ -32,7 +32,8 @@ const routes = [
     {path:'/add-crops', component: addCrops},
     { path: '/calendari/:id', component: TheCalendari, name: 'calendari' },
     {path: '/list-crops', component: Cropsall},
-    {path: '/store', component: TheStores},
+    { path: '/store', name: 'TheStore', component: theStoreComponent },
+    { path: '/generate-order/:productId', name: 'TheGenerateOrder', component: theGenerateOrderComponent },
     { path: '/employees', name: 'employees', component: TheEmployeesComponent },
     { path: '/equipment', name: 'equipment', component: Equipment },
     { path: '/create_order', component: TheCreateOrders }
