@@ -1,4 +1,8 @@
 <template>
+  <header>
+    <the-header-session />
+  </header>
+  <body style="margin-top: 50px">
   <div>
     <Toolbar>
       <template #start>
@@ -21,6 +25,7 @@
       </div>
     </div>
   </div>
+  </body>
 </template>
 
 <script>
@@ -29,10 +34,12 @@ import axios from 'axios';
 import Toolbar from 'primevue/toolbar';
 import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
+import TheHeaderSession from "@/components/the-header-session.component.vue";
 
 export default {
   name: 'TheStore',
   components: {
+    TheHeaderSession,
     ProductCardComponent,
     Toolbar,
     InputText,
@@ -80,5 +87,13 @@ export default {
 
 .p-inputgroup {
   margin-top: 20px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 </style>
