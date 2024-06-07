@@ -628,7 +628,7 @@
       "id": "ecbb"
     }
   ],
-  "productos": [
+  "products": [
     {
       "id": 1,
       "producto": "Papa",
@@ -899,5 +899,8 @@
       "numero_ventas": 321,
       "valoracion": 4
     }
+  ],
+  "orders":[
+
   ]
 }

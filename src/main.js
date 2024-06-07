@@ -20,7 +20,11 @@ import DataView from "primevue/dataview";
 import Fieldset from "primevue/fieldset";
 import Card from "primevue/card";
 import SelectButton from 'primevue/selectbutton';
+import Dropdown from 'primevue/dropdown';
 
+import 'primevue/resources/themes/saga-blue/theme.css';
+import 'primevue/resources/primevue.min.css';
+import 'primeicons/primeicons.css';
 const app = createApp(App);
 
 app.use(PrimeVue);
@@ -41,5 +45,5 @@ app.component('pv-fieldSet', Fieldset)
 app.component('pv-card', Card)
 app.component('pv-selectButton', SelectButton)
 app.component('pv-row', Row)
-
+app.component('Dropdown', Dropdown);
 app.mount('#app')
