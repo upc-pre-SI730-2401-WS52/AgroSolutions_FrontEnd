@@ -21,10 +21,6 @@ import Fieldset from "primevue/fieldset";
 import Card from "primevue/card";
 import SelectButton from 'primevue/selectbutton';
 import Dropdown from 'primevue/dropdown';
-
-import 'primevue/resources/themes/saga-blue/theme.css';
-import 'primevue/resources/primevue.min.css';
-import 'primeicons/primeicons.css';
 const app = createApp(App);
 
 app.use(PrimeVue);

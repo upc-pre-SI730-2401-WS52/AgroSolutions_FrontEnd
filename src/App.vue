@@ -1,6 +1,7 @@
-<script>
-export default {
-  name: 'App'}
+<script setup>
+import HelloWorld from './components/HelloWorld.component.vue'
+import TheWelcome from './components/TheWelcome.vue'
+import TheFooter from "@/components/the-footer.component.vue";
 </script>
 
 <template>
@@ -24,20 +25,18 @@ export default {
   </body>
   <footer>
   </footer>  <!-- <TheWelcome /> -->
-  <div id="app">
-    <router-view></router-view>
-  </div>
+
 </template>
 
 <style scoped>
-@import 'primevue/resources/themes/saga-blue/theme.css';
-@import 'primevue/resources/primevue.min.css';
-@import 'primeicons/primeicons.css';
-
 header {
   line-height: 1.5;
 }
 
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
 
 
 @media (min-width: 1024px) {
@@ -47,6 +46,9 @@ header {
     padding-right: calc(var(--section-gap) / 2);
   }
 
+  .logo {
+    margin: 0 2rem 0 0;
+  }
 
   header .wrapper {
     display: flex;
