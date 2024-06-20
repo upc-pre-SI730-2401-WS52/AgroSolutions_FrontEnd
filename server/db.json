@@ -91,6 +91,19 @@
           "amount": 500
         }
       ]
+<<<<<<< HEAD
+=======
+    },
+    {
+      "id": "",
+      "full_name": "",
+      "company_name": "",
+      "email_address": "",
+      "phone_number": "",
+      "user_type": "",
+      "password": "",
+      "confirmPassword": ""
+>>>>>>> e9b11272f487488723967fb87c7c8ceae94929e5
     }
   ],
   "tasks": [

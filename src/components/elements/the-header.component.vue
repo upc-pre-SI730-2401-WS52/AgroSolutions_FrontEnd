@@ -4,7 +4,6 @@
       <div class="left-section">
         <div class="logo-container">
           <img src="../../assets/images/logo.png" alt="Logo" class="logo">
-<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/elements/the-header-start.component.vue
 ========
           <h1 class="company-name">{{ companyName }}</h1>
@@ -12,26 +11,16 @@
         </div>
       </div>
       <language-switcher aria-label="Language switcher"/>
-=======
-          <h1 class="company-name">{{ companyName }}</h1>
-        </div>
-      </div>
->>>>>>> e9b11272f487488723967fb87c7c8ceae94929e5
     </div>
   </header>
 </template>
 
 <script>
-<<<<<<< HEAD
 import LanguageSwitcher from "@/components/elements/the-language-switcher.vue";
 
 export default {
   name: 'TheHeader',
   components: {LanguageSwitcher},
-=======
-export default {
-  name: 'TheHeader',
->>>>>>> e9b11272f487488723967fb87c7c8ceae94929e5
   data() {
     return {
       companyName: 'AgroSolution'

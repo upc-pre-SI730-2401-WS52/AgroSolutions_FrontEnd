@@ -1,9 +1,17 @@
 <script>
+<<<<<<< HEAD
 import TheHeaderSessionComponent from "@/components/elements/the-header-session.component.vue";
 import TheFooter from "@/components/elements/the-footer.component.vue";
 import DataTable from "primevue/datatable"; // Change this line
 import Column from "primevue/column";
 import TheHomeTable from "@/components/peding-task/the-peding-table.vue"; // Change this line
+=======
+import TheHeader from "@/components/elements/the-header.component.vue";
+import TheFooter from "@/components/elements/the-footer.component.vue";
+import DataTable from "primevue/datatable"; // Change this line
+import Column from "primevue/column";
+import TheHomeTable from "@/components/home/the-home-table.vue"; // Change this line
+>>>>>>> e9b11272f487488723967fb87c7c8ceae94929e5
 
 export default {
   name: 'the-main',

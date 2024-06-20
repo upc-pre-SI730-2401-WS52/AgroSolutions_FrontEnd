@@ -14,8 +14,13 @@ import addCrops from "@/pages/add-crops.vue";
 import TheCalendari from "@/pages/the-calendari.vue";
 import Cropsall from "@/pages/cropsall.vue";
 import TheEmployeesComponent from "@/pages/the-employees.vue";
+<<<<<<< HEAD
 import TheCreateOrders from "@/pages/the-create-orders.vue";
 import TheTeam from "@/pages/the-team.vue";
+=======
+import Equipment from "@/components/teams/equipment.vue";
+import TheCreateOrders from "@/pages/the-create-orders.vue";
+>>>>>>> e9b11272f487488723967fb87c7c8ceae94929e5
 
 const routes = [
     { path: '/', component: TheMain },

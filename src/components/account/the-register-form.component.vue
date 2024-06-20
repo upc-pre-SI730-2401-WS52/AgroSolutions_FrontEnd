@@ -104,7 +104,11 @@ export default {
   },
   methods: {
     async register(){
+<<<<<<< HEAD
     await this.$router.push('/login');
+=======
+    await this.$router.push('/');
+>>>>>>> e9b11272f487488723967fb87c7c8ceae94929e5
     const body = {
         id: this.id,
         full_name: this.fullName,
