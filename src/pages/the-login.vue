@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <header>
+      <the-header-start-component></the-header-start-component>
     </header>
     <main>
       <div class="content">
@@ -18,12 +19,12 @@
 </template>
 
 <script>
-import TheHeaderSession from "@/components/the-header-session.component.vue";
-import TheLoginForm from "@/components/the-login-form.component.vue";
-
+import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
+import TheLoginForm from "@/components/account/the-login-form.component.vue";
+import theHeaderStartComponent from "@/components/elements/the-header-start.component.vue";
 export default {
   name: 'the-login',
-  components: { TheLoginForm, TheHeaderSession }
+  components: {theHeaderStartComponent, TheLoginForm, TheHeaderSession }
 }
 </script>
 

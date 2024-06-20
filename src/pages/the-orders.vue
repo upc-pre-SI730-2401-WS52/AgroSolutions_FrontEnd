@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import TheHeaderSession from "@/components/the-header-session.component.vue";
-import TheOrder from "@/components/orders.vue";
+import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
+import TheOrder from "@/components/order/orders.vue";
 
 export default {
   name: 'the-orders',

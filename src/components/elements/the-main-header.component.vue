@@ -3,7 +3,7 @@
     <div class="container">
       <div class="left-section">
         <div class="logo-container">
-          <img src="@/assets/images/logo.png" alt="Logo" class="logo">
+          <img src="../../assets/images/logo.png" alt="Logo" class="logo">
           <h1 class="company-name">{{ companyName }}</h1>
         </div>
       </div>

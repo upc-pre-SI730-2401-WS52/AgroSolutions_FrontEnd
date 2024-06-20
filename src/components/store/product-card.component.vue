@@ -47,12 +47,10 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos para separar los botones en el #footer */
 .p-card-footer .p-button {
-  margin-right: 8px; /* Puedes ajustar este valor según tus preferencias */
+  margin-right: 8px;
 }
 
-/* Estilos para hacer que los campos estén en negrita */
 .p-card-content p strong {
   font-weight: bold;
 }

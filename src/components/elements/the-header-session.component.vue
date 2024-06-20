@@ -4,7 +4,7 @@
       <div class="left-section">
 
         <div class="logo-container">
-          <img src="@/assets/images/logo.png" alt="Logo" class="logo">
+          <img src="../../assets/images/logo.png" alt="Logo" class="logo">
           <router-link to="/home" class="link">
           <h1 class="company-name">{{ companyName }}</h1>
           </router-link>
@@ -28,8 +28,7 @@
 <script>
 
 
-
-import LanguageSwitcher from "@/pages/the-language-switcher.vue";
+import LanguageSwitcher from "@/components/elements/the-language-switcher.vue";
 
 export default {
   name: 'TheHeaderSession',

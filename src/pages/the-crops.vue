@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import TheHeaderSession from "@/components/the-header-session.component.vue";
-import ViewCrop from "@/components/view-crop.component.vue";
+import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
+import ViewCrop from "@/components/crop/view-crop.component.vue";
 
 export default {
   name: 'the-crops',

@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import TheHeaderSession from "@/components/the-header-session.component.vue";
-import ThePendingPayment from "@/components/pending-payment.vue";
+import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
+import ThePendingPayment from "@/components/pedding/pending-payment.vue";
 export default {
   name: 'the-orders',
   components: {ThePendingPayment, TheHeaderSession}

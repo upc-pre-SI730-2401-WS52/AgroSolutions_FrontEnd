@@ -1,9 +1,9 @@
 <script>
-import TheHeader from "@/components/the-header.component.vue";
-import TheFooter from "@/components/the-footer.component.vue";
+import TheHeader from "@/components/elements/the-header.component.vue";
+import TheFooter from "@/components/elements/the-footer.component.vue";
 import DataTable from "primevue/datatable"; // Change this line
 import Column from "primevue/column";
-import TheHomeTable from "@/components/the-home-table.vue"; // Change this line
+import TheHomeTable from "@/components/home/the-home-table.vue"; // Change this line
 
 export default {
   name: 'the-main',

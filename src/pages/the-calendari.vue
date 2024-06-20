@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import TheHeaderSession from "@/components/the-header-session.component.vue";
+import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
 import {CropsApiService} from "@/services/crop-api.service.js";
 
 export default {
