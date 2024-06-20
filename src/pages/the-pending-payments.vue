@@ -11,11 +11,7 @@
 
 <script>
 import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
-<<<<<<< HEAD
-import ThePendingPayment from "@/components/peding/pending-payment.vue";
-=======
 import ThePendingPayment from "@/components/pedding/pending-payment.vue";
->>>>>>> e9b11272f487488723967fb87c7c8ceae94929e5
 export default {
   name: 'the-orders',
   components: {ThePendingPayment, TheHeaderSession}

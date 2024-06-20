@@ -5,11 +5,7 @@
 
         <div class="logo-container">
           <img src="../../assets/images/logo.png" alt="Logo" class="logo">
-<<<<<<< HEAD
           <!--<router-link to="/" class="link">-->
-=======
-          <router-link to="/home" class="link">
->>>>>>> e9b11272f487488723967fb87c7c8ceae94929e5
           <h1 class="company-name">{{ companyName }}</h1>
           <!--</router-link>-->
           <language-switcher aria-label="Language switcher"/>

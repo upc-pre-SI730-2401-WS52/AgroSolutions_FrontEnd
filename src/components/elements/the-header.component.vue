@@ -4,10 +4,7 @@
       <div class="left-section">
         <div class="logo-container">
           <img src="../../assets/images/logo.png" alt="Logo" class="logo">
-<<<<<<<< HEAD:src/components/elements/the-header-start.component.vue
-========
           <h1 class="company-name">{{ companyName }}</h1>
->>>>>>>> e9b11272f487488723967fb87c7c8ceae94929e5:src/components/elements/the-header.component.vue
         </div>
       </div>
       <language-switcher aria-label="Language switcher"/>

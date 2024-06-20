@@ -26,7 +26,6 @@
 import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
 import TheLoginForm from "@/components/account/the-login-form.component.vue";
 import theHeaderStartComponent from "@/components/elements/the-header-start.component.vue";
-<<<<<<< HEAD
 
 export default {
   name: 'TheLogin',
@@ -35,11 +34,6 @@ export default {
     TheLoginForm,
     TheHeaderSession
   }
-=======
-export default {
-  name: 'the-login',
-  components: {theHeaderStartComponent, TheLoginForm, TheHeaderSession }
->>>>>>> e9b11272f487488723967fb87c7c8ceae94929e5
 }
 </script>
 
