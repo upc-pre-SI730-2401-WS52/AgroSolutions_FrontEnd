@@ -50,21 +50,21 @@ export default {
 }
 
 .left-section, .right-section {
-  padding: 0 20px; /* Espaciado interno */
+  padding: 0 20px;
 }
 
 .headline {
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #377a6a; /* Color del titular */
+  color: #377a6a;
 }
 
 .description {
   font-size: 1.2rem;
   margin-bottom: 30px;
   line-height: 1.6;
-  color: #555; /* Color de la descripción */
+  color: #555;
 }
 
 .features {
@@ -73,7 +73,7 @@ export default {
 
 .features li {
   margin-bottom: 10px;
-  color: #777; /* Color de las características */
+  color: #777;
 }
 
 .hero-image {

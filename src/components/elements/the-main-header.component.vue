@@ -3,8 +3,9 @@
     <div class="container">
       <div class="left-section">
         <div class="logo-container">
-          <img src="@/assets/images/logo.png" alt="Logo" class="logo">
+          <img src="../../assets/images/logo.png" alt="Logo" class="logo">
           <h1 class="company-name">{{ companyName }}</h1>
+          <language-switcher aria-label="Language switcher"/>
         </div>
       </div>
       <div class="right-section">
@@ -16,8 +17,11 @@
 </template>
 
 <script>
+import LanguageSwitcher from "@/components/elements/the-language-switcher.vue";
+
 export default {
   name: 'Header',
+  components: {LanguageSwitcher},
   data() {
     return {
       companyName: 'AgroSolution'
@@ -69,6 +73,7 @@ export default {
   margin: 0;
   font-size: 18px;
   color: #333;
+  padding-right: 50px;
 }
 
 .button-login,

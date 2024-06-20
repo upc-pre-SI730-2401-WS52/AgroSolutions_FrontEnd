@@ -70,6 +70,15 @@
         </div>
       </div>
 
+      <div class="form-group">
+        <div class="input-label">
+          <label for="confirmPassword">Confirmar Contraseña:</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="confirmPassword" v-model="confirmPassword" required aria-label="Confirme su contraseña">
+        </div>
+      </div>
+
       <button @click="register" aria-label="Registrar">Registrar</button>
     </div>
   </div>
@@ -89,12 +98,13 @@ export default {
       phoneNumber: '',
       userType: '',
       password: '',
-      userApiService: new UserApiService() // Asegúrate de instanciar el servicio aquí
+      confirmPassword: '',
+      userApiService: new UserApiService()
     };
   },
   methods: {
     async register(){
-    await this.$router.push('/'); // Cambia '/' por la ruta a la que deseas redirigir al usuario
+    await this.$router.push('/login');
     const body = {
         id: this.id,
         full_name: this.fullName,
@@ -102,8 +112,9 @@ export default {
         email_address: this.emailAddress,
         phone_number: this.phoneNumber,
         user_type: this.userType,
-        password: this.password
-      };
+        password: this.password,
+        confirmPassword: this.confirmPassword
+    };
       const response = await this.userApiService.create(body);
       router.push('/login');
       alert('User created');
@@ -155,6 +166,7 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="password"],
+input[type="confirmPassword"],
 select {
   width: 100%;
   padding: 15px;

@@ -29,12 +29,12 @@
 </template>
 
 <script>
-import ProductCardComponent from "@/components/product-card.component.vue";
+import ProductCardComponent from "@/components/store/product-card.component.vue";
 import axios from 'axios';
 import Toolbar from 'primevue/toolbar';
 import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
-import TheHeaderSession from "@/components/the-header-session.component.vue";
+import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
 
 export default {
   name: 'TheStore',

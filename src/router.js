@@ -5,18 +5,17 @@ import TheMain from '@/pages/the-main.vue'
 import TheFinances from '@/pages/the-finances.vue'
 import TheOrders from "@/pages/the-orders.vue";
 import ThePendingPayments from "@/pages/the-pending-payments.vue";
-import theStoreComponent from "@/components/the-store.component.vue";
-import theGenerateOrderComponent from "@/components/the-generate-order.component.vue";
+import theStoreComponent from "@/components/store/the-store.component.vue";
+import theGenerateOrderComponent from "@/components/order/the-generate-order.component.vue";
 
 import { createRouter, createWebHistory } from 'vue-router'
-import viewCropComponent from "@/components/view-crop.component.vue";
+import viewCropComponent from "@/components/crop/view-crop.component.vue";
 import addCrops from "@/pages/add-crops.vue";
 import TheCalendari from "@/pages/the-calendari.vue";
 import Cropsall from "@/pages/cropsall.vue";
-import TheEmployeesComponent from "@/components/TheEmployeesComponent.vue";
-import Equipment from "@/components/equipment.vue";
+import TheEmployeesComponent from "@/pages/the-employees.vue";
 import TheCreateOrders from "@/pages/the-create-orders.vue";
-import TheChat from "@/pages/the-chat.vue";
+import TheTeam from "@/pages/the-team.vue";
 
 const routes = [
     { path: '/', component: TheMain },
@@ -27,7 +26,6 @@ const routes = [
     { path: '/finances', component: TheFinances },
     { path: '/orders', component: TheOrders },
     {path: '/pending_payments', component: ThePendingPayments},
-    {path: '/chat', component: TheChat},
     { path: '/view-crow/:id', component: viewCropComponent, name: 'view-crow' },
     {path:'/add-crops', component: addCrops},
     { path: '/calendari/:id', component: TheCalendari, name: 'calendari' },
@@ -35,7 +33,7 @@ const routes = [
     { path: '/store', name: 'TheStore', component: theStoreComponent },
     { path: '/generate-order/:productId', name: 'TheGenerateOrder', component: theGenerateOrderComponent },
     { path: '/employees', name: 'employees', component: TheEmployeesComponent },
-    { path: '/equipment', name: 'equipment', component: Equipment },
+    { path: '/employees-team', name: 'equipment', component: TheTeam },
     { path: '/create_order', component: TheCreateOrders }
 ]
 

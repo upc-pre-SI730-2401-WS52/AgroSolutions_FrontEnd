@@ -1,35 +1,38 @@
 <script>
-import TheHeader from "@/components/elements/the-main-header.component.vue";
+import TheHeaderSessionComponent from "@/components/elements/the-header-session.component.vue";
 import TheFooter from "@/components/elements/the-footer.component.vue";
-import TheHomeBanner from "@/components/home/the-home-banner.component.vue";
+import DataTable from "primevue/datatable"; // Change this line
+import Column from "primevue/column";
+import theEquipment from "@/components/teams/the-equipment.vue";
 
 export default {
-  name: 'the-main',
+  name: 'the-team',
   components: {
-    TheHomeBanner,
-    TheHeader,
+    theEquipment,
+    DataTable, // Change this line
+    Column, // Change this line
+    TheHeaderSessionComponent,
     TheFooter
-  }
+  },
 }
+
 </script>
 
 <template>
   <header>
-    <TheHeader/>
+    <the-header-session-component/>
   </header>
+
   <main>
-    <the-home-banner></the-home-banner>
-
+    <the-equipment/>
   </main>
-
   <footer>
     <TheFooter/>
   </footer>
 </template>
 
-
-
 <style scoped>
+
 header {
   position: fixed;
   top: 0;

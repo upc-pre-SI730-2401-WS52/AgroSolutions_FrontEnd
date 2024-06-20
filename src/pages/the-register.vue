@@ -1,13 +1,14 @@
 <template>
   <div class="container">
     <header>
+      <TheHeaderStart></TheHeaderStart>
     </header>
     <main>
       <div class="content">
         <div class="left-side">
           <br/>
           <h1 class="welcome-text">Welcome to AgroSolutions</h1>
-          <img src="https://welcometoibiza.com/wp-content/uploads/agricultura-mundo-rural-ibiza-welcometoibiza.jpg" alt="image of farmer" class="hero-image" role="img" aria-label="Image of Farmer">
+          <img src="..\..\src\assets\images\register.png" alt="image of farmer" class="hero-image" role="img" aria-label="Image of Farmer">
         </div>
         <div class="right-side">
           <the-register-form></the-register-form>
@@ -18,12 +19,13 @@
 </template>
 
 <script>
-import TheHeaderSession from "@/components/the-header-session.component.vue";
-import TheRegisterForm from "@/components/the-register-form.component.vue";
+import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
+import TheRegisterForm from "@/components/account/the-register-form.component.vue";
+import TheHeaderStart from "@/components/elements/the-header-start.component.vue";
 
 export default {
   name: 'the-register',
-  components: { TheRegisterForm, TheHeaderSession }
+  components: { TheRegisterForm, TheHeaderSession, TheHeaderStart }
 }
 </script>
 
@@ -53,9 +55,9 @@ main {
 
 .content {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: stretch; /* Ajusta la altura */
-  width: 60000px; /* Ajusta el ancho según sea necesario */
+  justify-content: center;
+  align-items: stretch;
+  width: 60000px;
   max-width: 1200px;
 
 }
@@ -68,6 +70,7 @@ main {
 
 .left-side {
   background-color: #75aa9c;
+
 }
 
 .right-side {
@@ -82,9 +85,9 @@ main {
 }
 
 .hero-image {
-  width: 80%;
+  width: 85%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 100px;
   padding-left: 100px;
 
 }

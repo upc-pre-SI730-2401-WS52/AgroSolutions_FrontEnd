@@ -1,9 +1,9 @@
 <script>
-import TheHeader from "@/components/the-header.component.vue";
-import TheFooter from "@/components/the-footer.component.vue";
+import TheHeaderSessionComponent from "@/components/elements/the-header-session.component.vue";
+import TheFooter from "@/components/elements/the-footer.component.vue";
 import DataTable from "primevue/datatable"; // Change this line
 import Column from "primevue/column";
-import TheHomeTable from "@/components/the-home-table.vue"; // Change this line
+import TheHomeTable from "@/components/peding-task/the-peding-table.vue"; // Change this line
 
 export default {
   name: 'the-main',
@@ -11,7 +11,7 @@ export default {
     TheHomeTable,
     DataTable, // Change this line
     Column, // Change this line
-    TheHeader,
+    TheHeaderSessionComponent,
     TheFooter
   },
 }
@@ -20,7 +20,7 @@ export default {
 
 <template>
   <header>
-    <TheHeader/>
+    <the-header-session-component/>
   </header>
 
   <main>

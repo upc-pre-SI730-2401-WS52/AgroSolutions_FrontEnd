@@ -4,14 +4,15 @@
       <div class="left-section">
 
         <div class="logo-container">
-          <img src="@/assets/images/logo.png" alt="Logo" class="logo">
-          <router-link to="/home" class="link">
+          <img src="../../assets/images/logo.png" alt="Logo" class="logo">
+          <!--<router-link to="/" class="link">-->
           <h1 class="company-name">{{ companyName }}</h1>
-          </router-link>
+          <!--</router-link>-->
           <language-switcher aria-label="Language switcher"/>
         </div>
       </div>
       <div class="right-section">
+        <router-link to="/home" class="link">Pending Tasks</router-link>
         <router-link to="/list-crops" class="link">Crops</router-link>
         <router-link to="/employees" class="link">Employees</router-link>
         <router-link to="/store" class="link">Store</router-link>
@@ -28,8 +29,7 @@
 <script>
 
 
-
-import LanguageSwitcher from "@/pages/the-language-switcher.vue";
+import LanguageSwitcher from "@/components/elements/the-language-switcher.vue";
 
 export default {
   name: 'TheHeaderSession',
@@ -70,21 +70,22 @@ export default {
 }
 
 .logo {
-  width: 40px; /* Tamaño del logo */
+  width: 40px;
   margin-right: 10px;
 }
 
 .company-name {
   margin: 0;
-  font-size: 18px; /* Tamaño del texto */
-  color: #333; /* Color del texto */
+  font-size: 18px;
+  color: #333;
+  padding-right: 30px;
 }
 
 .link {
-  text-decoration: none; /* Quitar subrayado */
-  color: #333; /* Color del texto */
-  margin-right: 20px; /* Espaciado entre enlaces */
-  transition: color 0.3s; /* Transición de color */
+  text-decoration: none;
+  color: #333;
+  margin-right: 20px;
+  transition: color 0.3s;
 }
 
 .link:hover {

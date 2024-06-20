@@ -91,83 +91,68 @@
           "amount": 500
         }
       ]
-    },
-    {
-      "id": "",
-      "full_name": "",
-      "company_name": "",
-      "email_address": "",
-      "phone_number": "",
-      "user_type": "",
-      "password": ""
-    },
-    {
-      "id": "",
-      "full_name": "",
-      "company_name": "",
-      "email_address": "",
-      "phone_number": "",
-      "user_type": "",
-      "password": ""
-    },
-    {
-      "id": "",
-      "full_name": "",
-      "company_name": "",
-      "email_address": "",
-      "phone_number": "",
-      "user_type": "",
-      "password": ""
     }
   ],
   "tasks": [
     {
-      "task_id": 1,
-      "description": "Preparar informe de ventas",
-      "task_status": "doing",
-      "id": "5f5a"
+      "Id": 1,
+      "Name": "Sample Task",
+      "DescriptionTask": "Lorem ipsum dolor sit amet.",
+      "DueDate": "2024-06-30",
+      "AssignedTo": "John Doe",
+      "Priority": "High",
+      "Category": "Work",
+      "StateOfTask": "To Do"
     },
     {
-      "task_id": 2,
-      "description": "Enviar correos electrónicos a clientes",
-      "task_status": "to do",
-      "id": "7274"
+      "Id": 2,
+      "Name": "Update Website Content",
+      "DescriptionTask": "Update the content on the company's.",
+      "DueDate": "2024-07-15",
+      "AssignedTo": "Jane Smith",
+      "Priority": "Medium",
+      "Category": "Marketing",
+      "StateOfTask": "To Do"
     },
     {
-      "task_id": 3,
-      "description": "Revisar inventario de productos",
-      "task_status": "to do",
-      "id": "eb1e"
+      "Id": 3,
+      "Name": "Review Quarterly Financial",
+      "DescriptionTask": "Review and analyze the financial.",
+      "DueDate": "2024-07-05",
+      "AssignedTo": "Michael Johnson",
+      "Priority": "High",
+      "Category": "Finance",
+      "StateOfTask": "In Progress"
     },
     {
-      "task_id": 4,
-      "description": "Realizar llamadas de seguimiento",
-      "task_status": "to do",
-      "id": "b465"
+      "Id": 4,
+      "Name": "Develop New Feature",
+      "DescriptionTask": "Implement a new feature based.",
+      "DueDate": "2024-07-10",
+      "AssignedTo": "Emily Brown",
+      "Priority": "High",
+      "Category": "Development",
+      "StateOfTask": "In Progress"
     },
     {
-      "task_id": 5,
-      "description": "Programar reunión con proveedores",
-      "task_status": "to do",
-      "id": "5e3a"
+      "Id": 5,
+      "Name": "Organize Team Meeting",
+      "DescriptionTask": "Schedule and organize a meeting.",
+      "DueDate": "2024-06-28",
+      "AssignedTo": "David Wilson",
+      "Priority": "Medium",
+      "Category": "Project",
+      "StateOfTask": "To Do"
     },
     {
-      "task_id": 6,
-      "description": "Actualizar catálogo de productos",
-      "task_status": "to do",
-      "id": "1185"
-    },
-    {
-      "task_id": 7,
-      "description": "Investigar nuevas estrategias de marketing",
-      "task_status": "to do",
-      "id": "5b6c"
-    },
-    {
-      "task_id": 8,
-      "description": "Asistir a reunión de equipo",
-      "task_status": "to do",
-      "id": "1017"
+      "Id": 6,
+      "Name": "Prepare Presentation",
+      "DescriptionTask": "Create a presentation for the upcoming.",
+      "DueDate": "2024-07-08",
+      "AssignedTo": "Sarah Thompson",
+      "Priority": "Medium",
+      "Category": "Events",
+      "StateOfTask": "To Do"
     }
   ],
   "cultivos": [
@@ -314,7 +299,8 @@
           "actividad": "Primer riego",
           "estado": "Crecimiento temprano"
         }
-      ]
+      ],
+      "id": "1c3b"
     },
     {
       "id": "24",
@@ -438,7 +424,7 @@
       "tipo": "Compra Semillas",
       "costo": "7455",
       "descripcion": "Compra mensual de semillas",
-      "pagado": 0
+      "pagado": 1
     },
     {
       "id": "a002",
@@ -499,6 +485,13 @@
       "ingresos": 7000,
       "gastos": 2000,
       "ganancias": 5000
+    },
+    {
+      "id": "202a",
+      "mes": "Enero",
+      "ingresos": 1,
+      "gastos": 1,
+      "ganancias": 0
     }
   ],
   "employees": [
@@ -630,7 +623,7 @@
   ],
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "producto": "Papa",
       "antiguedad": 4,
       "cantidad_minima": 45,
@@ -639,7 +632,7 @@
       "valoracion": 4
     },
     {
-      "id": 2,
+      "id": "2",
       "producto": "Camote",
       "antiguedad": 3,
       "cantidad_minima": 67,
@@ -648,7 +641,7 @@
       "valoracion": 3
     },
     {
-      "id": 3,
+      "id": "3",
       "producto": "Oca",
       "antiguedad": 2,
       "cantidad_minima": 89,
@@ -657,7 +650,7 @@
       "valoracion": 5
     },
     {
-      "id": 4,
+      "id": "4",
       "producto": "Mashua",
       "antiguedad": 5,
       "cantidad_minima": 52,
@@ -666,7 +659,7 @@
       "valoracion": 2
     },
     {
-      "id": 5,
+      "id": "5",
       "producto": "Yuca",
       "antiguedad": 1,
       "cantidad_minima": 23,
@@ -675,7 +668,7 @@
       "valoracion": 4
     },
     {
-      "id": 6,
+      "id": "6",
       "producto": "Arracacha",
       "antiguedad": 3,
       "cantidad_minima": 45,
@@ -684,7 +677,7 @@
       "valoracion": 3
     },
     {
-      "id": 7,
+      "id": "7",
       "producto": "Maca",
       "antiguedad": 4,
       "cantidad_minima": 56,
@@ -693,7 +686,7 @@
       "valoracion": 5
     },
     {
-      "id": 8,
+      "id": "8",
       "producto": "Olluco",
       "antiguedad": 2,
       "cantidad_minima": 65,
@@ -702,7 +695,7 @@
       "valoracion": 2
     },
     {
-      "id": 9,
+      "id": "9",
       "producto": "Quinua",
       "antiguedad": 5,
       "cantidad_minima": 34,
@@ -711,7 +704,7 @@
       "valoracion": 3
     },
     {
-      "id": 10,
+      "id": "10",
       "producto": "Tarwi",
       "antiguedad": 4,
       "cantidad_minima": 78,
@@ -720,7 +713,7 @@
       "valoracion": 4
     },
     {
-      "id": 11,
+      "id": "11",
       "producto": "Zapallo",
       "antiguedad": 2,
       "cantidad_minima": 47,
@@ -729,7 +722,7 @@
       "valoracion": 5
     },
     {
-      "id": 12,
+      "id": "12",
       "producto": "Calabaza",
       "antiguedad": 3,
       "cantidad_minima": 64,
@@ -738,7 +731,7 @@
       "valoracion": 2
     },
     {
-      "id": 13,
+      "id": "13",
       "producto": "Calabacín",
       "antiguedad": 1,
       "cantidad_minima": 83,
@@ -747,7 +740,7 @@
       "valoracion": 3
     },
     {
-      "id": 14,
+      "id": "14",
       "producto": "Pepino",
       "antiguedad": 5,
       "cantidad_minima": 29,
@@ -756,7 +749,7 @@
       "valoracion": 4
     },
     {
-      "id": 15,
+      "id": "15",
       "producto": "Pepinillo",
       "antiguedad": 2,
       "cantidad_minima": 34,
@@ -765,7 +758,7 @@
       "valoracion": 2
     },
     {
-      "id": 16,
+      "id": "16",
       "producto": "Tomate",
       "antiguedad": 3,
       "cantidad_minima": 78,
@@ -774,7 +767,7 @@
       "valoracion": 5
     },
     {
-      "id": 17,
+      "id": "17",
       "producto": "Tomatillo",
       "antiguedad": 4,
       "cantidad_minima": 54,
@@ -783,7 +776,7 @@
       "valoracion": 3
     },
     {
-      "id": 18,
+      "id": "18",
       "producto": "Pimiento",
       "antiguedad": 1,
       "cantidad_minima": 76,
@@ -792,7 +785,7 @@
       "valoracion": 4
     },
     {
-      "id": 19,
+      "id": "19",
       "producto": "Ají amarillo",
       "antiguedad": 2,
       "cantidad_minima": 45,
@@ -801,7 +794,7 @@
       "valoracion": 3
     },
     {
-      "id": 20,
+      "id": "20",
       "producto": "Ají panca",
       "antiguedad": 5,
       "cantidad_minima": 34,
@@ -810,7 +803,7 @@
       "valoracion": 5
     },
     {
-      "id": 21,
+      "id": "21",
       "producto": "Ají rocoto",
       "antiguedad": 4,
       "cantidad_minima": 78,
@@ -819,7 +812,7 @@
       "valoracion": 2
     },
     {
-      "id": 22,
+      "id": "22",
       "producto": "Ají limo",
       "antiguedad": 1,
       "cantidad_minima": 56,
@@ -828,7 +821,7 @@
       "valoracion": 4
     },
     {
-      "id": 23,
+      "id": "23",
       "producto": "Choclo",
       "antiguedad": 2,
       "cantidad_minima": 89,
@@ -837,7 +830,7 @@
       "valoracion": 3
     },
     {
-      "id": 24,
+      "id": "24",
       "producto": "Chirimoya",
       "antiguedad": 5,
       "cantidad_minima": 47,
@@ -846,7 +839,7 @@
       "valoracion": 5
     },
     {
-      "id": 25,
+      "id": "25",
       "producto": "Palta",
       "antiguedad": 4,
       "cantidad_minima": 56,
@@ -855,7 +848,7 @@
       "valoracion": 3
     },
     {
-      "id": 26,
+      "id": "26",
       "producto": "Caigua",
       "antiguedad": 3,
       "cantidad_minima": 78,
@@ -864,7 +857,7 @@
       "valoracion": 4
     },
     {
-      "id": 27,
+      "id": "27",
       "producto": "Chayote",
       "antiguedad": 2,
       "cantidad_minima": 45,
@@ -873,7 +866,7 @@
       "valoracion": 3
     },
     {
-      "id": 28,
+      "id": "28",
       "producto": "Espinaca",
       "antiguedad": 1,
       "cantidad_minima": 67,
@@ -882,7 +875,7 @@
       "valoracion": 5
     },
     {
-      "id": 29,
+      "id": "29",
       "producto": "Acelga",
       "antiguedad": 4,
       "cantidad_minima": 89,
@@ -891,7 +884,7 @@
       "valoracion": 2
     },
     {
-      "id": 30,
+      "id": "30",
       "producto": "Lechuga",
       "antiguedad": 5,
       "cantidad_minima": 56,
@@ -900,7 +893,5 @@
       "valoracion": 4
     }
   ],
-  "orders":[
-
-  ]
+  "orders": []
 }

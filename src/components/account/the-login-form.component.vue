@@ -24,7 +24,6 @@
       <button @click="login" aria-label="Login">Login</button>
       <br/><br/>
       <button @click="register" aria-label="Register">Register</button>
-
     </div>
   </div>
 </template>

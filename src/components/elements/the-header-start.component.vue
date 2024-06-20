@@ -3,40 +3,33 @@
     <div class="container">
       <div class="left-section">
         <div class="logo-container">
-          <img src="@/assets/images/logo.png" alt="Logo" class="logo">
-          <h1 class="company-name">{{ companyName }}</h1>
+          <img src="../../assets/images/logo.png" alt="Logo" class="logo">
         </div>
       </div>
-      <div class="right-section">
-        <router-link to="/list-crops" class="link">Crops</router-link>
-        <router-link to="/employee" class="link">Employees</router-link>
-        <router-link to="/store" class="link">Store</router-link>
-        <router-link to="/finances" class="link">Pending payments</router-link>
-        <router-link to="/orders" class="link">Orders</router-link>
-        <router-link to="/pending_payments" class="link">Finances</router-link>
-        <router-link to="/farmer_chat" class="link">Chat</router-link>
-        <button @click="logout" class="button-logout">Log out</button>
-      </div>
+      <language-switcher aria-label="Language switcher"/>
     </div>
   </header>
 </template>
 
 <script>
+import LanguageSwitcher from "@/components/elements/the-language-switcher.vue";
+
 export default {
   name: 'TheHeader',
+  components: {LanguageSwitcher},
   data() {
     return {
       companyName: 'AgroSolution'
     };
   },
   methods: {
-      async logout() {
-        try {
-          await this.$router.push('/');
-        } catch (error) {
-          console.error('Error:', error);
-        }
+    async logout() {
+      try {
+        await this.$router.push('/');
+      } catch (error) {
+        console.error('Error:', error);
       }
+    }
   }
 }
 </script>
