@@ -170,19 +170,6 @@
       "image_Url": "https://i.postimg.cc/hGWLZTfZ/choclo.jpg"
     },
     {
-      "id": "8",
-      "estado": "Regular",
-      "area": 40,
-      "costo": 150,
-      "producto": "Tomate",
-      "retorno": 500,
-      "localizacion": "Ica",
-      "notificaciones": "Ninguna",
-      "calendarioId": "22",
-      "asesorId": "21",
-      "image_Url": "https://i.postimg.cc/jSC3YHqs/tomate.jpg"
-    },
-    {
       "id": "5",
       "estado": "Excelente",
       "area": 60,
@@ -280,27 +267,6 @@
           "estado": "Mantenimiento"
         }
       ]
-    },
-    {
-      "calendarioId": "22",
-      "dias": [
-        {
-          "fecha": "2024-05-15",
-          "actividad": "Preparación del terreno",
-          "estado": "Pre-siembra"
-        },
-        {
-          "fecha": "2024-05-16",
-          "actividad": "Siembra",
-          "estado": "Germinación"
-        },
-        {
-          "fecha": "2024-05-17",
-          "actividad": "Primer riego",
-          "estado": "Crecimiento temprano"
-        }
-      ],
-      "id": "1c3b"
     },
     {
       "id": "24",
@@ -619,6 +585,144 @@
         }
       ],
       "id": "ecbb"
+    },
+    {
+      "codigo_equipo": "E003",
+      "presupuesto": 100000,
+      "codigo_cultivo": "C003",
+      "asesor": {
+        "nombre": "Rosa",
+        "apellido": "Peres",
+        "dni": "87654321"
+      },
+      "operarios": [
+        {
+          "nombre": "Aldo",
+          "apellido": "Motes",
+          "dni": "12345678"
+        },
+        {
+          "nombre": "Felipe",
+          "apellido": "Ramirez",
+          "dni": "11223344"
+        }
+      ],
+      "id": "b656"
+    },
+    {
+      "codigo_equipo": "E004",
+      "presupuesto": 100000,
+      "codigo_cultivo": "C001",
+      "asesor": {
+        "nombre": "Pedro",
+        "apellido": "Ramirez",
+        "dni": "87654321"
+      },
+      "operarios": [
+        {
+          "nombre": "Mario",
+          "apellido": "Valdez",
+          "dni": "12345678"
+        },
+        {
+          "nombre": "Carlos",
+          "apellido": "Rodríguez",
+          "dni": "11223344"
+        }
+      ],
+      "id": "b656"
+    },
+    {
+      "codigo_equipo": "E004",
+      "presupuesto": 100000,
+      "codigo_cultivo": "C001",
+      "asesor": {
+        "nombre": "Pedro",
+        "apellido": "Ramirez",
+        "dni": "87654321"
+      },
+      "operarios": [
+        {
+          "nombre": "Mario",
+          "apellido": "Valdez",
+          "dni": "12345678"
+        },
+        {
+          "nombre": "Carlos",
+          "apellido": "Rodríguez",
+          "dni": "11223344"
+        }
+      ],
+      "id": "b656"
+    },
+    {
+      "codigo_equipo": "E005",
+      "presupuesto": 85000,
+      "codigo_cultivo": "C002",
+      "asesor": {
+        "nombre": "Juan",
+        "apellido": "García",
+        "dni": "98765432"
+      },
+      "operarios": [
+        {
+          "nombre": "Luis",
+          "apellido": "Pérez",
+          "dni": "54321678"
+        },
+        {
+          "nombre": "Ana",
+          "apellido": "Martínez",
+          "dni": "99887766"
+        }
+      ],
+      "id": "b657"
+    },
+    {
+      "codigo_equipo": "E006",
+      "presupuesto": 120000,
+      "codigo_cultivo": "C003",
+      "asesor": {
+        "nombre": "María",
+        "apellido": "López",
+        "dni": "76543210"
+      },
+      "operarios": [
+        {
+          "nombre": "Jorge",
+          "apellido": "Hernández",
+          "dni": "33445566"
+        },
+        {
+          "nombre": "Elena",
+          "apellido": "Gómez",
+          "dni": "88990011"
+        }
+      ],
+      "id": "b658"
+    },
+    {
+      "codigo_equipo": "E007",
+      "presupuesto": 95000,
+      "codigo_cultivo": "C004",
+      "asesor": {
+        "nombre": "Andrea",
+        "apellido": "Castro",
+        "dni": "65432109"
+      },
+      "operarios": [
+        {
+          "nombre": "Roberto",
+          "apellido": "Fernández",
+          "dni": "55442"
+        },
+        {
+          "nombre": "Patricia",
+          "apellido": "Sánchez",
+          "dni": "77665544"
+        }
+      ],
+      "id": "b659"
     }
   ],
   "products": [

@@ -9,8 +9,8 @@ export default {
   name: 'the-main',
   components: {
     TheHomeTable,
-    DataTable, // Change this line
-    Column, // Change this line
+    DataTable,
+    Column,
     TheHeaderSessionComponent,
     TheFooter
   },

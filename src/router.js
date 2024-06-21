@@ -1,5 +1,5 @@
 import TheLogin from '@/pages/the-login.vue'
-import TheRegister from '@/pages/the-register.vue'
+import TheRegister from '@/pages/the-register.page.vue'
 import TheHome from '@/pages/the-home.vue'
 import TheMain from '@/pages/the-main.vue'
 import TheFinances from '@/pages/the-finances.vue'
@@ -10,12 +10,12 @@ import theGenerateOrderComponent from "@/components/order/the-generate-order.com
 
 import { createRouter, createWebHistory } from 'vue-router'
 import viewCropComponent from "@/components/crop/view-crop.component.vue";
-import addCrops from "@/pages/add-crops.vue";
+import addCrops from "@/pages/the-add-crops.vue";
 import TheCalendari from "@/pages/the-calendari.vue";
-import Cropsall from "@/pages/cropsall.vue";
+import Cropsall from "@/pages/the-cropsall.vue";
 import TheEmployeesComponent from "@/pages/the-employees.vue";
 import TheCreateOrders from "@/pages/the-create-orders.vue";
-import TheTeam from "@/pages/the-team.vue";
+import TheTeam from "@/pages/the-team.page.vue";
 import TheBlog from "@/pages/the-blog.vue"
 import thePageNotFoundPage from "@/pages/the-page-not-found.page.vue";
 
@@ -39,8 +39,6 @@ const routes = [
     { path: '/create_order', component: TheCreateOrders },
     { path: '/blog', component: TheBlog },
     { path: '/:pathMatch(.*)*', component: thePageNotFoundPage }
-
-
 ]
 
 const router = createRouter({

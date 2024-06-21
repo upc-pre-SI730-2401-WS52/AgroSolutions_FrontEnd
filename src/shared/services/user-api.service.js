@@ -7,9 +7,6 @@ export class UserApiService {
     async getAll() {
         return await http.get('/users')
     }
-    async getAllTasks() {
-        return await http.get('/tasks')
-    }
     async getById(id) {
         return await http.get('users/'+id)
     }
@@ -25,7 +22,6 @@ export class UserApiService {
     async getPayments_pendingById(id) {
         return await http.get('users/payments_pending'+id)
     }
-
     async login(username, password) {
         try {
             const response = await http.get('/users');

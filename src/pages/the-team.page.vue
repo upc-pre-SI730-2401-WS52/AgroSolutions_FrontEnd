@@ -3,7 +3,7 @@ import TheHeaderSessionComponent from "@/components/elements/the-header-session.
 import TheFooter from "@/components/elements/the-footer.component.vue";
 import DataTable from "primevue/datatable"; // Change this line
 import Column from "primevue/column";
-import theEquipment from "@/components/teams/the-equipment.vue";
+import theEquipment from "@/components/teams/the-teams.vue";
 
 export default {
   name: 'the-team',
@@ -22,7 +22,6 @@ export default {
   <header>
     <the-header-session-component/>
   </header>
-
   <main>
     <the-equipment/>
   </main>
@@ -42,7 +41,7 @@ header {
 }
 
 main {
-  padding-top: 0px; /* Ajuste para subir el main */
+  padding-top: 50px;
   padding-bottom: 150px;
   position: fixed;
   top: 0;

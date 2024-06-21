@@ -1,20 +1,18 @@
-<<<<<<<< HEAD:src/components/teams/the-equipment.vue
-<!-- src/components/the-equipment.vue -->
-========
-<!-- src/components/equipment.vue -->
->>>>>>>> e9b11272f487488723967fb87c7c8ceae94929e5:src/components/teams/equipment.vue
 <template>
   <div class="equipment-container">
-    <h2>Equipos</h2>
-    <div v-for="equipo in equipos" :key="equipo.id">
-      <CardEquipment :equipo="equipo" />
+    <h2><b>Equipos</b></h2>
+    <div class="equipment-grid">
+      <div class="card-wrapper" v-for="equipo in equipos" :key="equipo.id">
+        <CardEquipment :equipo="equipo" />
+      </div>
     </div>
   </div>
 </template>
 
+
 <script>
-import CardEquipment from './CardEquipment.vue';
-import {getTeams} from "@/shared/services/employee-api.service.js";
+import CardEquipment from './the-card-team.vue';
+import { getTeams } from "@/shared/services/employee-api.service.js";
 
 export default {
   name: 'Equipment',
@@ -45,10 +43,22 @@ export default {
 .equipment-container {
   background-color: white;
   color: green;
-  padding: 16px;
+  padding: 10px;
 }
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card-wrapper {
+  width: 100%;
+}
+
 h2 {
   font-size: 1.5rem;
   margin-bottom: 16px;
 }
+
 </style>

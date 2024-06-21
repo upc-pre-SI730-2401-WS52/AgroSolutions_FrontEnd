@@ -1,11 +1,13 @@
 <template>
   <div class="main" role="main" aria-label="Lista de tareas pendientes">
+    <h1 style="display: flex; align-items: center;">
+      Pending Tasks
+      <Button @click="showAddTaskDialog = true" class="p-button-success" style="margin-left: 20px; background-color: #8dc9a6; border-color: #8dc9a6;">
+        Agregar Tarea
+      </Button>
+    </h1>
 
-
-
-
-    <!--<br><br>--> -m m
-    <h1>Pending Tasks</h1> <br>
+    <!-- DataTable for Pending Tasks -->
     <DataTable :value="tasks" tableStyle="min-width: 50rem" aria-label="Tabla de tareas pendientes">
       <Column field="Id" header="ID"></Column>
       <Column field="Name" header="Name"></Column>
@@ -18,66 +20,216 @@
       <Column header="Actions">
         <template #body="rowData">
           <div class="action-buttons">
-            <pv-button @click="editTask(rowData)">Edit</pv-button>
-            <pv-button  @click="deleteTask(rowData)">Delete</pv-button>
+            <Button @click="editTask(rowData)" class="edit-button">Edit</Button>
+            <Button @click="deleteTask(rowData.id)" class="delete-button">Delete</Button>
           </div>
         </template>
       </Column>
     </DataTable>
-  </div>
 
+    <!-- Edit Task Dialog -->
+    <Dialog v-model:visible="showEditTaskDialog" header="Edit Task" :modal="true" :closable="true">
+      <div class="dialog-content">
+        <form @submit.prevent="saveEditedTask">
+          <div class="p-fluid">
+            <div class="p-field">
+              <label for="editName">Name</label>
+              <InputText id="editName" v-model="editedTask.name" />
+            </div>
+            <div class="p-field">
+              <label for="editDescription">Description</label>
+              <InputText id="editDescription" v-model="editedTask.description" />
+            </div>
+            <div class="p-field">
+              <label for="editDueDate">Due Date</label>
+              <InputText id="editDueDate" v-model="editedTask.dueDate" />
+            </div>
+            <div class="p-field">
+              <label for="editAssignedTo">Assigned To</label>
+              <InputText id="editAssignedTo" v-model="editedTask.assignedTo" />
+            </div>
+            <div class="p-field">
+              <label for="editPriority">Priority</label>
+              <InputText id="editPriority" v-model="editedTask.priority" />
+            </div>
+            <div class="p-field">
+              <label for="editCategory">Category</label>
+              <InputText id="editCategory" v-model="editedTask.category" />
+            </div>
+            <div class="p-field">
+              <label for="stateOfTask">State Of Task</label>
+              <InputText id="stateOfTask" v-model="editedTask.stateOfTask" />
+            </div>
+            <div class="p-field">
+              <Button type="submit" label="Save" class="p-button-success" style="background-color: #8dc9a6; border-color: #8dc9a6;" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </Dialog>
+
+    <!-- Add Task Dialog -->
+    <Dialog v-model:visible="showAddTaskDialog" header="Add Task" :modal="true" :closable="true">
+      <div class="dialog-content">
+        <form @submit.prevent="addTask">
+          <div class="p-fluid">
+            <div class="p-field">
+              <label for="newName">Name</label>
+              <InputText id="newName" v-model="newTask.name" />
+            </div>
+            <div class="p-field">
+              <label for="newDescription">Description</label>
+              <InputText id="newDescription" v-model="newTask.description" />
+            </div>
+            <div class="p-field">
+              <label for="newDueDate">Due Date</label>
+              <InputText id="newDueDate" v-model="newTask.dueDate" />
+            </div>
+            <div class="p-field">
+              <label for="newAssignedTo">Assigned To</label>
+              <InputText id="newAssignedTo" v-model="newTask.assignedTo" />
+            </div>
+            <div class="p-field">
+              <label for="newPriority">Priority</label>
+              <InputText id="newPriority" v-model="newTask.priority" />
+            </div>
+            <div class="p-field">
+              <label for="newCategory">Category</label>
+              <InputText id="newCategory" v-model="newTask.category" />
+            </div>
+            <div class="p-field">
+              <label for="stateOfTask">State Of Task</label>
+              <InputText id="stateOfTask" v-model="newTask.stateOfTask" />
+            </div>
+            <div class="p-field">
+              <Button type="submit" label="Add" class="p-button-success" style="background-color: #8dc9a6; border-color: #8dc9a6;" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </Dialog>
+  </div>
 </template>
+
 <script>
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
-import {UserApiService} from "@/shared/services/user-api.service.api.js";
+import Dialog from "primevue/dialog";
+import InputText from "primevue/inputtext";
+import Button from "primevue/button";
+import { PendingTasksApiServiceApi } from "@/shared/services/pending-tasks.api.service.api.js";
 
 export default {
-  name: 'the-home-table',
+  name: "TheHomeTable",
   components: {
     DataTable,
-    Column
+    Column,
+    Dialog,
+    InputText,
+    Button,
   },
   data() {
     return {
       tasks: [],
-      userApiService: new UserApiService()
+      showEditTaskDialog: false,
+      showAddTaskDialog: false,
+      editedTask: {
+        id: null,
+        name: "",
+        description: "",
+        dueDate: "",
+        assignedTo: "",
+        priority: "",
+        category: "",
+        stateOfTask: "",
+      },
+      newTask: {
+        name: "",
+        description: "",
+        dueDate: "",
+        assignedTo: "",
+        priority: "",
+        category: "",
+        stateOfTask: "",
+      },
+      pendingTasksApiServiceApi: new PendingTasksApiServiceApi(),
     };
   },
-  async created() {
-    await this.refresh();
+  created() {
+    this.refresh();
   },
   methods: {
-
     async refresh() {
       try {
-        const response = await this.userApiService.getAllTasks();
+        const response = await this.pendingTasksApiServiceApi.getAllTask();
         this.tasks = response.data;
       } catch (error) {
-        console.error('Error al obtener los usuarios:', error);
+        console.error("Error fetching tasks:", error);
       }
     },
     editTask(rowData) {
-      console.log('Editar tarea:', rowData);
+      this.editedTask.id = rowData.id;
+      this.editedTask.name = rowData.name;
+      this.editedTask.description = rowData.description;
+      this.editedTask.dueDate = rowData.dueDate;
+      this.editedTask.assignedTo = rowData.assignedTo;
+      this.editedTask.priority = rowData.priority;
+      this.editedTask.category = rowData.category;
+      this.editedTask.stateOfTask = rowData.stateOfTask;
+
+      this.showEditTaskDialog = true;
     },
-    deleteTask(rowData) {
-      console.log('Eliminar tarea:', rowData);
+    async saveEditedTask() {
+      try {
+        const response = await this.pendingTasksApiServiceApi.updateTask(
+            this.editedTask.id,
+            this.editedTask
+        );
+        if (response.status === 200) {
+          alert("Task updated successfully.");
+          this.showEditTaskDialog = false;
+          this.refresh();
+        } else {
+          alert("Error updating task.");
+        }
+      } catch (error) {
+        console.error("Error updating task:", error);
+        alert("Error updating task.");
+      }
     },
-    addTask() {
-      // Asumiendo que tasks es un array, podrías agregar la nueva tarea al array
-      this.tasks.push({
-        Id: this.tasks.length + 1, // Generar ID de manera adecuada según tus datos
-        Name: this.newTask.name,
-        DescriptionTask: this.newTask.description,
-        DueDate: this.newTask.dueDate,
-        AssignedTo: this.newTask.assignedTo,
-        Priority: this.newTask.priority,
-        Category: this.newTask.category,
-        StateOfTask:  this.newTask.category,
-      })
-    }
-  }
-}
+    async deleteTask(id) {
+      try {
+        const response = await this.pendingTasksApiServiceApi.deleteTask(id);
+        if (response.status === 200) {
+          alert("Task deleted successfully.");
+          this.refresh();
+        } else {
+          alert("Error deleting task.");
+        }
+      } catch (error) {
+        console.error("Error deleting task:", error);
+        alert("Error deleting task.");
+      }
+    },
+    async addTask() {
+      try {
+        const response = await this.pendingTasksApiServiceApi.createTask(
+            this.newTask
+        );
+        if (response.status === 201) {
+          alert("Task added successfully.");
+          this.showAddTaskDialog = false;
+          this.refresh();
+        } else {
+          alert("Error adding task.");
+        }
+      } catch (error) {
+        console.error("Error adding task:", error);
+        alert("Error adding task.");
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -95,6 +247,7 @@ export default {
 .p-datatable-tbody .p-datatable-row:hover {
   background-color: #f0f0f0;
 }
+
 h1 {
   font-size: 36px;
   color: #75aa9c;
@@ -104,11 +257,41 @@ h1 {
   display: flex;
   justify-content: space-around;
 }
-.action-buttons button {
+
+.action-buttons .edit-button,
+.action-buttons .delete-button {
   padding: 5px 10px;
   margin: 5px;
+  min-width: 70px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.action-buttons .edit-button {
+  background-color: #75aa9c;
+  color: white;
+}
 
+.action-buttons .edit-button:hover {
+  background-color: #5c887b;
+}
 
+.action-buttons .delete-button {
+  background-color: #ff6347;
+  color: white;
+}
+
+.action-buttons .delete-button:hover {
+  background-color: #e6523c;
+}
+
+.dialog-content {
+  padding: 20px;
+}
+
+.dialog-content .p-field {
+  margin-bottom: 1.5rem;
+}
 </style>
