@@ -16,6 +16,7 @@ import Cropsall from "@/pages/cropsall.vue";
 import TheEmployeesComponent from "@/pages/the-employees.vue";
 import TheCreateOrders from "@/pages/the-create-orders.vue";
 import TheTeam from "@/pages/the-team.vue";
+import TheBlog from "@/pages/the-blog.vue";
 
 const routes = [
     { path: '/', component: TheMain },
@@ -34,7 +35,9 @@ const routes = [
     { path: '/generate-order/:productId', name: 'TheGenerateOrder', component: theGenerateOrderComponent },
     { path: '/employees', name: 'employees', component: TheEmployeesComponent },
     { path: '/employees-team', name: 'equipment', component: TheTeam },
-    { path: '/create_order', component: TheCreateOrders }
+    { path: '/create_order', component: TheCreateOrders },
+    { path: '/blog', component: TheBlog }
+
 ]
 
 const router = createRouter({

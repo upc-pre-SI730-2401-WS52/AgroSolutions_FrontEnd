@@ -19,6 +19,7 @@
         <router-link to="/finances" class="link">Finances</router-link>
         <router-link to="/orders" class="link">Orders</router-link>
         <router-link to="/pending_payments" class="link">Pending Payments</router-link>
+        <router-link to="/blog" class="link">Blog</router-link>
         <button @click="logout" class="button-logout">Log out</button>
 
       </div>

@@ -3,7 +3,7 @@ import TheHeaderSessionComponent from "@/components/elements/the-header-session.
 import TheFooter from "@/components/elements/the-footer.component.vue";
 import DataTable from "primevue/datatable"; // Change this line
 import Column from "primevue/column";
-import TheHomeTable from "@/components/peding-task/the-peding-table.vue"; // Change this line
+import TheHomeTable from "@/components/peding-task/the-peding-table.vue";
 
 export default {
   name: 'the-main',
@@ -19,8 +19,8 @@ export default {
 </script>
 
 <template>
-  <header>
-    <the-header-session-component/>
+    <header>
+  <the-header-session-component/>
   </header>
 
   <main>
