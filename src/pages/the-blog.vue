@@ -5,7 +5,6 @@
   <br/>
   <br/>
   <br/>
-  <br/>
 
   <main>
     <div>
@@ -56,7 +55,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .blog-list {
   display: flex;
   flex-wrap: wrap;
