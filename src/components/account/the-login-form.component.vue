@@ -46,7 +46,7 @@ export default {
         const userApiService = new UserApiService();
         const user = await userApiService.login(this.username, this.password);
         if (user) {
-          await router.push('/home');
+          await router.push('/root');
         } else {
           console.error('Credenciales incorrectas');
         }

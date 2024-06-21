@@ -2,39 +2,34 @@
   <header class="header">
     <div class="container">
       <div class="left-section">
-
         <div class="logo-container">
           <img src="../../assets/images/logo.png" alt="Logo" class="logo">
-          <!--<router-link to="/" class="link">-->
           <h1 class="company-name">{{ companyName }}</h1>
-          <!--</router-link>-->
-          <language-switcher aria-label="Language switcher"/>
+          <language-switcher aria-label="Language switcher"></language-switcher>
         </div>
       </div>
       <div class="right-section">
-        <router-link to="/home" class="link">Pending Tasks</router-link>
-        <router-link to="/list-crops" class="link">Crops</router-link>
-        <router-link to="/employees" class="link">Employees</router-link>
-        <router-link to="/store" class="link">Store</router-link>
-        <router-link to="/finances" class="link">Finances</router-link>
-        <router-link to="/orders" class="link">Orders</router-link>
-        <router-link to="/pending_payments" class="link">Pending Payments</router-link>
-        <router-link to="/blog" class="link">Blog</router-link>
-        <button @click="logout" class="button-logout">Log out</button>
-
+        <router-link to="/home" class="link" aria-label="Home">Home</router-link>
+        <router-link to="/pending-task" class="link" aria-label="Pending Tasks">Pending Tasks</router-link>
+        <router-link to="/list-crops" class="link" aria-label="Crops">Crops</router-link>
+        <router-link to="/employees" class="link" aria-label="Employees">Employees</router-link>
+        <router-link to="/store" class="link" aria-label="Store">Store</router-link>
+        <router-link to="/finances" class="link" aria-label="Finances">Finances</router-link>
+        <router-link to="/orders" class="link" aria-label="Orders">Orders</router-link>
+        <router-link to="/pending_payments" class="link" aria-label="Pending Payments">Pending Payments</router-link>
+        <router-link to="/blog" class="link" aria-label="Blog">Blog</router-link>
+        <button @click="logout" class="button-logout" aria-label="Log out">Log out</button>
       </div>
     </div>
   </header>
 </template>
 
 <script>
-
-
 import LanguageSwitcher from "@/components/elements/the-language-switcher.vue";
 
 export default {
   name: 'TheHeaderSession',
-  components: {LanguageSwitcher},
+  components: { LanguageSwitcher },
   data() {
     return {
       companyName: 'AgroSolution'
@@ -43,7 +38,7 @@ export default {
   methods: {
     async logout() {
       try {
-        await this.$router.push('/'); // Cambia '/' por la ruta a la que deseas redirigir al usuario
+        await this.$router.push('/');
       } catch (error) {
         console.error('Error:', error);
       }
@@ -54,9 +49,9 @@ export default {
 
 <style scoped>
 .header {
-  background-color: #ffffff; /* Color de fondo */
+  background-color: #ffffff;
   padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -86,24 +81,50 @@ export default {
   text-decoration: none;
   color: #333;
   margin-right: 20px;
-  transition: color 0.3s;
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.3s;
 }
 
 .link:hover {
-  color: #007bff; /* Color del texto al pasar el ratón */
+  color: #1a493f;
+  border-bottom-color: #1a4a3f;
 }
 
 .button-logout {
-  background-color: #dc3545; /* Color de fondo */
-  color: #ffffff; /* Color del texto */
-  border: none; /* Sin borde */
-  padding: 10px 20px; /* Padding */
-  border-radius: 20px; /* Bordes redondeados */
+  background-color: #dc3545;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; /* Transición suave */
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px;
+  margin-left: 10px;
 }
 
 .button-logout:hover {
-  background-color: #bd2130; /* Color de fondo al pasar el ratón */
+  background-color: #bd2130;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right-section {
+    margin-top: 10px;
+  }
+
+  .link {
+    margin-right: 0;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .button-logout {
+    margin-left: 0;
+    display: block;
+  }
 }
 </style>

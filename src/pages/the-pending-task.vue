@@ -6,7 +6,7 @@ import Column from "primevue/column";
 import TheHomeTable from "@/components/peding-task/the-peding-table.vue";
 
 export default {
-  name: 'the-main',
+  name: 'the-pending-tasks',
   components: {
     TheHomeTable,
     DataTable,

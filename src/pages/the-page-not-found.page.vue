@@ -4,7 +4,7 @@
       <div class="not-found-overlay"></div>
       <h1 class="not-found-title">{{ $t('notFoundPage') }}</h1>
       <div class="not-found-actions">
-        <pv-button @click="home" class="button-home">{{ $t('return') }}</pv-button>
+        <pv-button @click="home" class="button-home">{{ $t('home') }}</pv-button>
       </div>
     </div>
   </div>
@@ -16,7 +16,7 @@ export default {
   methods: {
     async home() {
       try {
-        await this.$router.push('/');
+        await this.$router.push('/home');
       } catch (error) {
         console.error('Error:', error);
       }
