@@ -1,6 +1,6 @@
 <script>
 
-import { CropsApiService } from '@/services/crop-api.service.js'
+import { CropsApiService } from '@/shared/services/crop-api.service.js'
 import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
 
 export default {

@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import { FinanzasApiService } from "@/services/finanzas-api.service.js";
+import { FinanzasApiService } from "@/shared/services/finanzas-api.service.js";
 import { ref } from 'vue';
 import Button from 'primevue/button';
 import Dialog from 'primevue/dialog';

@@ -12,7 +12,7 @@
 <script>
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
-import {UserApiService} from "@/services/user-api.service.api.js";
+import {UserApiService} from "@/shared/services/user-api.service.api.js";
 
 export default {
   name: 'the-home-table',

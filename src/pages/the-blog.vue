@@ -22,7 +22,7 @@
 import TheHeaderSessionComponent from "@/components/elements/the-header-session.component.vue";
 
 import CardBlog from '@/components/blog/card-blog.vue';
-import BlogApiService from '@/services/blog-api.service.js';
+import BlogApiService from '@/shared/services/blog-api.service.js';
 import TheHomeTable from "@/components/peding-task/the-peding-table.vue";
 import TheFooter from "@/components/elements/the-footer.component.vue";
 

@@ -24,7 +24,7 @@
 import EmployeeCard from '../components/employee/EmployeeCard.vue';
 import EmployeeInformation from '../components/employee/EmployeeInformation.vue';
 import AddEmployee from '../components/employee/AddEmployee.vue';
-import {addEmployee as addEmployeeService, getEmployees} from '../services/employee-api.service.js';
+import {addEmployee as addEmployeeService, getEmployees} from '@/shared/services/employee-api.service.js';
 import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
 
 export default {

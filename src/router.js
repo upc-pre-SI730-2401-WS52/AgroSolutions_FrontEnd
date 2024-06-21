@@ -16,7 +16,8 @@ import Cropsall from "@/pages/cropsall.vue";
 import TheEmployeesComponent from "@/pages/the-employees.vue";
 import TheCreateOrders from "@/pages/the-create-orders.vue";
 import TheTeam from "@/pages/the-team.vue";
-import TheBlog from "@/pages/the-blog.vue";
+import TheBlog from "@/pages/the-blog.vue"
+import thePageNotFoundPage from "@/pages/the-page-not-found.page.vue";
 
 const routes = [
     { path: '/', component: TheMain },
@@ -36,7 +37,9 @@ const routes = [
     { path: '/employees', name: 'employees', component: TheEmployeesComponent },
     { path: '/employees-team', name: 'equipment', component: TheTeam },
     { path: '/create_order', component: TheCreateOrders },
-    { path: '/blog', component: TheBlog }
+    { path: '/blog', component: TheBlog },
+    { path: '/:pathMatch(.*)*', component: thePageNotFoundPage }
+
 
 ]
 

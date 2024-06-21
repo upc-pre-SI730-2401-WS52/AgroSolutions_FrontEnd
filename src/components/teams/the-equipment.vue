@@ -14,7 +14,7 @@
 
 <script>
 import CardEquipment from './CardEquipment.vue';
-import {getTeams} from "@/services/employee-api.service.js";
+import {getTeams} from "@/shared/services/employee-api.service.js";
 
 export default {
   name: 'Equipment',

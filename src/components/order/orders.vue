@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import {ProviderApiService} from "@/services/provider-api.service.js";
+import {ProviderApiService} from "@/shared/services/provider-api.service.js";
 import { ref, onMounted } from 'vue';
 import DataView from 'primevue/dataview';
 import Tag from 'primevue/tag';

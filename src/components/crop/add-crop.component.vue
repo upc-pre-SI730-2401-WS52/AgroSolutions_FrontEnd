@@ -83,7 +83,7 @@
   </div>
 </template>
 <script>
-import {CropsApiService} from "@/services/crop-api.service.js";
+import {CropsApiService} from "@/shared/services/crop-api.service.js";
 
 export default {
   name: 'AddProduct',

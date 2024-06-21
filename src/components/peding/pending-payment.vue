@@ -74,8 +74,8 @@
 </template>
 
 <script>
-import {PagoPendienteApiService} from '@/services/pago-pendiente-api.service.js';
-import {CobranzaPendienteApiService} from "@/services/cobranza-pendiente-api.service.js";
+import {PagoPendienteApiService} from '@/shared/services/pago-pendiente-api.service.js';
+import {CobranzaPendienteApiService} from "@/shared/services/cobranza-pendiente-api.service.js";
 import {ref, onMounted} from 'vue';
 import Button from 'primevue/button';
 import Dialog from 'primevue/dialog';

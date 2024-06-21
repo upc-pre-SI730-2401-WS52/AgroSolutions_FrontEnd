@@ -85,7 +85,7 @@
 </template>
 
 <script>
-import {UserApiService} from "@/services/user-api.service.api.js";
+import {UserApiService} from "@/shared/services/user-api.service.api.js";
 
 export default {
   name: 'TheRegisterForm',
