@@ -21,9 +21,9 @@
 </template>
 
 <script>
-import EmployeeCard from '../components/employee/EmployeeCard.vue';
-import EmployeeInformation from '../components/employee/EmployeeInformation.vue';
-import AddEmployee from '../components/employee/AddEmployee.vue';
+import EmployeeCard from '../components/employee/employee-card.vue';
+import EmployeeInformation from '../components/employee/employee-information.vue';
+import AddEmployee from '../components/employee/add-employee.vue';
 import {addEmployee as addEmployeeService, getEmployees} from '@/shared/services/employee-api.service.js';
 import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
 

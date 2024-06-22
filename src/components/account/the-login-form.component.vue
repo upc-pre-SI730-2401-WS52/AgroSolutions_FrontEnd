@@ -46,7 +46,9 @@ export default {
         const userApiService = new UserApiService();
         const user = await userApiService.login(this.username, this.password);
         if (user) {
-          await router.push('/root');
+          // Aquí asumimos que user.user_type contiene el tipo de usuario (vendedor o agricultor)
+          localStorage.setItem('userType', user.user_type);
+          await router.push('/home');
         } else {
           console.error('Credenciales incorrectas');
         }

@@ -12,7 +12,7 @@
 <script>
 import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
 import ViewCrop from "@/components/crop/view-crop.component.vue";
-import CreateOrders from "@/components/order/CreateOrder.vue";
+import CreateOrders from "@/components/order/create-order.vue";
 
 export default {
   name: 'the-create-orders',

@@ -10,19 +10,20 @@
       </div>
       <div class="right-section">
         <router-link to="/home" class="link" aria-label="Home">Home</router-link>
-        <router-link to="/pending-task" class="link" aria-label="Pending Tasks">Pending Tasks</router-link>
-        <router-link to="/list-crops" class="link" aria-label="Crops">Crops</router-link>
-        <router-link to="/employees" class="link" aria-label="Employees">Employees</router-link>
-        <router-link to="/store" class="link" aria-label="Store">Store</router-link>
-        <router-link to="/finances" class="link" aria-label="Finances">Finances</router-link>
-        <router-link to="/orders" class="link" aria-label="Orders">Orders</router-link>
-        <router-link to="/pending_payments" class="link" aria-label="Pending Payments">Pending Payments</router-link>
+        <router-link v-if="isAgricultor" to="/pending-task" class="link" aria-label="Pending Tasks">Pending Tasks</router-link>
+        <router-link v-if="isAgricultor" to="/finances" class="link" aria-label="Finances">Finances</router-link>
+        <router-link v-if="isAgricultor" to="/pending_payments" class="link" aria-label="Pending Payments">Pending Payments</router-link>
+        <router-link v-if="isAgricultor" to="/employees" class="link" aria-label="Employees">Employees</router-link>
+        <router-link v-if="isAgricultor" to="/orders" class="link" aria-label="Orders">Orders</router-link>
+        <router-link v-if="isAgricultor" to="/list-crops" class="link" aria-label="Crops">Crops</router-link>
         <router-link to="/blog" class="link" aria-label="Blog">Blog</router-link>
+        <router-link v-if="isVendedor"to="/store" class="link" aria-label="Store">Store</router-link>
         <button @click="logout" class="button-logout" aria-label="Log out">Log out</button>
       </div>
     </div>
   </header>
 </template>
+
 
 <script>
 import LanguageSwitcher from "@/components/elements/the-language-switcher.vue";
@@ -35,9 +36,18 @@ export default {
       companyName: 'AgroSolution'
     };
   },
+  computed: {
+    isVendedor() {
+      return localStorage.getItem('userType') === 'vendedor';
+    },
+    isAgricultor() {
+      return localStorage.getItem('userType') === 'agricultor';
+    }
+  },
   methods: {
     async logout() {
       try {
+        localStorage.removeItem('userType'); // Limpiar tipo de usuario al cerrar sesión
         await this.$router.push('/');
       } catch (error) {
         console.error('Error:', error);
