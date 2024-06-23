@@ -91,83 +91,68 @@
           "amount": 500
         }
       ]
-    },
-    {
-      "id": "",
-      "full_name": "",
-      "company_name": "",
-      "email_address": "",
-      "phone_number": "",
-      "user_type": "",
-      "password": ""
-    },
-    {
-      "id": "",
-      "full_name": "",
-      "company_name": "",
-      "email_address": "",
-      "phone_number": "",
-      "user_type": "",
-      "password": ""
-    },
-    {
-      "id": "",
-      "full_name": "",
-      "company_name": "",
-      "email_address": "",
-      "phone_number": "",
-      "user_type": "",
-      "password": ""
     }
   ],
   "tasks": [
     {
-      "task_id": 1,
-      "description": "Preparar informe de ventas",
-      "task_status": "doing",
-      "id": "5f5a"
+      "Id": 1,
+      "Name": "Sample Task",
+      "DescriptionTask": "Lorem ipsum dolor sit amet.",
+      "DueDate": "2024-06-30",
+      "AssignedTo": "John Doe",
+      "Priority": "High",
+      "Category": "Work",
+      "StateOfTask": "To Do"
     },
     {
-      "task_id": 2,
-      "description": "Enviar correos electrónicos a clientes",
-      "task_status": "to do",
-      "id": "7274"
+      "Id": 2,
+      "Name": "Update Website Content",
+      "DescriptionTask": "Update the content on the company's.",
+      "DueDate": "2024-07-15",
+      "AssignedTo": "Jane Smith",
+      "Priority": "Medium",
+      "Category": "Marketing",
+      "StateOfTask": "To Do"
     },
     {
-      "task_id": 3,
-      "description": "Revisar inventario de productos",
-      "task_status": "to do",
-      "id": "eb1e"
+      "Id": 3,
+      "Name": "Review Quarterly Financial",
+      "DescriptionTask": "Review and analyze the financial.",
+      "DueDate": "2024-07-05",
+      "AssignedTo": "Michael Johnson",
+      "Priority": "High",
+      "Category": "Finance",
+      "StateOfTask": "In Progress"
     },
     {
-      "task_id": 4,
-      "description": "Realizar llamadas de seguimiento",
-      "task_status": "to do",
-      "id": "b465"
+      "Id": 4,
+      "Name": "Develop New Feature",
+      "DescriptionTask": "Implement a new feature based.",
+      "DueDate": "2024-07-10",
+      "AssignedTo": "Emily Brown",
+      "Priority": "High",
+      "Category": "Development",
+      "StateOfTask": "In Progress"
     },
     {
-      "task_id": 5,
-      "description": "Programar reunión con proveedores",
-      "task_status": "to do",
-      "id": "5e3a"
+      "Id": 5,
+      "Name": "Organize Team Meeting",
+      "DescriptionTask": "Schedule and organize a meeting.",
+      "DueDate": "2024-06-28",
+      "AssignedTo": "David Wilson",
+      "Priority": "Medium",
+      "Category": "Project",
+      "StateOfTask": "To Do"
     },
     {
-      "task_id": 6,
-      "description": "Actualizar catálogo de productos",
-      "task_status": "to do",
-      "id": "1185"
-    },
-    {
-      "task_id": 7,
-      "description": "Investigar nuevas estrategias de marketing",
-      "task_status": "to do",
-      "id": "5b6c"
-    },
-    {
-      "task_id": 8,
-      "description": "Asistir a reunión de equipo",
-      "task_status": "to do",
-      "id": "1017"
+      "Id": 6,
+      "Name": "Prepare Presentation",
+      "DescriptionTask": "Create a presentation for the upcoming.",
+      "DueDate": "2024-07-08",
+      "AssignedTo": "Sarah Thompson",
+      "Priority": "Medium",
+      "Category": "Events",
+      "StateOfTask": "To Do"
     }
   ],
   "cultivos": [
@@ -183,19 +168,6 @@
       "calendarioId": "11",
       "asesorId": "31",
       "image_Url": "https://i.postimg.cc/hGWLZTfZ/choclo.jpg"
-    },
-    {
-      "id": "8",
-      "estado": "Regular",
-      "area": 40,
-      "costo": 150,
-      "producto": "Tomate",
-      "retorno": 500,
-      "localizacion": "Ica",
-      "notificaciones": "Ninguna",
-      "calendarioId": "22",
-      "asesorId": "21",
-      "image_Url": "https://i.postimg.cc/jSC3YHqs/tomate.jpg"
     },
     {
       "id": "5",
@@ -297,26 +269,6 @@
       ]
     },
     {
-      "calendarioId": "22",
-      "dias": [
-        {
-          "fecha": "2024-05-15",
-          "actividad": "Preparación del terreno",
-          "estado": "Pre-siembra"
-        },
-        {
-          "fecha": "2024-05-16",
-          "actividad": "Siembra",
-          "estado": "Germinación"
-        },
-        {
-          "fecha": "2024-05-17",
-          "actividad": "Primer riego",
-          "estado": "Crecimiento temprano"
-        }
-      ]
-    },
-    {
       "id": "24",
       "dias": [
         {
@@ -392,7 +344,7 @@
       "id": "2",
       "proveedor": "Alejandro Rios",
       "costo": "6578",
-      "estadoEnvio": "En espera",
+      "estadoEnvio": "Entregado",
       "fechaEntrega": "12/06/2024",
       "localizacion": "-12.060155, -76.960981",
       "telefono": 996812457,
@@ -438,7 +390,7 @@
       "tipo": "Compra Semillas",
       "costo": "7455",
       "descripcion": "Compra mensual de semillas",
-      "pagado": 0
+      "pagado": 1
     },
     {
       "id": "a002",
@@ -499,6 +451,13 @@
       "ingresos": 7000,
       "gastos": 2000,
       "ganancias": 5000
+    },
+    {
+      "id": "202a",
+      "mes": "Enero",
+      "ingresos": 1,
+      "gastos": 1,
+      "ganancias": 0
     }
   ],
   "employees": [
@@ -626,11 +585,149 @@
         }
       ],
       "id": "ecbb"
+    },
+    {
+      "codigo_equipo": "E003",
+      "presupuesto": 100000,
+      "codigo_cultivo": "C003",
+      "asesor": {
+        "nombre": "Rosa",
+        "apellido": "Peres",
+        "dni": "87654321"
+      },
+      "operarios": [
+        {
+          "nombre": "Aldo",
+          "apellido": "Motes",
+          "dni": "12345678"
+        },
+        {
+          "nombre": "Felipe",
+          "apellido": "Ramirez",
+          "dni": "11223344"
+        }
+      ],
+      "id": "b656"
+    },
+    {
+      "codigo_equipo": "E004",
+      "presupuesto": 100000,
+      "codigo_cultivo": "C001",
+      "asesor": {
+        "nombre": "Pedro",
+        "apellido": "Ramirez",
+        "dni": "87654321"
+      },
+      "operarios": [
+        {
+          "nombre": "Mario",
+          "apellido": "Valdez",
+          "dni": "12345678"
+        },
+        {
+          "nombre": "Carlos",
+          "apellido": "Rodríguez",
+          "dni": "11223344"
+        }
+      ],
+      "id": "b656"
+    },
+    {
+      "codigo_equipo": "E004",
+      "presupuesto": 100000,
+      "codigo_cultivo": "C001",
+      "asesor": {
+        "nombre": "Pedro",
+        "apellido": "Ramirez",
+        "dni": "87654321"
+      },
+      "operarios": [
+        {
+          "nombre": "Mario",
+          "apellido": "Valdez",
+          "dni": "12345678"
+        },
+        {
+          "nombre": "Carlos",
+          "apellido": "Rodríguez",
+          "dni": "11223344"
+        }
+      ],
+      "id": "b656"
+    },
+    {
+      "codigo_equipo": "E005",
+      "presupuesto": 85000,
+      "codigo_cultivo": "C002",
+      "asesor": {
+        "nombre": "Juan",
+        "apellido": "García",
+        "dni": "98765432"
+      },
+      "operarios": [
+        {
+          "nombre": "Luis",
+          "apellido": "Pérez",
+          "dni": "54321678"
+        },
+        {
+          "nombre": "Ana",
+          "apellido": "Martínez",
+          "dni": "99887766"
+        }
+      ],
+      "id": "b657"
+    },
+    {
+      "codigo_equipo": "E006",
+      "presupuesto": 120000,
+      "codigo_cultivo": "C003",
+      "asesor": {
+        "nombre": "María",
+        "apellido": "López",
+        "dni": "76543210"
+      },
+      "operarios": [
+        {
+          "nombre": "Jorge",
+          "apellido": "Hernández",
+          "dni": "33445566"
+        },
+        {
+          "nombre": "Elena",
+          "apellido": "Gómez",
+          "dni": "88990011"
+        }
+      ],
+      "id": "b658"
+    },
+    {
+      "codigo_equipo": "E007",
+      "presupuesto": 95000,
+      "codigo_cultivo": "C004",
+      "asesor": {
+        "nombre": "Andrea",
+        "apellido": "Castro",
+        "dni": "65432109"
+      },
+      "operarios": [
+        {
+          "nombre": "Roberto",
+          "apellido": "Fernández",
+          "dni": "55442"
+        },
+        {
+          "nombre": "Patricia",
+          "apellido": "Sánchez",
+          "dni": "77665544"
+        }
+      ],
+      "id": "b659"
     }
   ],
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "producto": "Papa",
       "antiguedad": 4,
       "cantidad_minima": 45,
@@ -639,7 +736,7 @@
       "valoracion": 4
     },
     {
-      "id": 2,
+      "id": "2",
       "producto": "Camote",
       "antiguedad": 3,
       "cantidad_minima": 67,
@@ -648,7 +745,7 @@
       "valoracion": 3
     },
     {
-      "id": 3,
+      "id": "3",
       "producto": "Oca",
       "antiguedad": 2,
       "cantidad_minima": 89,
@@ -657,7 +754,7 @@
       "valoracion": 5
     },
     {
-      "id": 4,
+      "id": "4",
       "producto": "Mashua",
       "antiguedad": 5,
       "cantidad_minima": 52,
@@ -666,7 +763,7 @@
       "valoracion": 2
     },
     {
-      "id": 5,
+      "id": "5",
       "producto": "Yuca",
       "antiguedad": 1,
       "cantidad_minima": 23,
@@ -675,7 +772,7 @@
       "valoracion": 4
     },
     {
-      "id": 6,
+      "id": "6",
       "producto": "Arracacha",
       "antiguedad": 3,
       "cantidad_minima": 45,
@@ -684,7 +781,7 @@
       "valoracion": 3
     },
     {
-      "id": 7,
+      "id": "7",
       "producto": "Maca",
       "antiguedad": 4,
       "cantidad_minima": 56,
@@ -693,7 +790,7 @@
       "valoracion": 5
     },
     {
-      "id": 8,
+      "id": "8",
       "producto": "Olluco",
       "antiguedad": 2,
       "cantidad_minima": 65,
@@ -702,7 +799,7 @@
       "valoracion": 2
     },
     {
-      "id": 9,
+      "id": "9",
       "producto": "Quinua",
       "antiguedad": 5,
       "cantidad_minima": 34,
@@ -711,7 +808,7 @@
       "valoracion": 3
     },
     {
-      "id": 10,
+      "id": "10",
       "producto": "Tarwi",
       "antiguedad": 4,
       "cantidad_minima": 78,
@@ -720,7 +817,7 @@
       "valoracion": 4
     },
     {
-      "id": 11,
+      "id": "11",
       "producto": "Zapallo",
       "antiguedad": 2,
       "cantidad_minima": 47,
@@ -729,7 +826,7 @@
       "valoracion": 5
     },
     {
-      "id": 12,
+      "id": "12",
       "producto": "Calabaza",
       "antiguedad": 3,
       "cantidad_minima": 64,
@@ -738,7 +835,7 @@
       "valoracion": 2
     },
     {
-      "id": 13,
+      "id": "13",
       "producto": "Calabacín",
       "antiguedad": 1,
       "cantidad_minima": 83,
@@ -747,7 +844,7 @@
       "valoracion": 3
     },
     {
-      "id": 14,
+      "id": "14",
       "producto": "Pepino",
       "antiguedad": 5,
       "cantidad_minima": 29,
@@ -756,7 +853,7 @@
       "valoracion": 4
     },
     {
-      "id": 15,
+      "id": "15",
       "producto": "Pepinillo",
       "antiguedad": 2,
       "cantidad_minima": 34,
@@ -765,7 +862,7 @@
       "valoracion": 2
     },
     {
-      "id": 16,
+      "id": "16",
       "producto": "Tomate",
       "antiguedad": 3,
       "cantidad_minima": 78,
@@ -774,7 +871,7 @@
       "valoracion": 5
     },
     {
-      "id": 17,
+      "id": "17",
       "producto": "Tomatillo",
       "antiguedad": 4,
       "cantidad_minima": 54,
@@ -783,7 +880,7 @@
       "valoracion": 3
     },
     {
-      "id": 18,
+      "id": "18",
       "producto": "Pimiento",
       "antiguedad": 1,
       "cantidad_minima": 76,
@@ -792,7 +889,7 @@
       "valoracion": 4
     },
     {
-      "id": 19,
+      "id": "19",
       "producto": "Ají amarillo",
       "antiguedad": 2,
       "cantidad_minima": 45,
@@ -801,7 +898,7 @@
       "valoracion": 3
     },
     {
-      "id": 20,
+      "id": "20",
       "producto": "Ají panca",
       "antiguedad": 5,
       "cantidad_minima": 34,
@@ -810,7 +907,7 @@
       "valoracion": 5
     },
     {
-      "id": 21,
+      "id": "21",
       "producto": "Ají rocoto",
       "antiguedad": 4,
       "cantidad_minima": 78,
@@ -819,7 +916,7 @@
       "valoracion": 2
     },
     {
-      "id": 22,
+      "id": "22",
       "producto": "Ají limo",
       "antiguedad": 1,
       "cantidad_minima": 56,
@@ -828,7 +925,7 @@
       "valoracion": 4
     },
     {
-      "id": 23,
+      "id": "23",
       "producto": "Choclo",
       "antiguedad": 2,
       "cantidad_minima": 89,
@@ -837,7 +934,7 @@
       "valoracion": 3
     },
     {
-      "id": 24,
+      "id": "24",
       "producto": "Chirimoya",
       "antiguedad": 5,
       "cantidad_minima": 47,
@@ -846,7 +943,7 @@
       "valoracion": 5
     },
     {
-      "id": 25,
+      "id": "25",
       "producto": "Palta",
       "antiguedad": 4,
       "cantidad_minima": 56,
@@ -855,7 +952,7 @@
       "valoracion": 3
     },
     {
-      "id": 26,
+      "id": "26",
       "producto": "Caigua",
       "antiguedad": 3,
       "cantidad_minima": 78,
@@ -864,7 +961,7 @@
       "valoracion": 4
     },
     {
-      "id": 27,
+      "id": "27",
       "producto": "Chayote",
       "antiguedad": 2,
       "cantidad_minima": 45,
@@ -873,7 +970,7 @@
       "valoracion": 3
     },
     {
-      "id": 28,
+      "id": "28",
       "producto": "Espinaca",
       "antiguedad": 1,
       "cantidad_minima": 67,
@@ -882,7 +979,7 @@
       "valoracion": 5
     },
     {
-      "id": 29,
+      "id": "29",
       "producto": "Acelga",
       "antiguedad": 4,
       "cantidad_minima": 89,
@@ -891,7 +988,7 @@
       "valoracion": 2
     },
     {
-      "id": 30,
+      "id": "30",
       "producto": "Lechuga",
       "antiguedad": 5,
       "cantidad_minima": 56,
@@ -900,7 +997,35 @@
       "valoracion": 4
     }
   ],
-  "orders":[
-
-  ]
+  "blog": [
+    {
+      "id": "1",
+      "sector": "vendedor",
+      "texto": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "link": "link noticia",
+      "urlImagen": "data:image/jpeg;base64,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"
+    },
+    {
+      "id": "2",
+      "sector": "agricultor",
+      "texto": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "urlImagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMiAVqJadXC4Lrp1abJekS7urmkUf6n96R-g&s",
+      "link": "link noticia"
+    },
+    {
+      "id": "3",
+      "sector": "vendedor",
+      "texto": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. anaely es muy mandona",
+      "urlImagen": "https://www.google.com/imgres?q=ventas&imgurl=https%3A%2F%2Fcdn2.hubspot.net%2Fhubfs%2F53%2FQue%25CC%2581%2520es%2520el%2520ciclo%2520de%2520ventas%2520y%2520cua%25CC%2581les%2520son%2520sus%2520fases.jpg&imgrefurl=https%3A%2F%2Fblog.hubspot.es%2Fsales%2Fciclo-de-ventas&docid=7vnesMwSEGTtPM&tbnid=SFH0XE_McjqA-M&vet=12ahUKEwj_7Imzh-uGAxUQHrkGHV3ZBIkQM3oECH4QAA..i&w=598&h=398&hcb=2&ved=2ahUKEwj_7Imzh-uGAxUQHrkGHV3ZBIkQM3oECH4QAA",
+      "link": "link noticia"
+    },
+    {
+      "id": "4",
+      "sector": "agricultor",
+      "texto": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.eso eso eso ",
+      "urlImagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBpl6o1eC5IcrHreZ-N5Tk0yMN2mT1ZAeaLg&s",
+      "link": "link noticia"
+    }
+  ],
+  "orders": []
 }

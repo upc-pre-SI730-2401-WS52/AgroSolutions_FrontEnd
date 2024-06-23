@@ -1,7 +1,7 @@
 <script>
-import TheHeader from "@/components/the-main-header.component.vue";
-import TheFooter from "@/components/the-footer.component.vue";
-import TheHomeBanner from "@/components/the-home-banner.component.vue";
+import TheHeader from "@/components/elements/the-main-header.component.vue";
+import TheFooter from "@/components/elements/the-footer.component.vue";
+import TheHomeBanner from "@/components/root/the-root-banner.component.vue";
 
 export default {
   name: 'the-main',

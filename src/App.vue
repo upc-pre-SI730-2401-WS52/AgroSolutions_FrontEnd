@@ -1,7 +1,7 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.component.vue'
 import TheWelcome from './components/TheWelcome.vue'
-import TheFooter from "@/components/the-footer.component.vue";
+import TheFooter from "@/components/elements/the-footer.component.vue";
 </script>
 
 <template>

@@ -10,9 +10,9 @@
 </template>
 
 <script>
-import TheHeaderSession from "@/components/the-header-session.component.vue";
-import TheFinance from "@/components/finance.vue";
-import TheLoginForm from "@/components/the-login-form.component.vue";
+import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
+import TheFinance from "@/components/finance/finance.vue";
+import TheLoginForm from "@/components/account/the-login-form.component.vue";
 
 export default {
   name: 'the-finances',

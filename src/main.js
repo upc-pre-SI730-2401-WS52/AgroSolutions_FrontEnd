@@ -21,6 +21,8 @@ import Fieldset from "primevue/fieldset";
 import Card from "primevue/card";
 import SelectButton from 'primevue/selectbutton';
 import Dropdown from 'primevue/dropdown';
+import Galleria from 'primevue/galleria';
+
 const app = createApp(App);
 
 app.use(PrimeVue);
@@ -42,4 +44,6 @@ app.component('pv-card', Card)
 app.component('pv-selectButton', SelectButton)
 app.component('pv-row', Row)
 app.component('Dropdown', Dropdown);
+app.component('pv-galleria', Galleria);
+
 app.mount('#app')

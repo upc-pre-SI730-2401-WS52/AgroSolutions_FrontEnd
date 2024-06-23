@@ -1,11 +1,16 @@
 <template>
   <div class="container">
     <header>
+      <the-header-start-component></the-header-start-component>
     </header>
+    <br/> <br/>
     <main>
       <div class="content">
         <div class="left-side">
           <h1 class="welcome-text">AgroSolutions</h1>
+          <div class="image-container">
+            <img src="..\..\src\assets\images\login.png" alt="image of farmer" class="hero-image" role="img" aria-label="Image of Farmer">
+          </div>
           <div class="form-container">
             <the-login-form></the-login-form>
           </div>
@@ -18,12 +23,17 @@
 </template>
 
 <script>
-import TheHeaderSession from "@/components/the-header-session.component.vue";
-import TheLoginForm from "@/components/the-login-form.component.vue";
+import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
+import TheLoginForm from "@/components/account/the-login-form.component.vue";
+import theHeaderStartComponent from "@/components/elements/the-header-start.component.vue";
 
 export default {
-  name: 'the-login',
-  components: { TheLoginForm, TheHeaderSession }
+  name: 'TheLogin',
+  components: {
+    theHeaderStartComponent,
+    TheLoginForm,
+    TheHeaderSession
+  }
 }
 </script>
 
@@ -76,7 +86,7 @@ main {
   font-size: 3em;
   font-weight: bold;
   text-align: center;
-  padding: 50px;
+  padding: 10px;
 }
 
 .form-container {
@@ -86,5 +96,19 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: -60px;
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 25%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 40px;
 }
 </style>

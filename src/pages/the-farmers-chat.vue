@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import TheHeaderSession from "@/components/the-header-session.component.vue";
+import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
 import TheFarmerChat from "@/components/farmer-chat.vue";
 export default {
   name: 'the-orders',
