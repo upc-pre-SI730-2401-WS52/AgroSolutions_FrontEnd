@@ -66,6 +66,43 @@ const es = ({
     phone: 'Telefono',
     delivered: 'Entregado',
     notification: 'Notificar',
+
+
+    login: {
+        title: 'Iniciar Sesión',
+        email: 'Correo Electrónico',
+        enterEmail: 'Ingrese su correo electrónico',
+        password: 'Contraseña',
+        enterPassword: 'Ingrese su contraseña',
+        login: 'Iniciar Sesión',
+        register: 'Registrarse'
+    },
+
+    registration: {
+        formLabel: 'Formulario de registro',
+        title: 'Registro',
+        fullName: 'Nombre completo',
+        enterFullName: 'Ingrese su nombre completo',
+        id: 'DNI o RUC',
+        enterId: 'Ingrese su DNI o RUC',
+        companyName: 'Nombre de la empresa',
+        enterCompanyName: 'Ingrese el nombre de su empresa',
+        emailAddress: 'Correo electrónico',
+        enterEmailAddress: 'Ingrese su correo electrónico',
+        phoneNumber: 'Número de teléfono',
+        enterPhoneNumber: 'Ingrese su número de teléfono',
+        userType: 'Tipo de usuario',
+        selectUserType: 'Seleccione su tipo de usuario',
+        agricultor: 'Agricultor',
+        vendedor: 'Vendedor',
+        password: 'Contraseña',
+        enterPassword: 'Ingrese su contraseña',
+        confirmPassword: 'Confirmar contraseña',
+        enterConfirmPassword: 'Confirme su contraseña',
+        register: 'Registrar'
+    }
+
+
 })
 
 export default es;

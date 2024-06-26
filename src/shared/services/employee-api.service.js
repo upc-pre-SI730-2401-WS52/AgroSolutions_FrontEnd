@@ -17,6 +17,12 @@ export function addEmployee(employee) {
     }).then(response => response.json());
 }
 
+export function deleteEmployee(id) {
+    return fetch(`${apiBaseUrl}/employees/${id}`, {
+        method: 'DELETE'
+    }).then(response => response.json());
+}
+
 export function getTeams() {
     return fetch(`${apiBaseUrl}/equipos`)
         .then(response => response.json())

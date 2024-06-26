@@ -66,6 +66,44 @@ const en = ({
     phone: 'Phone',
     delivered: 'Delivered',
     notification: 'Notification',
+
+    login: {
+        title: 'Login',
+        email: 'Email',
+        enterEmail: 'Enter your email',
+        password: 'Password',
+        enterPassword: 'Enter your password',
+        login: 'Login',
+        register: 'Register'
+    },
+
+
+
+    registration: {
+        formLabel: 'Registration Form',
+        title: 'Register',
+        fullName: 'Full name',
+        enterFullName: 'Enter your full name',
+        id: 'DNI or RUC',
+        enterId: 'Enter your DNI or RUC',
+        companyName: 'Company name',
+        enterCompanyName: 'Enter your company name',
+        emailAddress: 'Email Address',
+        enterEmailAddress: 'Enter your email address',
+        phoneNumber: 'Phone number',
+        enterPhoneNumber: 'Enter your phone number',
+        userType: 'User type',
+        selectUserType: 'Select user type',
+        agricultor: 'Farmer',
+        vendedor: 'Vendor',
+        password: 'Password',
+        enterPassword: 'Enter your password',
+        confirmPassword: 'Confirm password',
+        enterConfirmPassword: 'Confirm your password',
+        register: 'Register'
+    }
+
+
 })
 
 export default en;

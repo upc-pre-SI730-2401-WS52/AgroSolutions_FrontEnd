@@ -1,35 +1,35 @@
 <template>
   <div class="login-form-container">
     <div class="login-form">
-      <h2>Login</h2>
+      <h2>{{ $t('login.title') }}</h2>
 
       <div class="form-group">
         <div class="input-label">
-          <label for="email">Email:</label>
+          <label for="email">{{ $t('login.email') }}:</label>
         </div>
         <div class="input-field">
-          <input type="text" id="email" v-model="username" required aria-label="Enter your email">
+          <input type="text" id="email" v-model="username" required :aria-label="$t('login.enterEmail')">
         </div>
       </div>
 
       <div class="form-group">
         <div class="input-label">
-          <label for="password">Password:</label>
+          <label for="password">{{ $t('login.password') }}:</label>
         </div>
         <div class="input-field">
-          <input type="password" id="password" v-model="password" required aria-label="Enter your password">
+          <input type="password" id="password" v-model="password" required :aria-label="$t('login.enterPassword')">
         </div>
       </div>
 
-      <button @click="login" aria-label="Login">Login</button>
+      <button @click="login" :aria-label="$t('login.login')">{{ $t('login.login') }}</button>
       <br/><br/>
-      <button @click="register" aria-label="Register">Register</button>
+      <button @click="register" :aria-label="$t('login.register')">{{ $t('login.register') }}</button>
     </div>
   </div>
 </template>
 
 <script>
-import {UserApiService} from "@/shared/services/user-api.service.js";
+import { UserApiService } from "@/shared/services/user-api.service.js";
 import router from "@/router.js";
 
 export default {
