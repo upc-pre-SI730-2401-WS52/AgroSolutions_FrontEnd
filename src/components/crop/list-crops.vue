@@ -12,7 +12,7 @@
           <div class="card-content" :style="{ backgroundColor: '#2C3E50' }" aria-label="Contenido de la tarjeta de cultivo">
             <div class="media align-items-center" aria-label="Sección de medios">
               <img
-                  :src="cultivo.image_Url"
+                  :src="cultivo.imageUrl"
                   class="cultivo-img"
                   alt="Imagen del cultivo"
                   :aria-label="'Imagen del cultivo ' + cultivo.producto"
@@ -71,29 +71,32 @@ export default {
 </script>
 
 <style scoped>
-.container1 {
-  width: 80%;
-  margin: 0 auto;
-}
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 20px;
 }
 
 .cultivo-card {
-  width: calc(50% - 10px );
   margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .card {
+  background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .card-content {
   padding: 20px;
+  background-color: #2C3E50;
+  color: #ffffff;
 }
 
 .cultivo-img {
@@ -105,6 +108,7 @@ export default {
 
 .button-container {
   text-align: center;
+  margin-top: 20px;
 }
 
 .button {
@@ -116,10 +120,11 @@ export default {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: #c82333;
 }
 
 .text-light {
@@ -146,4 +151,6 @@ footer {
   right: 0;
   z-index: 100;
 }
+
 </style>
+

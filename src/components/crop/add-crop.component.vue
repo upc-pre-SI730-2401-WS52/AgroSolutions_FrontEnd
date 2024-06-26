@@ -68,7 +68,7 @@
       <!-- Sección del calendario -->
       <div class="calendar-section">
         <h3 aria-label="Formulario para agregar un calendario">{{ $t('form.addCalendar') }}</h3>
-        <div class="form-group" v-for="(dia, index) in newProduct.calendario.dias" :key="index">
+        <div class="form-group" v-for="(dia, index) in newProduct.calendars" :key="index">
           <label :for="'fecha-' + index" :aria-label="'Ingresar fecha para el día ' + (index + 1)">{{ $t('form.date') }}</label>
           <input type="date" :id="'fecha-' + index" v-model="dia.fecha" :aria-label="'Ingresar fecha para el día ' + (index + 1)">
           <label :for="'actividad-' + index" :aria-label="'Ingresar actividad para el día ' + (index + 1)">{{ $t('form.activity') }}</label>
@@ -104,9 +104,7 @@ export default {
         notificaciones: '',
         image_Url: '',
         asesorId: '',
-        calendario: {
-          dias: []
-        }
+        calendars: []
       },
       asesores: [],
       nuevoDia: {
@@ -126,24 +124,19 @@ export default {
   },
   methods: {
     addDia() {
-      this.newProduct.calendario.dias.push({...this.nuevoDia});
+      this.newProduct.calendars.push({...this.nuevoDia});
       this.nuevoDia = { fecha: '', actividad: '', estado: '' };
     },
     removeDia(index) {
-      this.newProduct.calendario.dias.splice(index, 1);
+      this.newProduct.calendars.splice(index, 1);
     },
     async submitForm() {
       try {
         const service = new CropsApiService();
-        const calendarioResponse = await service.createCalendario(this.newProduct.calendario);
-        if (calendarioResponse.status === 201) {
-          this.newProduct.calendarioId = calendarioResponse.data.id;
-          delete this.newProduct.calendario;
-          const cultivoResponse = await service.createCultivo(this.newProduct);
-          if (cultivoResponse.status === 201) {
-            alert('Producto y calendario guardados con éxito');
-            this.resetForm();
-          }
+        const cultivoResponse = await service.createCultivo(this.newProduct);
+        if (cultivoResponse.status === 201) {
+          alert('Producto y calendario guardados con éxito');
+          this.resetForm();
         }
       } catch (error) {
         console.error('Error al guardar el producto y el calendario:', error);

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="margin-top: 50px; margin-bottom: 190px; margin-left: calc(100px);">
     <pv-fieldSet style="margin-top: 50px; margin-bottom: 50px;">
       <template #legend>
         <div class="flex align-items-center pl-2">
@@ -163,12 +163,13 @@ export default {
 <style scoped>
 .payment-cards-container {
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
+
 }
 
 .payment-card {
-  flex: 0 1 calc(50% - 10px);
+  flex: 0 1 calc(100% - 20px);
+  background-color: rgba(119, 221, 119, 0.5);
 }
 
 .ml-auto {
