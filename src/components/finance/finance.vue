@@ -1,14 +1,14 @@
 <template>
-  <div style="margin-top: 50px">
+  <div style="margin-top: 50px; margin-bottom: 180px;">
     <div class="flex align-items-center mb-3">
       <Button :label="$t('addFinance')" class="p-button-success" @click="showAddFinanceDialog = true" aria-label="Show Add Finance Dialog"></Button>
     </div>
 
     <div v-for="finanza in finanzas" :key="finanza.id" class="fieldset">
-      <pv-fieldSet>
+      <pv-fieldSet style="background-color: rgba(119, 221, 119, 0.1);">
         <template #legend>
           <div class="flex align-items-center pl-2">
-            <span class="font-bold">{{ $t('monthFinance') }} {{ finanza.mes }}</span>
+            <span class="font-bold" style="background-color: rgba(119, 221, 119, 1); border-radius: 8px;">{{ $t('monthFinance') }} {{ finanza.mes }}</span>
           </div>
         </template>
         <div class="cards-container">
@@ -110,7 +110,7 @@ export default {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
+  background-color: rgba(119, 221, 119, 0.5);
   text-align: center;
 }
 
