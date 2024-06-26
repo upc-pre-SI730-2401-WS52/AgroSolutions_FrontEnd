@@ -7,14 +7,14 @@
       <div class="calendario" aria-label="Sección del calendario">
         <h2 class="titulo" aria-label="Título del calendario">{{ $t('calendar.title') }}</h2>
         <br>
-        <div class="card-container" v-if="calendario && calendario.dias" aria-label="Contenedor de tarjetas del calendario">
-          <div v-for="dia in calendario.dias" :key="dia.fecha" class="card" :aria-label="'Tarjeta del día ' + dia.fecha">
+        <div class="card-container" v-if="calendario && calendario.calendars" aria-label="Contenedor de tarjetas del calendario">
+          <div v-for="cal in calendario.calendars" :key="cal.id" class="card" :aria-label="'Tarjeta del día ' + cal.fecha">
             <div class="card-header" aria-label="Encabezado de la tarjeta del día">
-              <h3 aria-label="Fecha del día">{{ dia.fecha }}</h3>
+              <h3 aria-label="Fecha del día">{{ cal.fecha }}</h3>
             </div>
             <div class="card-body" aria-label="Cuerpo de la tarjeta del día">
-              <p><strong aria-label="Actividad del día">{{ $t('calendar.activity') }}</strong> <span class="actividad" aria-label="Descripción de la actividad">{{ dia.actividad }}</span></p>
-              <p><strong aria-label="Estado del día">{{ $t('calendar.state') }}</strong> <span class="estado" aria-label="Descripción del estado">{{ dia.estado }}</span></p>
+              <p><strong aria-label="Actividad del día">{{ $t('calendar.activity') }}</strong> <span class="actividad" aria-label="Descripción de la actividad">{{ cal.actividad }}</span></p>
+              <p><strong aria-label="Estado del día">{{ $t('calendar.state') }}</strong> <span class="estado" aria-label="Descripción del estado">{{ cal.estado }}</span></p>
             </div>
           </div>
         </div>
@@ -38,14 +38,14 @@ export default {
     };
   },
   async created() {
-    const calendarioId = this.$route.params.id;
-    if (calendarioId) {
+    const cropId = this.$route.params.id;
+    if (cropId) {
       try {
         const service = new CropsApiService();
-        const response = await service.getCalendarioById(calendarioId);
+        const response = await service.getCultivoById(cropId);
         this.calendario = response.data;
       } catch (error) {
-        console.error('Error al obtener los datos del calendario:', error);
+        console.error('Error al obtener los datos del cultivo:', error);
       }
     }
   }

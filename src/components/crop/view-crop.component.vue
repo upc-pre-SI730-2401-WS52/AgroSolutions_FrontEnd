@@ -44,12 +44,12 @@ export default {
         <div class="crop-data" aria-label="Notificaciones del cultivo">{{ $t('cropInfo.notifications') }}: {{ crop.notificaciones }}</div>
         <div class="crop-data" aria-label="Localización del cultivo">{{ $t('cropInfo.location') }}: {{ crop.localizacion }}</div>
         <div class="crop-data" aria-label="Estado del cultivo">{{ $t('cropInfo.state') }}: {{ crop.estado }}</div>
-        <router-link :to="{ name: 'calendari', params: { id: crop.calendarioId }}" class="action-button" aria-label="Ir al calendario del cultivo">
+        <router-link :to="{ name: 'calendari', params: { id: crop.id }}" class="action-button" aria-label="Ir al calendario del cultivo">
           Calendario
         </router-link>
       </div>
       <div class="crop-image" aria-label="Imagen del cultivo">
-        <img :src="crop.image_Url" alt="Imagen del cultivo">
+        <img :src="crop.imageUrl" alt="Imagen del cultivo">
       </div>
     </div>
   </main>
