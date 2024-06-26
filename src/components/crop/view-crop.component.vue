@@ -2,10 +2,11 @@
 
 import { CropsApiService } from '@/shared/services/crop-api.service.js'
 import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
+import TheFooter from "@/components/elements/the-footer.component.vue";
 
 export default {
   name: "view-crop",
-  components: {TheHeaderSession},
+  components: {TheFooter, TheHeaderSession},
   data() {
     return {
       crop: null
@@ -52,6 +53,9 @@ export default {
       </div>
     </div>
   </main>
+  <footer>
+    <TheFooter/>
+  </footer>
 </template>
 
 
@@ -147,6 +151,18 @@ header {
   width: auto;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+footer {
+  background-color: #4f4d4d;
+  padding: 10px 0 10px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #737373;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 
 </style>

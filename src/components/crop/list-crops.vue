@@ -43,9 +43,11 @@
 
 <script>
 import { CropsApiService } from "@/shared/services/crop-api.service.js";
+import TheFooter from "@/components/elements/the-footer.component.vue";
 
 export default {
   name: "list-crops",
+  components: {TheFooter},
   data() {
     return {
       cultivos: []
@@ -130,5 +132,18 @@ export default {
 
 .text-danger {
   color: #dc3545;
+}
+
+footer {
+  background-color: #4f4d4d;
+  padding: 10px 0 10px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #737373;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 </style>
