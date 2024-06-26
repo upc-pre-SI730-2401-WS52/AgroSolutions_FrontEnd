@@ -1,44 +1,54 @@
 <template>
   <div class="add-employee-form">
-    <h2 style="color: black;">Agregar Empleado</h2>
+    <h2>Agregar Empleado</h2>
     <form @submit.prevent="submitForm">
-      <label style="color: black;">Nombre : </label>
-      <input v-model="employee.nombre" type="text" required />
-      <br>
+      <div class="form-group">
+        <label>Nombre:</label>
+        <input v-model="employee.nombre" type="text" class="form-control" required />
+      </div>
 
-      <label style="color: black;">Apellido : </label>
-      <input v-model="employee.apellido" type="text" required />
-      <br>
+      <div class="form-group">
+        <label>Apellido:</label>
+        <input v-model="employee.apellido" type="text" class="form-control" required />
+      </div>
 
-      <label style="color: black;">Edad : </label>
-      <input v-model="employee.edad" type="number" required />
-      <br>
+      <div class="form-group">
+        <label>Edad:</label>
+        <input v-model="employee.edad" type="number" class="form-control" required />
+      </div>
 
-      <label style="color: black;">DNI : </label>
-      <input v-model="employee.dni" type="text" required />
-      <br>
+      <div class="form-group">
+        <label>DNI:</label>
+        <input v-model="employee.dni" type="text" class="form-control" required />
+      </div>
 
-      <label style="color: black;">Cargo : </label>
-      <select v-model="employee.cargo" style="color: black;">
-        <option value="operario">Operario</option>
-        <option value="asesor">Asesor</option>
-      </select>
-      <br>
+      <div class="form-group">
+        <label>Cargo:</label>
+        <select v-model="employee.cargo" class="form-control" required>
+          <option value="operario">Operario</option>
+          <option value="asesor">Asesor</option>
+        </select>
+      </div>
 
-      <label style="color: black;">Salario : </label>
-      <input v-model="employee.salario" type="number" required />
-      <br>
+      <div class="form-group">
+        <label>Salario:</label>
+        <input v-model="employee.salario" type="number" class="form-control" required />
+      </div>
 
-      <label style="color: black;">Teléfono : </label>
-      <input v-model="employee.telefono" type="text" required />
-      <br>
+      <div class="form-group">
+        <label>Teléfono:</label>
+        <input v-model="employee.telefono" type="text" class="form-control" required />
+      </div>
 
-      <label style="color: black;">Foto de Perfil (URL) : </label>
-      <input v-model="employee.photoUrl" type="text" required />
-      <br>
+      <div class="form-group">
+        <label>Foto de Perfil (URL):</label>
+        <input v-model="employee.photoUrl" type="text" class="form-control" required />
+      </div>
 
-      <button type="submit" class="btn btn-primary">Registrar</button>
-      <button type="button" class="btn btn-danger" @click="$emit('close')">Cancelar</button>
+      <div class="button-group">
+        <button type="submit" class="btn btn-primary">Registrar</button>
+        <button type="button" class="btn btn-danger" @click="$emit('close')">Cancelar</button>
+      </div>
     </form>
   </div>
 </template>
@@ -77,15 +87,42 @@ export default {
   margin-top: 20px;
 }
 
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  color: black;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
 .btn {
-  margin: 10px;
-  color: white;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .btn-primary {
-  background-color: blue;
+  background-color: #75aa9c;
+  color: white;
 }
 
 .btn-primary:hover {
@@ -94,14 +131,10 @@ export default {
 
 .btn-danger {
   background-color: red;
+  color: white;
 }
 
 .btn-danger:hover {
   background-color: darkred;
-}
-
-input,
-select {
-  margin-bottom: 10px;
 }
 </style>
