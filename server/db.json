@@ -155,7 +155,7 @@
       "StateOfTask": "To Do"
     }
   ],
-  "cultivos": [
+  "crops": [
     {
       "id": "3",
       "estado": "Bueno",
@@ -165,9 +165,28 @@
       "retorno": 600,
       "localizacion": "Trujillo",
       "notificaciones": "Ninguna",
-      "calendarioId": "11",
-      "asesorId": "31",
-      "image_Url": "https://i.postimg.cc/hGWLZTfZ/choclo.jpg"
+      "asesorId": 31,
+      "imageUrl": "https://i.postimg.cc/hGWLZTfZ/choclo.jpg",
+      "calendars": [
+        {
+          "id": 101,
+          "fecha": "2024-06-01",
+          "actividad": "Siembra",
+          "estado": "Germinación"
+        },
+        {
+          "id": 102,
+          "fecha": "2024-06-02",
+          "actividad": "Riego inicial",
+          "estado": "Crecimiento temprano"
+        },
+        {
+          "id": 103,
+          "fecha": "2024-06-03",
+          "actividad": "Control de plagas",
+          "estado": "Mantenimiento"
+        }
+      ]
     },
     {
       "id": "5",
@@ -178,9 +197,28 @@
       "retorno": 700,
       "localizacion": "Arequipa",
       "notificaciones": "Ninguna",
-      "calendarioId": "24",
-      "asesorId": "41",
-      "image_Url": "https://i.postimg.cc/XqVxHFD6/papa.jpg"
+      "asesorId": 41,
+      "imageUrl": "https://i.postimg.cc/XqVxHFD6/papa.jpg",
+      "calendars": [
+        {
+          "id": 201,
+          "fecha": "2024-07-01",
+          "actividad": "Siembra",
+          "estado": "Germinación"
+        },
+        {
+          "id": 202,
+          "fecha": "2024-07-02",
+          "actividad": "Fertilización inicial",
+          "estado": "Crecimiento temprano"
+        },
+        {
+          "id": 203,
+          "fecha": "2024-07-03",
+          "actividad": "Inspección de suelo",
+          "estado": "Mantenimiento"
+        }
+      ]
     },
     {
       "id": "6",
@@ -191,9 +229,28 @@
       "retorno": 550,
       "localizacion": "Lambayeque",
       "notificaciones": "Todas",
-      "calendarioId": "19",
-      "asesorId": "41",
-      "image_Url": "https://i.postimg.cc/NfdCnJcJ/arroz.jpg"
+      "asesorId": 41,
+      "imageUrl": "https://i.postimg.cc/NfdCnJcJ/arroz.jpg",
+      "calendars": [
+        {
+          "id": 301,
+          "fecha": "2024-08-10",
+          "actividad": "Siembra",
+          "estado": "Germinación"
+        },
+        {
+          "id": 302,
+          "fecha": "2024-08-11",
+          "actividad": "Riego inicial",
+          "estado": "Crecimiento temprano"
+        },
+        {
+          "id": 303,
+          "fecha": "2024-08-12",
+          "actividad": "Control de malezas",
+          "estado": "Mantenimiento"
+        }
+      ]
     },
     {
       "id": "7896",
@@ -204,9 +261,28 @@
       "retorno": 650,
       "localizacion": "Cusco",
       "notificaciones": "Ninguna",
-      "calendarioId": "15",
-      "asesorId": "41",
-      "image_Url": "https://i.postimg.cc/bNw31xtQ/cafee.png"
+      "asesorId": 41,
+      "imageUrl": "https://i.postimg.cc/bNw31xtQ/cafee.png",
+      "calendars": [
+        {
+          "id": 401,
+          "fecha": "2024-09-05",
+          "actividad": "Siembra",
+          "estado": "Germinación"
+        },
+        {
+          "id": 402,
+          "fecha": "2024-09-06",
+          "actividad": "Aplicación de abono",
+          "estado": "Crecimiento temprano"
+        },
+        {
+          "id": 403,
+          "fecha": "2024-09-07",
+          "actividad": "Monitoreo de crecimiento",
+          "estado": "Mantenimiento"
+        }
+      ]
     }
   ],
   "asesores": [
@@ -245,88 +321,6 @@
       "nombre": "Pedro Gutiérrez",
       "descripcion": "Asesor con experiencia internacional en cultivos de exportación y mercados globales.",
       "calificacion": 4.4
-    }
-  ],
-  "calendarios": [
-    {
-      "id": "11",
-      "dias": [
-        {
-          "fecha": "2024-06-01",
-          "actividad": "Siembra",
-          "estado": "Germinación"
-        },
-        {
-          "fecha": "2024-06-02",
-          "actividad": "Riego inicial",
-          "estado": "Crecimiento temprano"
-        },
-        {
-          "fecha": "2024-06-03",
-          "actividad": "Control de plagas",
-          "estado": "Mantenimiento"
-        }
-      ]
-    },
-    {
-      "id": "24",
-      "dias": [
-        {
-          "fecha": "2024-07-01",
-          "actividad": "Siembra",
-          "estado": "Germinación"
-        },
-        {
-          "fecha": "2024-07-02",
-          "actividad": "Fertilización inicial",
-          "estado": "Crecimiento temprano"
-        },
-        {
-          "fecha": "2024-07-03",
-          "actividad": "Inspección de suelo",
-          "estado": "Mantenimiento"
-        }
-      ]
-    },
-    {
-      "id": "19",
-      "dias": [
-        {
-          "fecha": "2024-08-10",
-          "actividad": "Siembra",
-          "estado": "Germinación"
-        },
-        {
-          "fecha": "2024-08-11",
-          "actividad": "Riego inicial",
-          "estado": "Crecimiento temprano"
-        },
-        {
-          "fecha": "2024-08-12",
-          "actividad": "Control de malezas",
-          "estado": "Mantenimiento"
-        }
-      ]
-    },
-    {
-      "id": "15",
-      "dias": [
-        {
-          "fecha": "2024-09-05",
-          "actividad": "Siembra",
-          "estado": "Germinación"
-        },
-        {
-          "fecha": "2024-09-06",
-          "actividad": "Aplicación de abono",
-          "estado": "Crecimiento temprano"
-        },
-        {
-          "fecha": "2024-09-07",
-          "actividad": "Monitoreo de crecimiento",
-          "estado": "Mantenimiento"
-        }
-      ]
     }
   ],
   "providers": [
