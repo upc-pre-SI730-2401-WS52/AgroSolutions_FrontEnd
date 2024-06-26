@@ -85,7 +85,7 @@
 </template>
 
 <script>
-import { UserApiService } from "@/shared/services/user-api.service.js";
+import {UserApiService} from "@/shared/services/user-api.service.js";
 import router from "@/router.js";
 
 export default {

@@ -66,8 +66,7 @@ const es = ({
     phone: 'Telefono',
     delivered: 'Entregado',
     notification: 'Notificar',
-
-
+    
     login: {
         title: 'Iniciar Sesión',
         email: 'Correo Electrónico',
