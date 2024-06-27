@@ -8,7 +8,7 @@
           <label for="full_name">{{ $t('login.full_name') }}:</label>
         </div>
         <div class="input-field">
-          <input type="text" id="email" v-model="username" required :aria-label="$t('login.full_name')">
+          <input type="text" id="full_name" v-model="username" required :aria-label="$t('login.full_name')">
         </div>
       </div>
 

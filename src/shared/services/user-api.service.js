@@ -27,7 +27,7 @@ export class UserApiService {
             const response = await http.get('/users');
             const users = response.data;
 
-            const user = users.find(user => user.email_address === username);
+            const user = users.find(user => user.full_name === username);
 
             if (!user) {
                 throw new Error('Usuario no encontrado');
