@@ -31,7 +31,7 @@
               <label for="Content">Contenido:</label>
             </div>
             <div class="input-field">
-              <textarea id="Content" v-model="newBlog.Content" rows="3" required aria-label="Ingrese el contenido del blog"></textarea>
+              <textarea id="Content" v-model="newBlog.Content" rows="6" required aria-label="Ingrese el contenido del blog"></textarea>
             </div>
           </div>
 
@@ -107,13 +107,14 @@
 
 <script>
 import TheHeaderSessionComponent from "@/components/elements/the-header-session.component.vue";
-import BlogApiService from "@/shared/services/blog-api.service.js";
-
+import TheFooter from "@/components/elements/the-footer.component.vue";
+import {BlogApiService} from "@/shared/services/blog-api.service.js"
 export default {
   name: "TheAddBlogComponent",
-  components: { TheHeaderSessionComponent },
+  components: { TheHeaderSessionComponent, TheFooter },
   data() {
     return {
+      newBlog: {
         Id: "",
         Title: "",
         Subtitle: "",
@@ -125,41 +126,39 @@ export default {
         ImageUrl: "",
         CommentsCount: 0,
         ReadTimeMinutes: 0,
-        blogApiService: new BlogApiService(), // Instancia correcta dentro de data
+        blogApiService: new BlogApiService()
+      },
     };
   },
   methods: {
     async addNewBlog() {
-      try {
-        await this.$router.push('/blog');
-        const body = {
-          Id: this.Id,
-          Title: this.Title,
-          Subtitle: this.Subtitle,
-          Content: this.Content,
-          Summary: this.Summary,
-          CategoryBlog: this.CategoryBlog,
-          RoleBlog: this.RoleBlog,
-          TypeAuthor: this.TypeAuthor,
-          ImageUrl: this.ImageUrl,
-          CommentsCount: this.CommentsCount,
-          ReadTimeMinutes: this.ReadTimeMinutes
-        };
+      await this.$router.push('/blog');
+      const newBlogData = {
+        Id: this.newBlog.Id,
+        Title: this.newBlog.Title,
+        Subtitle: this.newBlog.Subtitle,
+        Content: this.newBlog.Content,
+        Summary: this.newBlog.Summary,
+        CategoryBlog: this.newBlog.CategoryBlog,
+        RoleBlog: this.newBlog.RoleBlog,
+        TypeAuthor: this.newBlog.TypeAuthor,
+        ImageUrl: this.newBlog.ImageUrl,
+        CommentsCount: this.newBlog.CommentsCount,
+        ReadTimeMinutes: this.newBlog.ReadTimeMinutes,
+      };
 
-        const response = await this.blogApiService.create(body);
-        router.push('/blog');
-        alert('Blog creado');
-        if (response.status === 201) {
-        } else {
-          console.error('Error al crear el blog');
-        }
-      } catch (error) {
-        console.error('Error en la creación del blog:', error);
+      const response = await this.blogApiService.create(body);
+      router.push('/blog');
+      alert('Post created');
+      if (response.status === 201) {
+      } else {
+        console.error('Error al crear el blog');
       }
     }
   },
 };
 </script>
+
 
 <style scoped>
 .add-blog-form-container {
