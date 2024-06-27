@@ -12,6 +12,10 @@ class BlogApiService {
             throw error;
         }
     }
+
+    async addPost(blogData) {
+        return await http.post('blog',body)
+    }
 }
 
 export default new BlogApiService();

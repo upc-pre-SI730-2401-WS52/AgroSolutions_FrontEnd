@@ -19,6 +19,8 @@ import TheCreateOrders from "@/pages/the-create-orders.vue";
 import TheTeam from "@/pages/the-team.page.vue";
 import TheBlog from "@/pages/the-blog.vue"
 import thePageNotFoundPage from "@/pages/the-page-not-found.page.vue";
+import theAddEmployee from "@/components/employee/the-add-employee.vue";
+import TheAddBlog from "@/components/blog/the-add-blog.component.vue";
 
 const routes = [
     { path: '/', component: TheMain },
@@ -40,6 +42,7 @@ const routes = [
     { path: '/employees-team', name: 'equipment', component: TheTeam },
     { path: '/create_order', component: TheCreateOrders },
     { path: '/blog', component: TheBlog },
+    { path: '/new-post', component: TheAddBlog },
     { path: '/:pathMatch(.*)*', component: thePageNotFoundPage }
 ]
 

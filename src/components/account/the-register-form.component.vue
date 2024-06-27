@@ -1,92 +1,91 @@
 <template>
-  <div class="registration-form-container" role="form" :aria-label="$t('registration.formLabel')">
+  <div class="registration-form-container" role="form" aria-label="Formulario de registro">
     <div class="registration-form">
-      <h2>{{ $t('registration.title') }}</h2>
+      <h2>Registro</h2>
 
       <div class="form-group">
         <div class="input-label">
-          <label for="fullName">{{ $t('registration.fullName') }}:</label>
+          <label for="fullName">Full name:</label>
         </div>
         <div class="input-field">
-          <pv-input-text type="text" id="fullName" v-model="fullName" required :aria-label="$t('registration.enterFullName')"/>
+          <pv-input-text type="text" id="fullName" v-model="fullName" required aria-label="Ingrese su nombre completo"/>
         </div>
       </div>
 
       <div class="form-group">
         <div class="input-label">
-          <label for="id">{{ $t('registration.id') }}:</label>
+          <label for="id">DNI or RUC:</label>
         </div>
         <div class="input-field">
-          <pv-input-text type="text" id="id" v-model.number="id" required :aria-label="$t('registration.enterId')"/>
+          <pv-input-text type="text" id="id"  v-model.number="id" required aria-label="Ingrese su DNI o RUC"/>
         </div>
       </div>
 
       <div class="form-group">
         <div class="input-label">
-          <label for="companyName">{{ $t('registration.companyName') }}:</label>
+          <label for="companyName">Company name :</label>
         </div>
         <div class="input-field">
-          <pv-input-text type="text" id="companyName" v-model="companyName" required :aria-label="$t('registration.enterCompanyName')"/>
+          <pv-input-text type="text" id="companyName" v-model="companyName" required aria-label="Ingrese el nombre de su empresa"/>
         </div>
       </div>
 
       <div class="form-group">
         <div class="input-label">
-          <label for="emailAddress">{{ $t('registration.emailAddress') }}:</label>
+          <label for="emailAddress">Email Address:</label>
         </div>
         <div class="input-field">
-          <pv-input-text type="email" id="emailAddress" v-model="emailAddress" required :aria-label="$t('registration.enterEmailAddress')"/>
+          <pv-input-text type="email" id="emailAddress" v-model="emailAddress" required aria-label="Ingrese su correo electrónico"/>
         </div>
       </div>
 
       <div class="form-group">
         <div class="input-label">
-          <label for="phoneNumber">{{ $t('registration.phoneNumber') }}:</label>
+          <label for="phoneNumber">Teléfono:</label>
         </div>
         <div class="input-field">
-          <pv-input-text type="tel" id="phoneNumber" v-model="phoneNumber" required :aria-label="$t('registration.enterPhoneNumber')"/>
+          <pv-input-text type="tel" id="phoneNumber" v-model="phoneNumber" required aria-label="Ingrese su número de teléfono"/>
         </div>
       </div>
 
       <div class="form-group">
         <div class="input-label">
-          <label for="userType">{{ $t('registration.userType') }}:</label>
+          <label for="userType">Tipo de usuario:</label>
         </div>
         <div class="input-field">
-          <select id="userType" v-model="userType" required :aria-label="$t('registration.selectUserType')">
-            <option value="">{{ $t('registration.selectUserType') }}</option>
-            <option value="agricultor">{{ $t('registration.agricultor') }}</option>
-            <option value="vendedor">{{ $t('registration.vendedor') }}</option>
+          <select id="userType" v-model="userType" required aria-label="Seleccione su tipo de usuario">
+            <option value="">Seleccionar tipo de usuario</option>
+            <option value="agricultor">Agricultor</option>
+            <option value="vendedor">Vendedor</option>
           </select>
         </div>
       </div>
 
       <div class="form-group">
         <div class="input-label">
-          <label for="password">{{ $t('registration.password') }}:</label>
+          <label for="password">Contraseña:</label>
         </div>
         <div class="input-field">
-          <input type="password" id="password" v-model="password" required :aria-label="$t('registration.enterPassword')">
+          <input type="password" id="password" v-model="password" required aria-label="Ingrese su contraseña">
         </div>
       </div>
 
       <div class="form-group">
         <div class="input-label">
-          <label for="confirmPassword">{{ $t('registration.confirmPassword') }}:</label>
+          <label for="confirmPassword">Confirmar Contraseña:</label>
         </div>
         <div class="input-field">
-          <input type="password" id="confirmPassword" v-model="confirmPassword" required :aria-label="$t('registration.enterConfirmPassword')">
+          <input type="password" id="confirmPassword" v-model="confirmPassword" required aria-label="Confirme su contraseña">
         </div>
       </div>
 
-      <button @click="register" :aria-label="$t('registration.register')">{{ $t('registration.register') }}</button>
+      <button @click="register" aria-label="Registrar">Registrar</button>
     </div>
   </div>
 </template>
 
 <script>
 import {UserApiService} from "@/shared/services/user-api.service.js";
-import router from "@/router.js";
 
 export default {
   name: 'TheRegisterForm',
@@ -104,8 +103,9 @@ export default {
     };
   },
   methods: {
-    async register() {
-      const body = {
+    async register(){
+    await this.$router.push('/login');
+    const body = {
         id: this.id,
         full_name: this.fullName,
         company_name: this.companyName,
@@ -114,22 +114,18 @@ export default {
         user_type: this.userType,
         password: this.password,
         confirmPassword: this.confirmPassword
-      };
-
-      try {
-        const response = await this.userApiService.create(body);
-        if (response.status === 201) {
-          alert('User created');
-          await this.$router.push('/login');
-        } else {
-          console.error('Error al registrar el usuario');
-        }
-      } catch (error) {
-        console.error('Error al registrar el usuario:', error.message);
+    };
+      const response = await this.userApiService.create(body);
+      router.push('/login');
+      alert('User created');
+    if (response.status === 201) {}
+      else {
+        console.error('Error al registrar el usuario');
       }
     }
   }
 }
+
 </script>
 
 <style scoped>

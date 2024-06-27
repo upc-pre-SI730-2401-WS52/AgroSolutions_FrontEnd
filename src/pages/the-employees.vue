@@ -35,9 +35,9 @@
 </template>
 
 <script>
-import EmployeeCard from '../components/employee/employee-card.vue';
-import EmployeeInformation from '../components/employee/employee-information.vue';
-import AddEmployee from '../components/employee/add-employee.vue';
+import EmployeeCard from '../components/employee/the-employee-card.vue';
+import EmployeeInformation from '../components/employee/the-employee-information.vue';
+import AddEmployee from '../components/employee/the-add-employee.vue';
 import { addEmployee as addEmployeeService, getEmployees, deleteEmployee } from '@/shared/services/employee-api.service.js';
 import TheHeaderSession from "@/components/elements/the-header-session.component.vue";
 import TheFooter from "@/components/elements/the-footer.component.vue";

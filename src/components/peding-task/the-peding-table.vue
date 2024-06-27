@@ -2,32 +2,27 @@
   <div class="main" role="main" aria-label="Lista de tareas pendientes">
     <h1 style="display: flex; align-items: center;">
       Pending Tasks
-      <Button @click="showAddTaskDialog = true" class="p-button-success" style="margin-left: 20px; background-color: #8dc9a6; border-color: #8dc9a6;">
-        Agregar Tarea
-      </Button>
+      <Button @click="showAddTaskDialog = true" class="p-button-success" style="margin-left: 20px; background-color: #8dc9a6; border-color: #8dc9a6;">Agregar Tarea</Button>
     </h1>
-
-    <!-- DataTable for Pending Tasks -->
     <DataTable :value="tasks" tableStyle="min-width: 50rem" aria-label="Tabla de tareas pendientes">
-      <Column field="Id" header="ID"></Column>
-      <Column field="Name" header="Name"></Column>
-      <Column field="DescriptionTask" header="Description"></Column>
-      <Column field="DueDate" header="Due Date"></Column>
-      <Column field="AssignedTo" header="Assigned To"></Column>
-      <Column field="Priority" header="Priority"></Column>
-      <Column field="Category" header="Category"></Column>
-      <Column field="StateOfTask" header="State of task"></Column>
+      <Column field="id" header="ID"></Column>
+      <Column field="name" header="Name"></Column>
+      <Column field="descriptionTask" header="Description"></Column>
+      <Column field="dueDate" header="Due Date"></Column>
+      <Column field="assignedTo" header="Assigned To"></Column>
+      <Column field="priority" header="Priority"></Column>
+      <Column field="category" header="Category"></Column>
+      <Column field="stateOfTask" header="State of task"></Column>
       <Column header="Actions">
-        <template #body="rowData">
+        <template #body="{ rowData }">
           <div class="action-buttons">
             <Button @click="editTask(rowData)" class="edit-button">Edit</Button>
-            <Button @click="deleteTask(rowData.id)" class="delete-button">Delete</Button>
+            <Button @click="deleteTask(rowData)" class="delete-button">Eliminar</Button>
           </div>
         </template>
       </Column>
     </DataTable>
 
-    <!-- Edit Task Dialog -->
     <Dialog v-model:visible="showEditTaskDialog" header="Edit Task" :modal="true" :closable="true">
       <div class="dialog-content">
         <form @submit.prevent="saveEditedTask">
@@ -38,7 +33,7 @@
             </div>
             <div class="p-field">
               <label for="editDescription">Description</label>
-              <InputText id="editDescription" v-model="editedTask.description" />
+              <InputText id="editDescription" v-model="editedTask.descriptionTask" />
             </div>
             <div class="p-field">
               <label for="editDueDate">Due Date</label>
@@ -57,8 +52,8 @@
               <InputText id="editCategory" v-model="editedTask.category" />
             </div>
             <div class="p-field">
-              <label for="stateOfTask">State Of Task</label>
-              <InputText id="stateOfTask" v-model="editedTask.stateOfTask" />
+              <label for="editStateOfTask">State Of Task</label>
+              <InputText id="editStateOfTask" v-model="editedTask.stateOfTask" />
             </div>
             <div class="p-field">
               <Button type="submit" label="Save" class="p-button-success" style="background-color: #8dc9a6; border-color: #8dc9a6;" />
@@ -68,7 +63,6 @@
       </div>
     </Dialog>
 
-    <!-- Add Task Dialog -->
     <Dialog v-model:visible="showAddTaskDialog" header="Add Task" :modal="true" :closable="true">
       <div class="dialog-content">
         <form @submit.prevent="addTask">
@@ -79,7 +73,7 @@
             </div>
             <div class="p-field">
               <label for="newDescription">Description</label>
-              <InputText id="newDescription" v-model="newTask.description" />
+              <InputText id="newDescription" v-model="newTask.descriptionTask" />
             </div>
             <div class="p-field">
               <label for="newDueDate">Due Date</label>
@@ -98,8 +92,8 @@
               <InputText id="newCategory" v-model="newTask.category" />
             </div>
             <div class="p-field">
-              <label for="stateOfTask">State Of Task</label>
-              <InputText id="stateOfTask" v-model="newTask.stateOfTask" />
+              <label for="newStateOfTask">State Of Task</label>
+              <InputText id="newStateOfTask" v-model="newTask.stateOfTask" />
             </div>
             <div class="p-field">
               <Button type="submit" label="Add" class="p-button-success" style="background-color: #8dc9a6; border-color: #8dc9a6;" />
@@ -136,7 +130,7 @@ export default {
       editedTask: {
         id: null,
         name: "",
-        description: "",
+        descriptionTask: "",
         dueDate: "",
         assignedTo: "",
         priority: "",
@@ -145,87 +139,97 @@ export default {
       },
       newTask: {
         name: "",
-        description: "",
+        descriptionTask: "",
         dueDate: "",
         assignedTo: "",
         priority: "",
         category: "",
         stateOfTask: "",
       },
-      pendingTasksApiServiceApi: new PendingTasksApiServiceApi(),
+      pendingTasksApiServiceApi: null,
     };
   },
   created() {
+    this.pendingTasksApiServiceApi = new PendingTasksApiServiceApi();
     this.refresh();
   },
   methods: {
-    async refresh() {
-      try {
-        const response = await this.pendingTasksApiServiceApi.getAllTask();
-        this.tasks = response.data;
-      } catch (error) {
-        console.error("Error fetching tasks:", error);
+    deleteTask(taskId) {
+      if (confirm(`¿Estás seguro de eliminar la tarea con ID ${taskId}?`)) {
+        this.pendingTasksApiServiceApi.deleteTask(taskId)
+            .then(response => {
+              if (response.status === 200) {
+                alert("Tarea eliminada correctamente.");
+                this.refresh();
+              } else {
+                alert("Error al eliminar la tarea.");
+              }
+            })
+            .catch(error => {
+              console.error("Error al eliminar la tarea:", error);
+              alert("Error al eliminar la tarea.");
+            });
       }
     },
     editTask(rowData) {
       this.editedTask.id = rowData.id;
       this.editedTask.name = rowData.name;
-      this.editedTask.description = rowData.description;
+      this.editedTask.descriptionTask = rowData.descriptionTask;
       this.editedTask.dueDate = rowData.dueDate;
       this.editedTask.assignedTo = rowData.assignedTo;
       this.editedTask.priority = rowData.priority;
       this.editedTask.category = rowData.category;
       this.editedTask.stateOfTask = rowData.stateOfTask;
-
       this.showEditTaskDialog = true;
     },
     async saveEditedTask() {
       try {
         const response = await this.pendingTasksApiServiceApi.updateTask(
             this.editedTask.id,
-            this.editedTask
+            {
+              name: this.editedTask.name,
+              descriptionTask: this.editedTask.descriptionTask,
+              dueDate: this.editedTask.dueDate,
+              assignedTo: this.editedTask.assignedTo,
+              priority: this.editedTask.priority,
+              category: this.editedTask.category,
+              stateOfTask: this.editedTask.stateOfTask,
+            }
         );
         if (response.status === 200) {
-          alert("Task updated successfully.");
+          alert("Tarea actualizada correctamente.");
           this.showEditTaskDialog = false;
           this.refresh();
         } else {
-          alert("Error updating task.");
+          alert("Error al actualizar la tarea.");
         }
       } catch (error) {
-        console.error("Error updating task:", error);
-        alert("Error updating task.");
-      }
-    },
-    async deleteTask(id) {
-      try {
-        const response = await this.pendingTasksApiServiceApi.deleteTask(id);
-        if (response.status === 200) {
-          alert("Task deleted successfully.");
-          this.refresh();
-        } else {
-          alert("Error deleting task.");
-        }
-      } catch (error) {
-        console.error("Error deleting task:", error);
-        alert("Error deleting task.");
+        console.error("Error al actualizar la tarea:", error);
+        alert("Error al actualizar la tarea.");
       }
     },
     async addTask() {
       try {
-        const response = await this.pendingTasksApiServiceApi.createTask(
-            this.newTask
-        );
+        const response = await this.pendingTasksApiServiceApi.createTask(this.newTask);
         if (response.status === 201) {
-          alert("Task added successfully.");
+          alert("Tarea agregada correctamente.");
           this.showAddTaskDialog = false;
           this.refresh();
         } else {
-          alert("Error adding task.");
+          alert("Error al agregar la tarea.");
         }
       } catch (error) {
-        console.error("Error adding task:", error);
-        alert("Error adding task.");
+        console.error("Error al agregar la tarea:", error);
+        alert("Error al agregar la tarea.");
+      }
+    },
+    async refresh() {
+      try {
+        const response = await this.pendingTasksApiServiceApi.getAllTask();
+        this.tasks = response.data;
+      } catch (error) {
+        console.error("Error al obtener las tareas:", error);
+        alert("Error al obtener las tareas.");
       }
     },
   },

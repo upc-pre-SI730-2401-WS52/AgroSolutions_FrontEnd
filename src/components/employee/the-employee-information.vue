@@ -53,7 +53,7 @@ export default {
 }
 button {
   margin-top: 16px;
-  background: #75aa9c;
+  background: green;
   color: white;
   padding: 8px 16px;
   border: none;

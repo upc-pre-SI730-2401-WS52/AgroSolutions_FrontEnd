@@ -47,7 +47,7 @@ export default {
   methods: {
     async logout() {
       try {
-        localStorage.removeItem('userType'); // Limpiar tipo de usuario al cerrar sesión
+        localStorage.removeItem('userType');
         await this.$router.push('/');
       } catch (error) {
         console.error('Error:', error);
