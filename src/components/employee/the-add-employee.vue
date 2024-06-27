@@ -1,53 +1,53 @@
 <template>
   <div class="add-employee-form">
-    <h2>Agregar Empleado</h2>
+    <h2>{{ $t('addEmployeeForm.title') }}</h2>
     <form @submit.prevent="submitForm">
       <div class="form-group">
-        <label>Nombre:</label>
+        <label>{{ $t('addEmployeeForm.name') }}:</label>
         <input v-model="employee.nombre" type="text" class="form-control" required />
       </div>
 
       <div class="form-group">
-        <label>Apellido:</label>
+        <label>{{ $t('addEmployeeForm.lastName') }}:</label>
         <input v-model="employee.apellido" type="text" class="form-control" required />
       </div>
 
       <div class="form-group">
-        <label>Edad:</label>
+        <label>{{ $t('addEmployeeForm.age') }}:</label>
         <input v-model="employee.edad" type="number" class="form-control" required />
       </div>
 
       <div class="form-group">
-        <label>DNI:</label>
+        <label>{{ $t('addEmployeeForm.dni') }}:</label>
         <input v-model="employee.dni" type="text" class="form-control" required />
       </div>
 
       <div class="form-group">
-        <label>Cargo:</label>
+        <label>{{ $t('addEmployeeForm.position') }}:</label>
         <select v-model="employee.cargo" class="form-control" required>
-          <option value="operario">Operario</option>
-          <option value="asesor">Asesor</option>
+          <option value="operario">{{ $t('addEmployeeForm.operario') }}</option>
+          <option value="asesor">{{ $t('addEmployeeForm.asesor') }}</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label>Salario:</label>
+        <label>{{ $t('addEmployeeForm.salary') }}:</label>
         <input v-model="employee.salario" type="number" class="form-control" required />
       </div>
 
       <div class="form-group">
-        <label>Teléfono:</label>
+        <label>{{ $t('addEmployeeForm.phone') }}:</label>
         <input v-model="employee.telefono" type="text" class="form-control" required />
       </div>
 
       <div class="form-group">
-        <label>Foto de Perfil (URL):</label>
+        <label>{{ $t('addEmployeeForm.photoUrl') }}:</label>
         <input v-model="employee.photoUrl" type="text" class="form-control" required />
       </div>
 
       <div class="button-group">
-        <button type="submit" class="btn btn-primary">Registrar</button>
-        <button type="button" class="btn btn-danger" @click="$emit('close')">Cancelar</button>
+        <button type="submit" class="btn btn-primary">{{ $t('addEmployeeForm.register') }}</button>
+        <button type="button" class="btn btn-danger" @click="$emit('close')">{{ $t('addEmployeeForm.cancel') }}</button>
       </div>
     </form>
   </div>

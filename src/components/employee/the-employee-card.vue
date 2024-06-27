@@ -3,18 +3,18 @@
     <img :src="employee.photoUrl" alt="Foto de empleado" class="card-image">
     <div class="card-content">
       <h2 class="card-title">{{ employee.nombre }} {{ employee.apellido }}</h2>
-      <p class="card-info">Cargo: {{ employee.cargo }}</p>
-      <p class="card-info">Salario: {{ employee.salario }}</p>
+      <p class="card-info">{{ $t('employeeCard.position') }}: {{ employee.cargo }}</p>
+      <p class="card-info">{{ $t('employeeCard.salary') }}: {{ employee.salario }}</p>
     </div>
     <div class="card-buttons">
-      <button class="info-button" @click="$emit('view-info', employee)">Ver Información</button>
-      <button class="delete-button" @click="deleteEmployee">Eliminar</button>
+      <button class="info-button" @click="$emit('view-info', employee)">{{ $t('employeeCard.viewInfo') }}</button>
+      <button class="delete-button" @click="deleteEmployee">{{ $t('employeeCard.delete') }}</button>
     </div>
   </div>
 </template>
 
 <script>
-import {deleteEmployee} from '@/shared/services/employee-api.service.js';
+import { deleteEmployee } from '@/shared/services/employee-api.service.js';
 
 export default {
   name: 'EmployeeCard',
@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     deleteEmployee() {
-      if (confirm(`¿Estás seguro de eliminar a ${this.employee.nombre} ${this.employee.apellido}?`)) {
+      if (confirm(`${this.$t('employeeCard.deleteConfirm')} ${this.employee.nombre} ${this.employee.apellido}?`)) {
         deleteEmployee(this.employee.id)
             .then(() => {
               this.$emit('employee-deleted', this.employee.id);

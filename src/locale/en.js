@@ -101,7 +101,92 @@ const en = ({
         confirmPassword: 'Confirm password',
         enterConfirmPassword: 'Confirm your password',
         register: 'Register'
+    },
+    blog: {
+        title: 'Blog Posts',
+        addNewPost: 'Add New Post',
+    },
+    cardBlog: {
+        role: 'Role',
+        readTime: 'Read Time',
+        readMore: 'Read More',
+        minutes: 'minutes'
+    },
+    carousel: {
+        alt: 'Image'
+    },
+    mainPage: {
+        welcomeTitle: 'Welcome to AgroSolutions',
+        welcomeText: 'Discover our innovative solutions for the agricultural sector.',
+        startButton: 'Start'
+    },
+    employeesPage: {
+        title: 'Employees',
+        addEmployee: 'Add Employee',
+        viewTeams: 'View Teams',
+    },
+    addEmployeeForm: {
+        title: 'Add Employee',
+        name: 'First Name',
+        lastName: 'Last Name',
+        age: 'Age',
+        dni: 'DNI',
+        position: 'Position',
+        salary: 'Salary',
+        phone: 'Phone',
+        photoUrl: 'Profile Photo (URL)',
+        register: 'Register',
+        cancel: 'Cancel',
+        operario: 'Operator',
+        asesor: 'Advisor',
+    },
+    employeeCard: {
+        viewInfo: 'View Information',
+        delete: 'Delete',
+        position: 'Position',
+        salary: 'Salary',
+        deleteConfirm: 'Are you sure you want to delete',
+    },
+    employeeInformation: {
+        name: 'Name',
+        age: 'Age',
+        dni: 'DNI',
+        position: 'Position',
+        salary: 'Salary',
+        phone: 'Phone',
+        close: 'Close',
+    },
+
+    banner: {
+        headline: 'Discover and Join Us',
+        description: 'The innovative startup dedicated to strengthening the agricultural sector, offering a comprehensive approach to support small and medium farmers in the optimal development of their crops.',
+        features: [
+            'Technical information and specialized advice is received.',
+            'We act as an active business partner, purchasing and marketing farmers\' products on our online platform.',
+            'We facilitate specific evaluations and personalized recommendations from our professionals on farmers\' fields.'
+        ],
+        heroImageUrl: 'https://www.businessempresarial.com.pe/wp-content/uploads/2023/09/Trabajadores-campesinos-en-Mexico-1920-3-780x470.jpg'
+    },
+    cardEquipment: {
+        team: 'Team',
+        budget: 'Budget',
+        crop: 'Crop',
+        advisor: 'Advisor',
+        workers: 'Workers'
+    },
+    header: {
+        home: 'Home',
+        pendingTasks: 'Pending Tasks',
+        finances: 'Finances',
+        pendingPayments: 'Pending Payments',
+        employees: 'Employees',
+        orders: 'Orders',
+        blog: 'Blog',
+        store: 'Store', // Añadido para el vendedor
+        logout: 'Log out'
     }
+
+
 
 
 })

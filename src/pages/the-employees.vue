@@ -6,10 +6,10 @@
 
     <main style="padding-top: 80px; padding-bottom: 150px;">
       <div class="employees-container">
-        <h1>Empleados</h1>
+        <h1>{{ $t('employeesPage.title') }}</h1>
         <div class="button-container">
-          <button class="green-button" @click="showAddEmployeeForm = true">Agregar empleado</button>
-          <button class="green-button" @click="viewTeams">Ver Equipos</button>
+          <button class="green-button" @click="showAddEmployeeForm = true">{{ $t('employeesPage.addEmployee') }}</button>
+          <button class="green-button" @click="viewTeams">{{ $t('employeesPage.viewTeams') }}</button>
         </div>
 
         <AddEmployee v-if="showAddEmployeeForm" @add-employee="addEmployee" @close="showAddEmployeeForm = false" />
@@ -78,7 +78,7 @@ export default {
       });
     },
     viewTeams() {
-      this.$router.push({ name: 'equipment' });
+      this.$router.push({name: 'equipment'});
     },
     showEmployeeInfo(employee) {
       this.selectedEmployee = employee;
@@ -92,6 +92,7 @@ export default {
   }
 }
 </script>
+
 <style scoped>
 .employees-container {
   background-color: white;
@@ -143,8 +144,8 @@ button.green-button:hover {
 main {
   padding-top: 80px;
   padding-bottom: 150px;
-
 }
+
 footer {
   background-color: #4f4d4d;
   padding: 10px 0 10px;
@@ -157,5 +158,4 @@ footer {
   right: 0;
   z-index: 100;
 }
-
 </style>

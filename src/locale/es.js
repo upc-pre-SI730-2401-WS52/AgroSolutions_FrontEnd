@@ -99,8 +99,91 @@ const es = ({
         confirmPassword: 'Confirmar contraseña',
         enterConfirmPassword: 'Confirme su contraseña',
         register: 'Registrar'
-    }
+    },
+    blog: {
+        title: 'Publicaciones del Blog',
+        addNewPost: 'Añadir Nueva Publicación',
+    },
+    cardBlog: {
+        role: 'Rol',
+        readTime: 'Tiempo de Lectura',
+        readMore: 'Leer Más',
+        minutes: 'minutos'
+    },
+    carousel: {
+        alt: 'Imagen'
+    },
+    mainPage: {
+        welcomeTitle: 'Bienvenidos a AgroSolutions',
+        welcomeText: 'Descubre nuestras soluciones innovadoras para el sector agrícola.',
+        startButton: 'Comenzar'
+    },
+    employeesPage: {
+        title: 'Empleados',
+        addEmployee: 'Agregar Empleado',
+        viewTeams: 'Ver Equipos',
+    },
+    addEmployeeForm: {
+        title: 'Agregar Empleado',
+        name: 'Nombre',
+        lastName: 'Apellido',
+        age: 'Edad',
+        dni: 'DNI',
+        position: 'Cargo',
+        salary: 'Salario',
+        phone: 'Teléfono',
+        photoUrl: 'Foto de Perfil (URL)',
+        register: 'Registrar',
+        cancel: 'Cancelar',
+        operario: 'Operario',
+        asesor: 'Asesor',
+    },
 
+    employeeCard: {
+        viewInfo: 'Ver Información',
+        delete: 'Eliminar',
+        position: 'Cargo',
+        salary: 'Salario',
+        deleteConfirm: '¿Estás seguro de eliminar a',
+    },
+
+    employeeInformation: {
+        name: 'Nombre',
+        age: 'Edad',
+        dni: 'DNI',
+        position: 'Cargo',
+        salary: 'Salario',
+        phone: 'Teléfono',
+        close: 'Cerrar',
+    },
+    banner: {
+        headline: 'Descubre y Únete',
+        description: 'La startup innovadora dedicada a fortalecer el sector agrícola, ofreciendo un enfoque integral para apoyar a los agricultores pequeños y medianos en el desarrollo óptimo de sus cultivos.',
+        features: [
+            'Se recibe información técnica y asesoramiento especializado.',
+            'Actuamos como socio comercial activo, comprando y comercializando productos de los agricultores en nuestra plataforma en línea.',
+            'Facilitamos evaluaciones específicas y recomendaciones personalizadas de nuestros profesionales en los campos de los agricultores.'
+        ],
+        heroImageUrl: 'https://www.businessempresarial.com.pe/wp-content/uploads/2023/09/Trabajadores-campesinos-en-Mexico-1920-3-780x470.jpg'
+    },
+    cardEquipment: {
+        team: 'Equipo',
+        budget: 'Presupuesto',
+        crop: 'Cultivo',
+        advisor: 'Asesor',
+        workers: 'Operarios'
+    },
+    header: {
+        home: 'Inicio',
+        pendingTasks: 'Tareas Pendientes',
+        finances: 'Finanzas',
+        pendingPayments: 'Pagos Pendientes',
+        employees: 'Empleados',
+        orders: 'Órdenes',
+        blog: 'Blog',
+        store: 'Tienda', // Añadido para el vendedor
+        logout: 'Cerrar sesión'
+    }
 
 })
 
