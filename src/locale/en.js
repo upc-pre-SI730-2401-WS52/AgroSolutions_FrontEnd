@@ -74,7 +74,8 @@ const en = ({
         password: 'Password',
         enterPassword: 'Enter your password',
         login: 'Login',
-        register: 'Register'
+        register: 'Register',
+        full_name: 'User Name'
     },
 
 

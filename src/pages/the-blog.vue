@@ -67,7 +67,7 @@ export default {
     },
 
     addNewPost() {
-       this.$router.push('/new-post');
+      this.$router.push('/new-post');
     },
   },
 };

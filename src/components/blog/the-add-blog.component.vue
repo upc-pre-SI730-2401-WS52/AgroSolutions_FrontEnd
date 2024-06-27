@@ -22,61 +22,61 @@
               <label for="Subtitle">Subtítulo:</label>
             </div>
             <div class="input-field">
-              <input type="text" id="Subtitle" v-model="newBlog.subtitle" required aria-label="Ingrese el subtítulo del blog" />
+              <input type="text" id="Subtitle" v-model="newBlog.Subtitle" required aria-label="Ingrese el subtítulo del blog" />
             </div>
           </div>
 
           <div class="form-group">
             <div class="input-label">
-              <label for="content">Contenido:</label>
+              <label for="Content">Contenido:</label>
             </div>
             <div class="input-field">
-              <textarea id="Content" v-model="newBlog.content" rows="6" required aria-label="Ingrese el contenido del blog"></textarea>
+              <textarea id="Content" v-model="newBlog.Content" rows="3" required aria-label="Ingrese el contenido del blog"></textarea>
             </div>
           </div>
 
           <div class="form-group">
             <div class="input-label">
-              <label for="sxummary">Resumen:</label>
+              <label for="Summary">Resumen:</label>
             </div>
             <div class="input-field">
-              <input type="text" id="Summary" v-model="newBlog.summary" required aria-label="Ingrese el resumen del blog" />
+              <input type="text" id="Summary" v-model="newBlog.Summary" required aria-label="Ingrese el resumen del blog" />
             </div>
           </div>
 
           <div class="form-group">
             <div class="input-label">
-              <label for="category">Categoría:</label>
+              <label for="Category">Categoría:</label>
             </div>
             <div class="input-field">
-              <input type="text" id="Category" v-model="newBlog.category" required aria-label="Ingrese la categoría del blog" />
+              <input type="text" id="Category" v-model="newBlog.CategoryBlog" required aria-label="Ingrese la categoría del blog" />
             </div>
           </div>
 
           <div class="form-group">
             <div class="input-label">
-              <label for="role">Rol:</label>
+              <label for="Role">Rol:</label>
             </div>
             <div class="input-field">
-              <input type="text" id="Role" v-model="newBlog.role" required aria-label="Ingrese el rol del autor del blog" />
+              <input type="text" id="Role" v-model="newBlog.RoleBlog" required aria-label="Ingrese el rol del autor del blog" />
             </div>
           </div>
 
           <div class="form-group">
             <div class="input-label">
-              <label for="typeAuthor">Tipo de Autor:</label>
+              <label for="TypeAuthor">Tipo de Autor:</label>
             </div>
             <div class="input-field">
-              <input type="text" id="TypeAuthor" v-model="newBlog.typeAuthor" required aria-label="Ingrese el tipo de autor del blog" />
+              <input type="text" id="TypeAuthor" v-model="newBlog.TypeAuthor" required aria-label="Ingrese el tipo de autor del blog" />
             </div>
           </div>
 
           <div class="form-group">
             <div class="input-label">
-              <label for="imageUrl">URL de la Imagen:</label>
+              <label for="ImageUrl">URL de la Imagen:</label>
             </div>
             <div class="input-field">
-              <input type="text" id="ImageUrl" v-model="newBlog.imageUrl" required aria-label="Ingrese la URL de la imagen del blog" />
+              <input type="text" id="ImageUrl" v-model="newBlog.ImageUrl" required aria-label="Ingrese la URL de la imagen del blog" />
             </div>
           </div>
 
@@ -85,16 +85,16 @@
               <label for="CommentsCount">Cantidad de Comentarios:</label>
             </div>
             <div class="input-field">
-              <input type="number" id="CommentsCount" v-model.number="newBlog.commentsCount" required aria-label="Ingrese la cantidad de comentarios del blog" />
+              <input type="number" id="CommentsCount" v-model.number="newBlog.CommentsCount" required aria-label="Ingrese la cantidad de comentarios del blog" />
             </div>
           </div>
 
           <div class="form-group">
             <div class="input-label">
-              <label for="readTimeMinutes">Tiempo de Lectura (Minutos):</label>
+              <label for="ReadTimeMinutes">Tiempo de Lectura (Minutos):</label>
             </div>
             <div class="input-field">
-              <input type="number" id="ReadTimeMinutes" v-model.number="newBlog.readTimeMinutes" required aria-label="Ingrese el tiempo de lectura en minutos del blog" />
+              <input type="number" id="ReadTimeMinutes" v-model.number="newBlog.ReadTimeMinutes" required aria-label="Ingrese el tiempo de lectura en minutos del blog" />
             </div>
           </div>
 
@@ -106,54 +106,57 @@
 </template>
 
 <script>
-import BlogApiService from "@/shared/services/blog-api.service.js";
 import TheHeaderSessionComponent from "@/components/elements/the-header-session.component.vue";
-import TheFooter from "@/components/elements/the-footer.component.vue";
+import BlogApiService from "@/shared/services/blog-api.service.js";
 
 export default {
   name: "TheAddBlogComponent",
-  components: { TheHeaderSessionComponent, TheFooter },
+  components: { TheHeaderSessionComponent },
   data() {
     return {
-      newBlog: {
+        Id: "",
         Title: "",
         Subtitle: "",
         Content: "",
         Summary: "",
-        Category: "",
-        Role: "",
+        CategoryBlog: "",
+        RoleBlog: "",
         TypeAuthor: "",
         ImageUrl: "",
         CommentsCount: 0,
         ReadTimeMinutes: 0,
-      },
+        blogApiService: new BlogApiService(), // Instancia correcta dentro de data
     };
   },
   methods: {
     async addNewBlog() {
       try {
-        await BlogApiService.addPost(this.newBlog);
-        alert("Blog agregado correctamente");
-        this.clearForm();
+        await this.$router.push('/blog');
+        const body = {
+          Id: this.Id,
+          Title: this.Title,
+          Subtitle: this.Subtitle,
+          Content: this.Content,
+          Summary: this.Summary,
+          CategoryBlog: this.CategoryBlog,
+          RoleBlog: this.RoleBlog,
+          TypeAuthor: this.TypeAuthor,
+          ImageUrl: this.ImageUrl,
+          CommentsCount: this.CommentsCount,
+          ReadTimeMinutes: this.ReadTimeMinutes
+        };
+
+        const response = await this.blogApiService.create(body);
+        router.push('/blog');
+        alert('Blog creado');
+        if (response.status === 201) {
+        } else {
+          console.error('Error al crear el blog');
+        }
       } catch (error) {
-        console.error("Error al agregar el blog:", error);
-        alert("Error al agregar el blog. Por favor, inténtelo de nuevo.");
+        console.error('Error en la creación del blog:', error);
       }
-    },
-    clearForm() {
-      this.newBlog = {
-        Title: "",
-        Subtitle: "",
-        Content: "",
-        Summary: "",
-        Category: "",
-        Role: "",
-        TypeAuthor: "",
-        ImageUrl: "",
-        CommentsCount: 0,
-        ReadTimeMinutes: 0,
-      };
-    },
+    }
   },
 };
 </script>

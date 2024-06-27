@@ -5,10 +5,10 @@
 
       <div class="form-group">
         <div class="input-label">
-          <label for="email">{{ $t('login.email') }}:</label>
+          <label for="full_name">{{ $t('login.full_name') }}:</label>
         </div>
         <div class="input-field">
-          <input type="text" id="email" v-model="username" required :aria-label="$t('login.enterEmail')">
+          <input type="text" id="email" v-model="username" required :aria-label="$t('login.full_name')">
         </div>
       </div>
 
@@ -46,7 +46,6 @@ export default {
         const userApiService = new UserApiService();
         const user = await userApiService.login(this.username, this.password);
         if (user) {
-          // Aquí asumimos que user.user_type contiene el tipo de usuario (vendedor o agricultor)
           localStorage.setItem('userType', user.user_type);
           await router.push('/home');
         } else {

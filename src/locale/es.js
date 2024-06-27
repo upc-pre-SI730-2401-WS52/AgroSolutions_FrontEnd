@@ -74,7 +74,8 @@ const es = ({
         password: 'Contraseña',
         enterPassword: 'Ingrese su contraseña',
         login: 'Iniciar Sesión',
-        register: 'Registrarse'
+        register: 'Registrarse',
+        full_name: 'Nombre de usuario'
     },
 
     registration: {

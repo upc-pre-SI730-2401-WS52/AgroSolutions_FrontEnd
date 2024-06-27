@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_URL = 'http://localhost:3000/blog';
 
-class BlogApiService {
+export class BlogApiService {
     async getPosts() {
         try {
             const response = await axios.get(API_URL);
@@ -14,8 +14,13 @@ class BlogApiService {
     }
 
     async addPost(blogData) {
-        return await http.post('blog',body)
+        try {
+            const response = await axios.post(API_URL, blogData);
+            return response.data;
+        } catch (error) {
+            console.error('Error al agregar el post:', error);
+            throw error; // Lanza el error para que el componente que llama maneje la excepción
+        }
     }
 }
-
 export default new BlogApiService();
